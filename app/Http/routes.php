@@ -14,12 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/teste','UserController@index');
-
 
 Route::get('pando', function () {
     echo "Pando sucesso";
 });
+
+Route::get('/testando','UserController@index');
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
