@@ -23,6 +23,36 @@
                                 @endif
                             </div>
                         </div>
+             <!----campo de telefone-->
+                        <div class="form-group{{ $errors->has('telefone') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Telefone</label>
+
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="telefone" value="{{ old('telefone') }}">
+
+                                @if ($errors->has('telefone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('telefone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+            <!-----campo de endereço--->
+            <div class="form-group{{ $errors->has('endereco') ? ' has-error' : '' }}">
+                <label class="col-md-4 control-label">Endereço</label>
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control" name="endereco" value="{{ old('endereco') }}">
+
+                    @if ($errors->has('endereco'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('endereco') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+
+
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">E-Mail Address</label>
