@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
+use App\Events\GeracaoDeRifas;
+use Auth;
 
 class AcaoController extends Controller
 {
@@ -30,6 +32,7 @@ class AcaoController extends Controller
     public function create()
     {
         //
+        return view('acao_inserir');
     }
 
     /**
@@ -40,7 +43,25 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Cria o objeto Acao a ser inserido
+        $acao = new Acao;
+        $acao->id_usuario = Auth::user()->id;
+        $acao->nome_acao = $request->nome_acao;
+        $acao->descricao = $request->descricao;
+        $acao->imagem = $request->imagem;
+        $acao->quantidade_rifas = $request->quantidade_rifas;
+        $acao->valor_rifa = $request->valor_rifa;
+        $acao->data_sorteio = $request->data_sorteio;
+        $acao->forma_entrega = $request->forma_entrega;
+
+        //Cria e salva as rifas
+        $quantidade_rifas = $acao->quantidade_rifas;
+
+        //Salva a acao
+        $acao->save();
+        \Event::fire(new GeracaoDeRifas($acao));
+
+        return redirect('/home');
     }
 
     /**
