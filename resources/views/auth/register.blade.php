@@ -37,20 +37,20 @@
                                 @endif
                             </div>
                         </div>
-            <!-----campo de endereço--->
-            <div class="form-group{{ $errors->has('endereco') ? ' has-error' : '' }}">
-                <label class="col-md-4 control-label">Endereço</label>
+            <!-----campo de endereço-->
+                        <div class="form-group{{ $errors->has('endereco') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Endereço</label>
 
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="endereco" value="{{ old('endereco') }}">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" name="endereco" value="{{ old('endereco') }}">
 
-                    @if ($errors->has('endereco'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('endereco') }}</strong>
-                        </span>
-                    @endif
-                </div>
-            </div>
+                                @if ($errors->has('endereco'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('endereco') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
 
 

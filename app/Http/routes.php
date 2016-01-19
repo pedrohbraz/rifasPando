@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('pando', function () {
-    echo "Pando sucesso";
-});
+
 
 Route::get('/testando','UserController@index');
 
@@ -42,4 +40,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('acao/inserir', 'AcaoController@create');
+
+    Route::post('acao/inserir', 'AcaoController@store');
 });
