@@ -15,6 +15,14 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
+     <!---- folhas de estilo de teste-->
+     <link rel="stylesheet" href="css/5grid/core.css" />
+			<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+			<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+			<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+
     <style>
         body {
             font-family: 'Lato';
@@ -64,6 +72,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="/perfil"><i class="fa fa-btn perfil"></i>Perfil</a></li>
                             </ul>
                         </li>
                     @endif

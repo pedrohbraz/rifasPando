@@ -41,7 +41,13 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
+
     Route::get('acao/inserir', 'AcaoController@create');
 
     Route::post('acao/inserir', 'AcaoController@store');
+
+    Route::get('/perfil',function(){
+      return view ('Users/TelaUser');
+    });
+
 });

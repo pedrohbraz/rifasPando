@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <table>
 <thead>
 <tr>
@@ -16,8 +18,8 @@
 @foreach($user as $user)
 <tr>
 <td>{{ $user->id }}</td>
-<td>{{ $user->nome }}</td>
-<td>{{ $user->email_contato }}</td>
+<td>{{ $user->name }}</td>
+<td>{{ $user->email }}</td>
 <td>{{ $user->telefone}}</td>
 <td>{{ $user->endereco}}</td>
 <td>{{ $user->login}}</td>
@@ -31,3 +33,4 @@
 </tbody>
 </table>
 <!----------------------------------------------->
+@endsection
