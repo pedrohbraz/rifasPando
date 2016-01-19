@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 Route::get('/teste','UserController@index');
 
+
+Route::get('pando', function () {
+    echo "Pando sucesso";
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
