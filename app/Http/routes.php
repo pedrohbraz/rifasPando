@@ -41,9 +41,7 @@ Route::get('vazio', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/', function () {
-    	return view('welcome');
-	});
+	Route::get('/', 'AcaoController@index');
 
     Route::get('/home', 'HomeController@index');
 
@@ -54,5 +52,14 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/perfil',function(){
       return view ('Users/TelaUser');
     });
+
+    Route::get('image/{folder}/{filename}/{size}', function ($folder,$filename,$size)
+	{
+	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
+
+	    return $img->response('jpg');
+	});
+
+	Route::get('acao/{id}', 'AcaoController@show');
 
 });

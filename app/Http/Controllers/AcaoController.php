@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Acao;
 use App\Events\GeracaoDeRifas;
 use Auth;
+use Storage;
 
 class AcaoController extends Controller
 {
@@ -43,12 +44,12 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
+
         //Cria o objeto Acao a ser inserido
         $acao = new Acao;
         $acao->id_usuario = Auth::user()->id;
         $acao->nome_acao = $request->nome_acao;
         $acao->descricao = $request->descricao;
-        $acao->imagem = $request->imagem;
         $acao->quantidade_rifas = $request->quantidade_rifas;
         $acao->valor_rifa = $request->valor_rifa;
         $acao->data_sorteio = $request->data_sorteio;
@@ -59,6 +60,17 @@ class AcaoController extends Controller
 
         //Salva a acao
         $acao->save();
+
+        //Armazenamento da imagem
+        $arquivo = $request->file('imagem');
+        $extension = $arquivo->getClientOriginalExtension();
+        $image_name = 'acao'.$acao->id;
+        $path = $arquivo->getRealPath();
+        Storage::put('acaos/'.$image_name.'.'.$extension,file_get_contents($path));
+        $acao->imagem = '/image/acaos/'.$image_name;
+        $acao->save();
+
+        //Dispara o evento de geracao de rifas
         \Event::fire(new GeracaoDeRifas($acao));
 
         return redirect('/home');
@@ -73,6 +85,8 @@ class AcaoController extends Controller
     public function show($id)
     {
         //
+        $acao   = Acao::find($id);
+        return view('acao', compact('acao'));
     }
 
     /**
