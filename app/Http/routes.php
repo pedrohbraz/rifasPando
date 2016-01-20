@@ -39,9 +39,7 @@ Route::get('/teste','UserController@index');
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/', function () {
-    	return view('welcome');
-	});
+	Route::get('/', 'AcaoController@index');
 
     Route::get('/home', 'HomeController@index');
 
@@ -52,5 +50,12 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/perfil',function(){
       return view ('Users/TelaUser');
     });
+
+    Route::get('image/{folder}/{filename}', function ($folder,$filename)
+	{
+	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit(140);
+
+	    return $img->response('jpg');
+	});
 
 });
