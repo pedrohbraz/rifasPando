@@ -21,7 +21,9 @@ Route::get('pando', function () {
 
 Route::get('/testando','UserController@index');
 
-
+Route::get('vazio', function () {
+    echo "rota vazia";
+});
 
 /*
 |--------------------------------------------------------------------------
