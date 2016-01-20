@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--- script para tela dinamica-->
+  <script type="text/javascript">
+
+    function toggle(obj) {
+    var el = document.getElementById(obj);
+    if ( el.style.display != 'none' ) {
+    el.style.display = 'none';
+    }
+    else {
+    el.style.display = '';
+    }
+    }
+
+
+  </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Ações OnLine</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -14,6 +30,15 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+
+     <!---- folhas de estilo adicionadas para o perfil-->
+    <link rel="stylesheet" href="css/5grid/core.css" />
+			<link rel="stylesheet" href="css/5grid/core-desktop.css" />
+			<link rel="stylesheet" href="css/5grid/core-1200px.css" />
+			<link rel="stylesheet" href="css/5grid/core-noscript.css" />
+		<!--	<link rel="stylesheet" href="css/style.css" />-->
+		<!--	<link rel="stylesheet" href="css/style-desktop.css" />-->
+      <link rel="stylesheet" href="estilo/estilo.css" />
 
     <style>
         body {
@@ -40,7 +65,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Ações OnLine
                 </a>
             </div>
 
@@ -64,6 +89,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="/perfil"><i class="fa fa-btn perfil"></i>Perfil</a></li>
                             </ul>
                         </li>
                     @endif
