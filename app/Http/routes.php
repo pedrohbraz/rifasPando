@@ -41,11 +41,14 @@ Route::get('vazio', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
+	Route::get('/', 'AcaoController@index');
+
 
    Route::get("/acao",'AcaoController@index');
 
-   Route::get("/acao/{usuario}/exibir",'AcaoController@show');
+   Route::get("/acao/{usuario}/exibir",'AcaoController@acaosUser');
+    Route::get('/home', 'HomeController@index');
+
 
     Route::get('acao/inserir', 'AcaoController@create');
 
@@ -54,5 +57,14 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/perfil',function(){
       return view ('Users/TelaUser');
     });
+
+    Route::get('image/{folder}/{filename}/{size}', function ($folder,$filename,$size)
+	{
+	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
+
+	    return $img->response('jpg');
+	});
+
+	Route::get('acao/{id}', 'AcaoController@show');
 
 });

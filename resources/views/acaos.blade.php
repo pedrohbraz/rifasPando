@@ -5,35 +5,26 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Rifas disponiveis</div>
 
                 <div class="panel-body">
-                    Acoes e Rifas aqui!
 
-                    <table>
-                    <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>Nome Acao</th>
-                    <th>ID usuario</th>
+                    <div class="row">
+                    @foreach($acaos as $acao)
 
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($acaos as $acaos)
-                    <tr>
-                    <td>{{ $acaos->id }}</td>
-                    <td>{{ $acaos->nome_acao }}</td>
-                   <td>{{$acaos->id_usuario}}
-
-                    <td></td>
-                    </tr>
+                      <div class="col-xs-6 col-md-3">
+                        <div class="thumbnail">
+                          <a href="acao/{{$acao->id}}">
+                            <img src="{{$acao->imagem}}/190">
+                          </a>
+                          <div class="caption">
+                            <h3>{{$acao->nome_acao}}</h3>
+                            <p>R${{$acao->valor_rifa}},00</p>
+                          </div>
+                        </div>
+                      </div>
                     @endforeach
-                    </tbody>
-                    </table>
-
-
-
+                    </div>
                 </div>
             </div>
         </div>
