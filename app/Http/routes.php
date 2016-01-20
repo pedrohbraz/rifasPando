@@ -43,6 +43,9 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/home', 'HomeController@index');
 
+   Route::get("/acao",'AcaoController@index');
+
+   Route::get("/acao/{usuario}/exibir",'AcaoController@show');
 
     Route::get('acao/inserir', 'AcaoController@create');
 

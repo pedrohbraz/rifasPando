@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
+use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
 
@@ -72,7 +73,9 @@ class AcaoController extends Controller
      */
     public function show($id)
     {
-        //
+    //  $acao = Acao::find($id_usuario);
+    $acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
+    return view('Users.acoesCriadas',compact('acao'));
     }
 
     /**

@@ -9,7 +9,29 @@
 
                 <div class="panel-body">
                     Acoes e Rifas aqui!
-                
+
+                    <table>
+                    <thead>
+                    <tr>
+                    <th>ID</th>
+                    <th>Nome Acao</th>
+                    <th>ID usuario</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($acaos as $acaos)
+                    <tr>
+                    <td>{{ $acaos->id }}</td>
+                    <td>{{ $acaos->nome_acao }}</td>
+                   <td>{{$acaos->id_usuario}}
+
+                    <td></td>
+                    </tr>
+                    @endforeach
+                    </tbody>
+                    </table>
+
 
 
                 </div>
