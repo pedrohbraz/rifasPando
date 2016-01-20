@@ -1,62 +1,41 @@
 @extends('layouts.app')
 @section('content')
 
+<h1> Bem Vindo {{ Auth::user()->name }}</h1>
 
-<h1 align="center" style="font-size: 40px"> Seja Bem Vindo {{ Auth::user()->name }} </h1>
+<div id="lateral">
+<div id="menu">
 
-<!----------------------------->
-<!-- Features Wrapper -->
-		<!--	<div id="features-wrapper">
-				<div class="5grid-layout">
-					<div class="row">
-						<div class="4u">
+<h3 class="link-titulo">Seu Perfil</h3>
+<ul class="box">
+    <li><a href="#">Atualizar Perfil</a></li>
+  </ul>
 
-							<!-- Box -->-->
-								<section class="box box-feature">
-									<a href="#" class="image image-full"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Atualizar Perfil</h2>
-									<!--		<span class="byline">Maybe here as well I think</span>-->
-										</header>
-										<p>Você pode alterar suas informações pessoais e de contato. Lembre-se de sempre manter seus dados atualizados</p>
-									</div>
-								</section>
+<h3 class="link-titulo">Ações Organizadas</h3>
+    <ul class="box">
+      <!--  <li><a href="/acao/inserir">Criar Ação</a></li>-->
+    <!--  <li> <button type="button" onclick="Mudarestado('minhaDiv')">Criar Ação</button></li>-->
+        <li><a href="#" onclick="toggle('tela')">Criar Ação</a></li>
+        <li><a href="#">Ações em andamento</a></li>
+        <li><a href="#">Ações fechadas</a></li>
+        <!-- mais links -->
+    </ul>
 
-						</div>
-						<div class="4u">
+<h3 class="link-titulo">Ações compradas</h3>
+    <ul class="box">
+        <li><a href="#">Ações em andamento</a></li>
+        <li><a href="#">Ações fechadas</a></li>
+        <!-- mais links -->
+    </ul>
 
-							<!-- Box -->
-								<section class="box box-feature">
-									<a href="#" class="image image-full"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Ações organizadas</h2>
-										<!--	<span class="byline">This is also an interesting subtitle</span>-->
-										</header>
-										<p>Gerencie todas as Ações que você está organizando ou que já organizou</p>
-									</div>
-								</section>
+<!-- mais seções -->
 
-						</div>
-						<div class="4u">
+</div> <!-- /#menu -->
+</div id="link"> <!-- vazio --> <div>
+</div> <!-- /#lateral -->
 
-							<!-- Box -->
-								<section class="box box-feature last">
-									<a href="#" class="image image-full"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="inner">
-										<header>
-											<h2>Ações que está concorrendo</h2>
-									<!--		<span class="byline">Here's another intriguing subtitle</span>-->
-										</header>
-										<p>Veja aqui todas as ações que você está participando ou já participou !</p>
-									</div>
-								</section>
-
-						</div>
-					</div>
-				</div>
-			</div>
-
+<div id="tela" style="display:none">
+  <IFRAME src="/acao/inserir" width="900" height="900" scrolling="yes" frameborder="0" align="center"></IFRAME>
+</div>
 
 @endsection
