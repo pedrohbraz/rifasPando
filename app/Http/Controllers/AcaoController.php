@@ -85,6 +85,8 @@ class AcaoController extends Controller
     public function show($id)
     {
         //
+        $acao   = Acao::find($id);
+        return view('acao', compact('acao'));
     }
 
     /**

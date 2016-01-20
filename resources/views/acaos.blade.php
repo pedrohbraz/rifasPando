@@ -13,7 +13,9 @@
                     
                       <div class="col-xs-6 col-md-3">
                         <div class="thumbnail">
-                          <img src="{{$acao->imagem}}">
+                          <a href="acao/{{$acao->id}}">
+                            <img src="{{$acao->imagem}}/190">
+                          </a>
                           <div class="caption">
                             <h3>{{$acao->nome_acao}}</h3>
                             <p>R${{$acao->valor_rifa}},00</p>

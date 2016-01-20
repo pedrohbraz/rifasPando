@@ -51,11 +51,13 @@ Route::group(['middleware' => 'web'], function () {
       return view ('Users/TelaUser');
     });
 
-    Route::get('image/{folder}/{filename}', function ($folder,$filename)
+    Route::get('image/{folder}/{filename}/{size}', function ($folder,$filename,$size)
 	{
-	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit(140);
+	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
 
 	    return $img->response('jpg');
 	});
+
+	Route::get('acao/{id}', 'AcaoController@show');
 
 });
