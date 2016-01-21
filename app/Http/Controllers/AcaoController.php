@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
+use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
 use Storage;
@@ -90,8 +91,16 @@ class AcaoController extends Controller
         $acao   = Acao::find($id);
         //dd($acao->mensagem);
         return view('acao', compact('acao'));
+
     }
 
+    public function acaosUser($id)
+    {
+
+    //  $acao = Acao::find($id_usuario);
+    $acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
+    return view('Users.acoesCriadas',compact('acao'));
+}
     /**
      * Show the form for editing the specified resource.
      *

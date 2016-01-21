@@ -42,7 +42,11 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::get('/', 'AcaoController@index');
 
-    Route::get('/home', 'HomeController@index');
+
+
+
+   Route::get("/acao/{usuario}/exibir",'AcaoController@acaosUser');
+   Route::get('/home', 'HomeController@index');
 
 
 
@@ -56,7 +60,8 @@ Route::group(['middleware' => 'web'], function () {
 
 	    return $img->response('jpg');
 	});
-
+	
+    Route::get("/acao",'AcaoController@index');
     Route::get('acao/inserir', 'AcaoController@create');
     Route::post('acao/inserir', 'AcaoController@store');
 	Route::get('acao/{id}', 'AcaoController@show');
