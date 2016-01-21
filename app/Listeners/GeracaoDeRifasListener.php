@@ -28,11 +28,13 @@ class GeracaoDeRifasListener
     public function handle(GeracaoDeRifas $event)
     {
         $acao = $event->getAcao();
-        for($i=0 ; $i<=$acao->quantidade_rifas; $i++)
+        for($i=1 ; $i<=$acao->quantidade_rifas; $i++)
         {
             $rifa = New Rifa;
-            $rifa->id_acao = $acao->id;
+
+            $rifa->acao_id   = $acao->id;
             $rifa->nome_rifa = $i;
+            
             $rifa->save();
         }
     }

@@ -12,7 +12,7 @@ class MensagemADMstableSeeder extends Seeder
     public function run()
     {
       DB::table('mensagemADMs')->insert([
-          'id_user' => 1,
+          'user_id' => 1,
           'titulo' => 'Mensagem adm',
           'descricao'=>'ola mundo',
           

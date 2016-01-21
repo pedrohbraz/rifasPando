@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -41,18 +40,37 @@ Route::get('vazio', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/', function () {
-    	return view('welcome');
-	});
+	Route::get('/', 'AcaoController@index');
 
     Route::get('/home', 'HomeController@index');
 
-    Route::get('acao/inserir', 'AcaoController@create');
 
-    Route::post('acao/inserir', 'AcaoController@store');
 
     Route::get('/perfil',function(){
       return view ('Users/TelaUser');
     });
+
+    Route::get('image/{folder}/{filename}/{size}', function ($folder,$filename,$size)
+	{
+	    $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
+
+	    return $img->response('jpg');
+	});
+
+    Route::get('acao/inserir', 'AcaoController@create');
+    Route::post('acao/inserir', 'AcaoController@store');
+	Route::get('acao/{id}', 'AcaoController@show');
+
+	Route::post('acao/{id}', 'MensagemController@store');
+
+	Route::group(['middleware' => 'role:admin'],function(){
+		Route::get('mensagem_adm','MensagemADMController@index');
+		Route::get('mensagem_adm/inserir','MensagemADMController@create');
+		Route::post('mensagem_adm/inserir','MensagemADMController@store');
+
+	});
+	
+
+	//Route::get('role/generate','UserController@create');
 
 });

@@ -14,8 +14,8 @@ class CreateRifasTable extends Migration
     {
       Schema::create('rifas', function (Blueprint $table) {
       $table->increments('id');
-      $table->integer('id_acao')->unsigned()->index();
-      $table->foreign('id_acao')
+      $table->integer('acao_id')->unsigned()->index();
+      $table->foreign('acao_id')
              ->references('id')->on('acaos')
              ->onDelete('cascade');
 

@@ -6,11 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\User;
-use App\Role;
-use App\Permission;
 
-class UserController extends Controller
+class MensagemADMController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-      $user= user::all();
-      return view('users',['user'=>$user]);
-
+        //
+        return view('mensagemADM');
     }
 
     /**
