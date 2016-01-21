@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
+  use EntrustUserTrait;
   //Usar o softDeletes na tabela users
     //Usuarios nao serao deletados, mas sim marcados como deletados
     //use SoftDeletes;
@@ -43,6 +45,12 @@ class User extends Authenticatable
     public function mensagem()
     {
         return $this->hasMany('App\Mensagem');
+    }
+
+    //Um usuario ADM pode escrever varias mensagens administrativas
+    public function mensagemADM()
+    {
+        return $this->hasMany('App\MensagemADM');
     }
 
     //Um usuario pode ter varias rifas (compradas)

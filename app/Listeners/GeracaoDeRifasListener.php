@@ -31,8 +31,10 @@ class GeracaoDeRifasListener
         for($i=1 ; $i<=$acao->quantidade_rifas; $i++)
         {
             $rifa = New Rifa;
-            $rifa->acao_id = $acao->id;
+
+            $rifa->acao_id   = $acao->id;
             $rifa->nome_rifa = $i;
+            
             $rifa->save();
         }
     }

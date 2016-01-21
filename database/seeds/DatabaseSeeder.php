@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call(MensagemsTableSeeder::class);
         $this->call(MensagemADMstableSeeder::class);
         $this->call(RifasTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(PermissionRoleTableSeeder::class);
+        $this->call(RoleUserTableSeeder::class);
 
     }
 }

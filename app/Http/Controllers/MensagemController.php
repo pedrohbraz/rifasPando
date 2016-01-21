@@ -6,12 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Acao;
-use App\Events\GeracaoDeRifas;
 use Auth;
-use Storage;
+use App\Mensagem;
 
-class AcaoController extends Controller
+class MensagemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,9 +18,7 @@ class AcaoController extends Controller
      */
     public function index()
     {
-        //Obtem todas as acoes para serem listadas
-        $acaos = Acao::all();
-        return view('acaos',compact('acaos'));
+        //
     }
 
     /**
@@ -33,7 +29,6 @@ class AcaoController extends Controller
     public function create()
     {
         //
-        return view('acao_inserir');
     }
 
     /**
@@ -44,38 +39,16 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
+        //Salva a mensagem de um usuario sobre uma acao
+        $mensagem = new Mensagem;
 
-        //Cria o objeto Acao a ser inserido
-        $acao = new Acao;
+        $mensagem->user_id  = Auth::user()->id;
+        $mensagem->acao_id  = $request->acao_id;
+        $mensagem->mensagem = $request->mensagem; 
 
-        $acao->user_id          = Auth::user()->id;
-        $acao->nome_acao        = $request->nome_acao;
-        $acao->descricao        = $request->descricao;
-        $acao->quantidade_rifas = $request->quantidade_rifas;
-        $acao->valor_rifa       = $request->valor_rifa;
-        $acao->data_sorteio     = $request->data_sorteio;
-        $acao->forma_entrega    = $request->forma_entrega;
+        $mensagem->save();
 
-        //Cria e salva as rifas
-        $quantidade_rifas = $acao->quantidade_rifas;
-
-        //Salva a acao
-        $acao->save();
-
-        //Armazenamento da imagem
-        $arquivo    = $request->file('imagem');
-        $extension  = $arquivo->getClientOriginalExtension();
-        $image_name = 'acao'.$acao->id;
-        $path       = $arquivo->getRealPath();
-        
-        Storage::put('acaos/'.$image_name.'.'.$extension,file_get_contents($path));
-        $acao->imagem = '/image/acaos/'.$image_name;
-        $acao->save();
-
-        //Dispara o evento de geracao de rifas
-        \Event::fire(new GeracaoDeRifas($acao));
-
-        return redirect('/home');
+        return redirect('/acao/'.$mensagem->acao_id);
     }
 
     /**
@@ -87,9 +60,6 @@ class AcaoController extends Controller
     public function show($id)
     {
         //
-        $acao   = Acao::find($id);
-        //dd($acao->mensagem);
-        return view('acao', compact('acao'));
     }
 
     /**
