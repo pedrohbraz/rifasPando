@@ -74,6 +74,8 @@ Route::group(['middleware' => 'web'], function () {
 		Route::post('mensagem_adm/inserir','MensagemADMController@store');
 
 	});
+
+	Route::get('paypal', 'AcaoController@paypal');
 	
 
 	//Route::get('role/generate','UserController@create');
