@@ -1,23 +1,28 @@
 @extends('layouts.app')
 @section('content')
 
-<h1> Bem Vindo {{ Auth::user()->name }}</h1>
+<h1 align="center"> Bem Vindo {{ Auth::user()->name }}</h1>
 
-<div id="lateral">
-<div id="menu">
+<div id="wrapper">
 
-<h3 class="link-titulo">Seu Perfil</h3>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                    </a>
+                </li>
+
+                <h3 class="link-titulo">Seu Perfil</h3>
 <ul class="box">
-    <li><a href="#">Atualizar Perfil</a></li>
+    <li><a href="/perfil/{{ Auth::user()->id }}/editar">Atualizar Perfil</a></li>
   </ul>
 
 <h3 class="link-titulo">Ações Organizadas</h3>
     <ul class="box">
-      <!--  <li><a href="/acao/inserir">Criar Ação</a></li>-->
-    <!--  <li> <button type="button" onclick="Mudarestado('minhaDiv')">Criar Ação</button></li>-->
-        <li><a href="#" onclick="mudaTela('tela')">Criar Ação</a></li>
-        <li><a href="#"onclick="mudaTela('acoes_and')">Ações em andamento</a></li>
-        <li><a href="#">Ações fechadas</a></li>
+        <li><a href="acao/inserir">Criar Ação</a></li>
+        <li><a href="/acao/{{ Auth::user()->id }}/organizadas/andamento/exibir">Ações em andamento</a></li>
+        <li><a href="/acao/{{ Auth::user()->id }}/organizadas/fechadas/exibir">Ações fechadas</a></li>
         <!-- mais links -->
     </ul>
 
@@ -27,18 +32,27 @@
         <li><a href="#">Ações fechadas</a></li>
         <!-- mais links -->
     </ul>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-<!-- mais seções -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Pagina Usuario</h1>
+                        <p></p>
+                        <p></code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
 
-</div> <!-- /#menu -->
+    </div>
+    
 
-</div> <!-- /#lateral -->
-
-<div id="tela" style="display:none">
-  <IFRAME src="/acao/inserir" width="900" height="900" scrolling="yes" frameborder="0" align="center"></IFRAME>
-</div>
-<div id="acoes_and" style="display:none">
-  <IFRAME src="/acao/{{ Auth::user()->id }}/exibir" width="900" height="900" scrolling="yes" frameborder="0" align="center"></IFRAME>
-</div>
-
+</body>
 @endsection

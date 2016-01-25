@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--- script para tela dinamica-->
-  <script type="text/javascript">
 
-    function mudaTela(el) {
-    var display = document.getElementById(el).style.display;
-    if(display == "none")
-        document.getElementById(el).style.display = 'block';
-    else
-        document.getElementById(el).style.display = 'none';
-}
-
-  </script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,6 +25,19 @@
 		<!--	<link rel="stylesheet" href="css/style.css" />-->
 		<!--	<link rel="stylesheet" href="css/style-desktop.css" />-->
       <link rel="stylesheet" href="estilo/estilo.css" />
+
+      <!---novo menu lateral usuario-->
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css2/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css2/simple-sidebar.css" rel="stylesheet">
 
     <style>
         body {

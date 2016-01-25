@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 
-
-  </script>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css2/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css2/simple-sidebar.css" rel="stylesheet">
 
 
 
@@ -39,7 +46,7 @@
     </style>
 </head>
 <body id="app-layout">
-    
+
 
     @yield('content')
 
