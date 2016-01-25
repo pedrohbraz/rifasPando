@@ -12,8 +12,8 @@ class MensagemsTableSeeder extends Seeder
     public function run()
     {
       DB::table('mensagems')->insert([
-          'id_user' => 1,
-          'id_acao' => 1,
+          'user_id' => 1,
+          'acao_id' => 1,
           'mensagem' => 'testando mensagens',
 
 

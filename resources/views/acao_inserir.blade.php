@@ -1,4 +1,6 @@
-@extends('layouts.app')
+
+@extends('layouts.mackart')
+
 
 @section('content')
 <div class="container">

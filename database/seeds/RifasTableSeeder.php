@@ -12,7 +12,7 @@ class RifasTableSeeder extends Seeder
     public function run()
     {
       DB::table('rifas')->insert([
-          'id_acao' => 1,
+          'acao_id' => 1,
           'nome_rifa' => 'rifa 1',
           'id_comprador' => 1,
           

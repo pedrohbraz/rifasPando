@@ -14,7 +14,7 @@ class CreateAcaosTable extends Migration
     {
       Schema::create('acaos', function (Blueprint $table) {
         $table->increments('id');
-        $table->integer('id_usuario');
+        $table->integer('user_id');
         $table->string('nome_acao',100);
         $table->longText('descricao');
         $table->longText('imagem')->nullable();//esta null apenas para teste de seed, retirar depois

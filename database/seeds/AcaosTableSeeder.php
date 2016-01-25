@@ -12,7 +12,7 @@ class AcaosTableSeeder extends Seeder
     public function run()
     {
       DB::table('acaos')->insert([
-          'id_usuario' => 1,
+          'user_id' => 1,
           'nome_acao' => 'rifa 1',
           'descricao' => 'teste rifa',
           'quantidade_rifas'=>20,
