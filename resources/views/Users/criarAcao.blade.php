@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<h1 align="center"> Acoes criadas</h1>
+<h1 align="center"> </h1>
 
 <div id="wrapper">
 
@@ -22,9 +22,9 @@
     <ul class="box">
       <!--  <li><a href="/acao/inserir">Criar Ação</a></li>-->
     <!--  <li> <button type="button" onclick="Mudarestado('minhaDiv')">Criar Ação</button></li>-->
-        <li><a href="acao/inserir">Criar Ação</a></li>
-        <li><a href="/acao/{{ Auth::user()->id }}/andamento/exibir">Ações em andamento</a></li>
-        <li><a href="#" onclick="mudaTela('fechadas')">Ações fechadas</a></li>
+        <li><a href="#" >Criar Ação</a></li>
+        <li><a href="#">Ações em andamento</a></li>
+        <li><a href="#">Ações fechadas</a></li>
         <!-- mais links -->
     </ul>
 
@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Pagina Usuario</h1>
-                        <p></p>
+                        <p><IFRAME  src="/acao/inserir" width="900" height="900" scrolling="yes" frameborder="0" align="center"></IFRAME></p>
                         <p></code>.</p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
