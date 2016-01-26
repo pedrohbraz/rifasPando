@@ -1,4 +1,6 @@
+
 @extends('layouts.mackart')
+
 
 @section('content')
 <div class="container">
@@ -69,9 +71,13 @@
                         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
+                              <button type="button" class="btn btn-primary" onclick="location.href = '/perfil'">
+                                  <i class="fa fa-btn fa-user"></i>Voltar
+                              </button>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i>Criar!
                                 </button>
+
                             </div>
                         </div>
                     </form>

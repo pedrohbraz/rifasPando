@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
+
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
+
 use App\Role;
 use App\Permission;
+
 
 class UserController extends Controller
 {
@@ -64,7 +70,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      $user = User::find($id);
+  //    dd($user);
+      return view('Users.editar',compact('user'));
     }
 
     /**
@@ -76,7 +84,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $user = User::find($id);
+      $user->name = $request->name;
+      $user->telefone = $request->telefone;
+      $user->password = bcrypt($request->newpassword);
+      //dd($user);
+      $user->save();
+
     }
 
     /**

@@ -105,13 +105,40 @@ class AcaoController extends Controller
 
     }
 
-    public function acaosUser($id)
+    public function acaosOrgAndamento($id)
+    {
+    $hoje = getdate();
+    $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+    $acao = DB::table('acaos')->select('*')
+               ->where('data_sorteio','>=',$hoje2)->where('id_usuario','=',$id)
+               ->get();
+
+    return view('Users.acoesOrgAndamento',compact('acao'));
+   }
+
+   public function acaosCompAndamento($id)
+   {
+  // $acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
+  // return view('Users.acoesOrgAndamento',compact('acao'));
+  }
+
+public function acaosOrgClosed($id)
+  {
+
+    $hoje = getdate();
+    $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+    $acao = DB::table('acaos')->select('*')
+               ->where('data_sorteio','<',$hoje2)->where('id_usuario','=',$id)
+               ->get();
+    return view('Users.acoesOrgClosed',compact('acao'));
+  }
+
+  public function acaosCompClosed($id)
     {
 
-    //  $acao = Acao::find($id_usuario);
-    $acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
-    return view('Users.acoesCriadas',compact('acao'));
-}
+        //$acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
+      //  return view('Users.acoesOrgClosed',compact('acao'));
+    }
     /**
      * Show the form for editing the specified resource.
      *
