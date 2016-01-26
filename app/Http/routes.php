@@ -75,7 +75,12 @@ Route::group(['middleware' => 'web'], function () {
 
 	});
 
+	Route::get('carrinho','AcaoController@carrinhoDeCompras');
+	Route::post('carrinho','AcaoController@checkout');
+
 	Route::get('paypal', 'AcaoController@paypal');
+
+	Route::post('paypal2', 'AcaoController@paypal2');
 	
 
 	//Route::get('role/generate','UserController@create');
