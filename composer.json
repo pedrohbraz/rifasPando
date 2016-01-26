@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "intervention/image": "^2.3",
         "ext-curl": "*",
-        "angelleye/paypal-php-library": "2.0.*"
+        "angelleye/paypal-php-library": "2.0.*",
+        "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
