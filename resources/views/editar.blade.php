@@ -1,5 +1,4 @@
-
-@extends('layouts.mackartHeader')
+@extends('layouts.mackart')
 @section('content')
 <div class="container">
     <div class="row">

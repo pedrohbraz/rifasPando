@@ -1,0 +1,69 @@
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+      position: static;
+  }
+
+  #sidebar.affix {
+      position: fixed;
+      top: 0;
+      width:21.2%;
+  }
+}
+
+.affix,.affix-top {
+   position:static;
+}
+
+/* theme */
+
+body {
+  color:#828282;
+  background-color:#eee;
+}
+
+a,a:hover {
+	color:#ff3333;
+  	text-decoration:none;
+}
+
+.highlight-bk {
+	background-color:#ff3333;
+    padding:1px;
+    width:100%;
+}
+
+.highlight {
+	color:#ff3333;
+}
+
+h3.highlight  {
+	padding-top:13px;
+    padding-bottom:14px;
+  	border-bottom:2px solid #ff3333;
+}
+
+.accordion-group {
+	border-width:0;
+}
+
+.dropdown-menu {
+	min-width: 250px;
+}
+
+.accordion-heading .accordion-toggle, .accordion-inner, .nav-stacked li > a {
+	padding-left:1px;
+}
+
+.caret {
+	color:#fff;
+}
+
+
+
+.panel {
+	padding-left:27px;
+    padding-right:27px;
+}
+
+/* end theme */
