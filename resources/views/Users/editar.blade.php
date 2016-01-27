@@ -1,13 +1,13 @@
-@extends('layouts.app')
-
+@extends('layouts.mackartHeader')
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Editar Perfil</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="/perfil/{{Auth::user()->id}}/atualizar">
+                    <form class="form-horizontal" role="form" method="POST" action="/perfil/{{Auth::user()->id}}/atualizar" enctype="multipart/form-data">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -51,6 +51,14 @@
                                 @endif
                             </div>
                         </div>
+                        <!--Foto do usuario-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Inserir Foto</label>
+
+                                        <div class="col-md-6">
+                                            <input type="file" class="form-control" name="foto" value="{{ old('foto') }}">
+                                        </div>
+                                    </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Nova senha</label>

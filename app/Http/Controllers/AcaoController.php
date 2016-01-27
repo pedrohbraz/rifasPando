@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
+use App\Rifa;
 use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
@@ -68,7 +69,7 @@ class AcaoController extends Controller
         $extension  = $arquivo->getClientOriginalExtension();
         $image_name = 'acao'.$acao->id;
         $path       = $arquivo->getRealPath();
-        
+
         Storage::put('acaos/'.$image_name.'.'.$extension,file_get_contents($path));
         $acao->imagem = '/image/acaos/'.$image_name;
         $acao->save();
@@ -99,7 +100,8 @@ class AcaoController extends Controller
     $hoje = getdate();
     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
     $acao = DB::table('acaos')->select('*')
-               ->where('data_sorteio','>=',$hoje2)->where('id_usuario','=',$id)
+               ->where('data_sorteio','>=',$hoje2)
+               ->where('user_id','=',$id)
                ->get();
 
     return view('Users.acoesOrgAndamento',compact('acao'));
@@ -107,9 +109,18 @@ class AcaoController extends Controller
 
    public function acaosCompAndamento($id)
    {
-  // $acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
-  // return view('Users.acoesOrgAndamento',compact('acao'));
-  }
+     $hoje = getdate();
+     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+
+     $rifas = DB::table('rifas')
+               ->join('acaos','rifas.acao_id','=','acaos.id')
+               ->where('rifas.id_comprador','=',$id)
+               ->where('acaos.data_sorteio','>',$hoje2)
+               ->get();
+
+      return view('Users.acoesCompAndamento',compact('rifas'));
+    }
+
 
 public function acaosOrgClosed($id)
   {
@@ -117,7 +128,8 @@ public function acaosOrgClosed($id)
     $hoje = getdate();
     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
     $acao = DB::table('acaos')->select('*')
-               ->where('data_sorteio','<',$hoje2)->where('id_usuario','=',$id)
+               ->where('data_sorteio','<',$hoje2)
+               ->where('user_id','=',$id)
                ->get();
     return view('Users.acoesOrgClosed',compact('acao'));
   }
@@ -125,9 +137,19 @@ public function acaosOrgClosed($id)
   public function acaosCompClosed($id)
     {
 
-        //$acao = DB::select('select * from acaos where id_usuario  = ?',[$id]);
-      //  return view('Users.acoesOrgClosed',compact('acao'));
-    }
+      $hoje = getdate();
+      $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+
+     $rifas = DB::table('rifas')
+               ->join('acaos','rifas.acao_id','=','acaos.id')
+               ->where('rifas.id_comprador','=',$id)
+               ->where('acaos.data_sorteio','<',$hoje2)
+               ->get();
+     //dd($rifas);
+
+      return view('Users.acoesCompClosed',compact('rifas'));
+     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -162,13 +184,21 @@ public function acaosOrgClosed($id)
         //
     }
 
+  //Metodo para gerar um valor aleatorio das rifas
+  public function gerarRifa(){
+    //
+
+
+  }
+
+
     public function paypal()
     {
         $PayPalConfig = array(
                     'Sandbox' => 'https://www.sandbox.paypal.com',
                     'APIUsername' => 'texugo.laranja@gmail.com',
                     'APIPassword' => '5774X35a',
-                    'APISignature' => $api_signature, 
+                    'APISignature' => $api_signature,
                     'PrintHeaders' => $print_headers,
                     'LogResults' => $log_results,
                     'LogPath' => $log_path,
@@ -196,18 +226,18 @@ public function acaosOrgClosed($id)
                             'surveyquestion' => '',                     // The survey question on the PayPal Review page.  50 char max.
                             'surveychoiceselected' => '',               // The survey response selected by the buyer on the PayPal Review page.  15 char max.
                             'allowedpaymentmethod' => '',               // The payment method type. Specify the value InstantPaymentOnly.
-                            'buttonsource' => ''                        // ID code for use by third-party apps to identify transactions in PayPal. 
+                            'buttonsource' => ''                        // ID code for use by third-party apps to identify transactions in PayPal.
                         );
-                                
+
         $Payments = array();
         $Payment = array(
                         'amt' => '100.00',                          // Required.  The total cost of the transaction to the customer.  If shipping cost and tax charges are known, include them in this value.  If not, this value should be the current sub-total of the order.
                         'currencycode' => 'USD',                    // A three-character currency code.  Default is USD.
-                        'itemamt' => '80.00',                       // Required if you specify itemized L_AMT fields. Sum of cost of all items in this order.  
+                        'itemamt' => '80.00',                       // Required if you specify itemized L_AMT fields. Sum of cost of all items in this order.
                         'shippingamt' => '15.00',                   // Total shipping costs for this order.  If you specify SHIPPINGAMT you mut also specify a value for ITEMAMT.
                         'insuranceoptionoffered' => '',         // If true, the insurance drop-down on the PayPal review page displays the string 'Yes' and the insurance amount.  If true, the total shipping insurance for this order must be a positive number.
                         'handlingamt' => '',                    // Total handling costs for this order.  If you specify HANDLINGAMT you mut also specify a value for ITEMAMT.
-                        'taxamt' => '5.00',                         // Required if you specify itemized L_TAXAMT fields.  Sum of all tax items in this order. 
+                        'taxamt' => '5.00',                         // Required if you specify itemized L_TAXAMT fields.  Sum of all tax items in this order.
                         'desc' => 'This is a test order.',                          // Description of items on the order.  127 char max.
                         'custom' => '',                         // Free-form field for your own use.  256 char max.
                         'invnum' => '',                         // Your own invoice or tracking number.  127 char max.
@@ -220,13 +250,13 @@ public function acaosOrgClosed($id)
                         'shiptozip' => '',                      // Required if shipping is included.  Postal code of shipping address.  20 char max.
                         'shiptocountry' => '',                  // Required if shipping is included.  Country code of shipping address.  2 char max.
                         'shiptophonenum' => '',                 // Phone number for shipping address.  20 char max.
-                        'notetext' => 'This is a test note before ever having left the web site.',                      // Note to the merchant.  255 char max.  
+                        'notetext' => 'This is a test note before ever having left the web site.',                      // Note to the merchant.  255 char max.
                         'allowedpaymentmethod' => '',           // The payment method type.  Specify the value InstantPaymentOnly.
-                        'paymentaction' => 'Sale',                  // How you want to obtain the payment.  When implementing parallel payments, this field is required and must be set to Order. 
-                        'paymentrequestid' => '',               // A unique identifier of the specific payment request, which is required for parallel payments. 
+                        'paymentaction' => 'Sale',                  // How you want to obtain the payment.  When implementing parallel payments, this field is required and must be set to Order.
+                        'paymentrequestid' => '',               // A unique identifier of the specific payment request, which is required for parallel payments.
                         'sellerpaypalaccountid' => ''           // A unique identifier for the merchant.  For parallel payments, this field is required and must contain the Payer ID or the email address of the merchant.
                         );
-                        
+
         $PaymentOrderItems = array();
         $Item = array(
                     'name' => 'Widget 123',                             // Item name. 127 char max.
@@ -244,8 +274,8 @@ public function acaosOrgClosed($id)
                     'itemwidthunit' => '',                  // The width unit of the item.
                     'itemlengthvalue' => '',                    // The length value of the item.
                     'itemlengthunit' => '',                     // The length unit of the item.
-                    'ebayitemnumber' => '',                     // Auction item number.  
-                    'ebayitemauctiontxnid' => '',           // Auction transaction ID number.  
+                    'ebayitemnumber' => '',                     // Auction item number.
+                    'ebayitemauctiontxnid' => '',           // Auction transaction ID number.
                     'ebayitemorderid' => '',                // Auction order ID number.
                     'ebayitemcartid' => ''                  // The unique identifier provided by eBay for this order from the buyer. These parameters must be ordered sequentially beginning with 0 (for example L_EBAYITEMCARTID0, L_EBAYITEMCARTID1). Character length: 255 single-byte characters
                     );
@@ -267,26 +297,26 @@ public function acaosOrgClosed($id)
                     'itemwidthunit' => '',                  // The width unit of the item.
                     'itemlengthvalue' => '',                    // The length value of the item.
                     'itemlengthunit' => '',                     // The length unit of the item.
-                    'ebayitemnumber' => '',                     // Auction item number.  
-                    'ebayitemauctiontxnid' => '',           // Auction transaction ID number.  
+                    'ebayitemnumber' => '',                     // Auction item number.
+                    'ebayitemauctiontxnid' => '',           // Auction transaction ID number.
                     'ebayitemorderid' => '',                // Auction order ID number.
                     'ebayitemcartid' => ''                  // The unique identifier provided by eBay for this order from the buyer. These parameters must be ordered sequentially beginning with 0 (for example L_EBAYITEMCARTID0, L_EBAYITEMCARTID1). Character length: 255 single-byte characters
                     );
         array_push($PaymentOrderItems, $Item);
 
         $Payment['order_items'] = $PaymentOrderItems;
-        array_push($Payments, $Payment);                
+        array_push($Payments, $Payment);
 
         $UserSelectedOptions = array(
                                      'shippingcalculationmode' => '',   // Describes how the options that were presented to the user were determined.  values are:  API - Callback   or   API - Flatrate.
                                      'insuranceoptionselected' => '',   // The Yes/No option that you chose for insurance.
-                                     'shippingoptionisdefault' => '',   // Is true if the buyer chose the default shipping option.  
+                                     'shippingoptionisdefault' => '',   // Is true if the buyer chose the default shipping option.
                                      'shippingoptionamount' => '',      // The shipping amount that was chosen by the buyer.
                                      'shippingoptionname' => '',        // Is true if the buyer chose the default shipping option...??  Maybe this is supposed to show the name..??
                                      );
 
         $PayPalRequest = array(
-                               'DECPFields' => $DECPFields, 
+                               'DECPFields' => $DECPFields,
                                'Payments' => $Payments
                                );
 

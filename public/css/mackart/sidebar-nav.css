@@ -1,10 +1,10 @@
 
 /* nav menu styles */
-#nav { 
-  display: block; 
-  width: 100%; 
+#nav {
+  display: block;
+  width: 100%;
   background:transparent;
-  margin: 10px auto; 
+  margin: 10px auto;
 }
 
 #nav{
@@ -18,8 +18,8 @@ padding: 0px;
   list-style-type: none;
 }
 
-#nav > li > a { 
-  display: block; 
+#nav > li > a {
+  display: block;
   padding: 10px 10px;
   color: #777;
   text-decoration: none;
@@ -27,7 +27,7 @@ padding: 0px;
   background-color: #fafafa;
 }
 
-#nav > li > a:hover, #nav > li > a.open { 
+#nav > li > a:hover, #nav > li > a.open {
   color: #666;
   background-color: #f3f3f3;
   border-bottom: 1px solid #ddd;
@@ -36,8 +36,8 @@ padding: 0px;
 #nav li ul { display: none; background: #fff; margin: 0px; padding-left:0px;}
 
 
-#nav li ul li a { 
-  display: block; 
+#nav li ul li a {
+  display: block;
   background: #fafafa;
   padding: 10px 0px;
   padding-left: 15px;

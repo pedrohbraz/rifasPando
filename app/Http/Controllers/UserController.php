@@ -11,7 +11,7 @@ use App\User;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
-
+use Storage;
 use App\Role;
 use App\Permission;
 
@@ -88,6 +88,18 @@ class UserController extends Controller
       $user->name = $request->name;
       $user->telefone = $request->telefone;
       $user->password = bcrypt($request->newpassword);
+
+      //Armazenamento da imagem
+      $arquivo    = $request->file('foto');
+    //  dd($arquivo);
+      $extension  = $arquivo->getClientOriginalExtension();
+      $image_name = 'user'.$user->id;
+      $path       = $arquivo->getRealPath();
+
+      Storage::put('users/'.$image_name.'.'.$extension,file_get_contents($path));
+      $user->foto = '/image/users/'.$image_name;
+
+
       //dd($user);
       $user->save();
 

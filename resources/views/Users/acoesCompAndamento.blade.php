@@ -1,4 +1,3 @@
-
 @extends('layouts.mackartHeader')
 
 @section('content')
@@ -11,16 +10,16 @@
                 <div class="panel-body">
 
                     <div class="row">
-                    @foreach($acao as $acao)
+                    @foreach($rifas as $rifas)
 
                      <div class="col-xs-6 col-md-3">
                         <div class="thumbnail">
-                         <a href="acao/{{$acao->id}}">
+                      <!--   <a href="acao/{{$acao->id}}">
                             <img src="{{$acao->imagem}}/190">
-                          </a>
+                          </a>-->
                           <div class="caption">
-                            <h3>{{$acao->nome_acao}}</h3>
-                            <p>R${{$acao->valor_rifa}},00</p>
+                            <h3>{{$rifas->acao_id}}</h3>
+                            <p>{{$rifas->nome_rifa}}</p>
                           </div>
                         </div>
                       </div>

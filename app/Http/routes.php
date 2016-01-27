@@ -41,7 +41,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/perfil',function(){
-      return view ('Users/TelaUser2');
+      return view ('Users/TelaUserTeste');
     });
 	  Route::get('/', 'AcaoController@index');
     Route::get('/home', 'HomeController@index');
@@ -51,7 +51,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('acao/inserir', 'AcaoController@store');
     Route::get("/acao/{usuario}/organizadas/andamento/exibir",'AcaoController@acaosOrgAndamento');
     Route::get("/acao/{usuario}/organizadas/fechadas/exibir",'AcaoController@acaosOrgClosed');
-    Route::get("/acao/{usuario}/compradas/andamento/exibir",'AcaoController@acaosCompClosed');
+    Route::get("/acao/{usuario}/compradas/andamento/exibir",'AcaoController@acaosCompAndamento');
     Route::get("/acao/{usuario}/compradas/fechadas/exibir",'AcaoController@acaosCompClosed');
     //Atualização de perfil--usando controlador de usuario
 
@@ -70,7 +70,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get("/acao",'AcaoController@index');
     Route::get('acao/inserir', 'AcaoController@create');
     Route::post('acao/inserir', 'AcaoController@store');
-	Route::get('acao/{id}', 'AcaoController@show');
+  	Route::get('acao/{id}', 'AcaoController@show');
 
 	Route::post('acao/{id}', 'MensagemController@store');
 
