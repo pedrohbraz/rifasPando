@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\MensagemAdm;
+use Auth;
 
 class MensagemADMController extends Controller
 {
@@ -17,7 +19,8 @@ class MensagemADMController extends Controller
     public function index()
     {
         //
-        return view('mensagemADM');
+        $mensagens = MensagemAdm::where('is_active','1')->get();
+        return view('admin/tela_admin',compact('mensagens'));
     }
 
     /**
@@ -28,6 +31,7 @@ class MensagemADMController extends Controller
     public function create()
     {
         //
+        return view('admin/mensagemADM_inserir');
     }
 
     /**
@@ -38,6 +42,17 @@ class MensagemADMController extends Controller
      */
     public function store(Request $request)
     {
+        $mensagem = new MensagemAdm;
+        $mensagem->user_id      = Auth::user()->id;
+        $mensagem->titulo       = $request->titulo;
+        $mensagem->descricao    = $request->descricao;
+        $mensagem->active_until = $request->active_until;
+
+        $mensagem->save();
+
+        $mensagens = MensagemAdm::where('is_active','=','1');
+        return view('admin/tela_admin', compact('mensagens'));
+
         //
     }
 
