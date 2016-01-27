@@ -12,6 +12,17 @@ use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
 use Storage;
+//PayPal
+use PayPal\Api\Amount;
+use PayPal\Api\CreditCard;
+use PayPal\Api\Details;
+use PayPal\Api\FundingInstrument;
+use PayPal\Api\Item;
+use PayPal\Api\ItemList;
+use PayPal\Api\Payer;
+use PayPal\Api\Payment;
+use PayPal\Api\Transaction;
+use PayPal\Api\RedirectUrls;
 
 class AcaoController extends Controller
 {
@@ -184,12 +195,6 @@ public function acaosOrgClosed($id)
         //
     }
 
-  //Metodo para gerar um valor aleatorio das rifas
-  public function gerarRifa(){
-    //
-
-
-  }
 
 
     public function paypal()
@@ -324,5 +329,107 @@ public function acaosOrgClosed($id)
 
         echo '<pre />';
         print_r($_SESSION['PayPalResult']);
+
+    public function carrinhoDeCompras()
+    {
+        return view('shopping_cart');
+    }
+
+    public function checkout(Request $request)
+    {
+        $rifa = $request;
+        return view('checkout',compact('rifa'));
+    }
+
+    public function paypal(Request $request)
+    {
+        $apiContext = new \PayPal\Rest\ApiContext(
+            new \PayPal\Auth\OAuthTokenCredential(
+                'ATGFkB2ea6f0pM92jwBqkZ17kxsiftDvUhLHyXson-10AUs7n5TocpEc0sis7Cl_fMIxS8uQO04kPP8Q',     // ClientID
+                'ENP_JPkc3e4Yl6VeHZ_0vgvEh0SYdtzkMvw_VGBrr2nJ67sg9RuKB_YF7y_k4bj-4t2U-_23MaAGV3vD'      // ClientSecret
+            )
+        );
+
+        // ### Payer
+
+        $payer = new Payer();
+        $payer->setPaymentMethod("paypal");
+
+        // ### Itemized information
+
+        $item1 = new Item();
+        $item1->setName($request->name)
+            ->setCurrency('BRL')
+            ->setQuantity($request->quantidade)
+            ->setSku("123123") // Similar to `item_number` in Classic API
+            ->setPrice($request->valor);
+        $item2 = new Item();
+
+
+        $itemList = new ItemList();
+        $itemList->addItem($item1);
+
+        // ### Additional payment details
+        $shipping = 0.1 * $request->total;
+        $tax      = 0.08 * $request->total;
+
+        $details = new Details();
+        $details->setShipping($shipping)
+            ->setTax($tax)
+            ->setSubtotal($request->total);
+
+        // ### Amount
+        $amount = new Amount();
+        $amount->setCurrency("BRL")
+            ->setTotal($request->total + $tax + $shipping)
+            ->setDetails($details);
+
+        // ### Transaction
+
+        $transaction = new Transaction();
+        $transaction->setAmount($amount)
+            ->setItemList($itemList)
+            ->setDescription("Payment description")
+            ->setInvoiceNumber(uniqid());
+
+        // ### Redirect urls
+
+        $baseUrl = "http://rifas.pando";
+        $redirectUrls = new RedirectUrls();
+        $redirectUrls->setReturnUrl("$baseUrl")
+            ->setCancelUrl("$baseUrl/ExecutePayment.php?success=false");
+
+        // ### Payment
+
+        $payment = new Payment();
+        $payment->setIntent("sale")
+            ->setPayer($payer)
+            ->setRedirectUrls($redirectUrls)
+            ->setTransactions(array($transaction));
+
+
+        // For Sample Purposes Only.
+        $request = clone $payment;
+
+        // ### Create Payment
+
+        try {
+            $payment->create($apiContext);
+        } catch (Exception $ex) {
+            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
+            echo("Erro. Nao foi possivel criar o pagamento nesta sessao.");
+            exit(1);
+        }
+
+        // ### Get redirect url
+        // The API response provides the url that you must redirect
+        // the buyer to. Retrieve the url from the $payment->getApprovalLink()
+        // method
+        $approvalUrl = $payment->getApprovalLink();
+
+        // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
+        echo("Created Payment Using PayPal. Please visit the URL to Approve.");
+        return redirect($approvalUrl);
+
     }
 }

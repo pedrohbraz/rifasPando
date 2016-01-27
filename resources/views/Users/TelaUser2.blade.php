@@ -1,3 +1,4 @@
+
 @extends('layouts.mackartHeader')
 
 @section('content')

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<!-- Title here -->
-		<title>MacKart</title>
+		<title>Rifas Online</title>
 		<!-- Description, Keywords and Author -->
 		<meta name="description" content="Your description">
 		<meta name="keywords" content="Your,Keywords">
@@ -13,15 +13,19 @@
 
 		<!-- Styles -->
 		<!-- Bootstrap CSS -->
-		<link href="../css/mackart/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/mackart/bootstrap.min.css" rel="stylesheet">
 		<!-- Flex slider -->
-		<link href="../css/mackart/flexslider.css" rel="stylesheet">
-		<link href="../css/mackart/owl.carousel.css" rel="stylesheet">
-		<link href="../css/mackart/font-awesome.min.css" rel="stylesheet">
+
+		<link href="../../css/mackart/flexslider.css" rel="stylesheet">
+		<link href="../../css/mackart/owl.carousel.css" rel="stylesheet">
+		<link href="../../css/mackart/font-awesome.min.css" rel="stylesheet">
+
 		<!-- Custom CSS -->
-		<link href="../css/mackart/style.css" rel="stylesheet">
+		<link href="../../css/mackart/style.css" rel="stylesheet">
 		<!-- Stylesheet for Color -->
-		<link href="../css/mackart/red.css" rel="stylesheet">
+
+		<link href="../../css/mackart/red.css" rel="stylesheet">
+
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images-mackart/favicon/favicon.png">
@@ -36,15 +40,15 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-						<h4>Shopping Cart</h4>
+						<h4>Carrinho de Rifas</h4>
 					</div>
 					<div class="modal-body">
 						<table class="table table-striped tcart">
 							<thead>
 								<tr>
-								  <th>Name</th>
-								  <th>Quantity</th>
-								  <th>Price</th>
+								  <th>Nome</th>
+								  <th>Quantidade</th>
+								  <th>Valor</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -73,7 +77,7 @@
 					</div>
 					<div class="modal-footer">
 						<a href="index.html" class="btn">Continue Shopping</a>
-						<a href="checkout.html" class="btn btn-danger">Checkout</a>
+						<a href="carrinho" class="btn btn-danger">Checkout</a>
 					</div>
 				</div>
 			</div>
@@ -236,8 +240,18 @@
 								</a> -<span class="bold">$25</span>
 							</span>
 							<!-- Login and Register link -->
-							<span class="lr"><a href="#login" role="button" data-toggle="modal">Login</a>
-							or <a href="#register" role="button" data-toggle="modal">Register</a></span>
+							<span class="lr">
+							@if(Auth::user()==null)
+								<a href="/login" role="button" data-toggle="modal">Login</a>
+								or <a href="/register" role="button" data-toggle="modal">Register</a> </span>
+							@else
+								<a href="/logout" role="button" data-toggle="modal">logout</a> </span>
+								@if(Auth::user()->hasRole('admin'))
+									<br /><br />
+									<span class="lr"><a href="/admin" role="button" data-toggle="modal">Painel do Admin</a></span>
+								@endif
+							@endif
+
 						</div>
 
 					</div>

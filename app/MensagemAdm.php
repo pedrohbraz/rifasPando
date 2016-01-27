@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MensagemADM extends Model
+class MensagemAdm extends Model
 {
     //
     public function user()
