@@ -48,29 +48,33 @@
               	<div class="col col-sm-8">
                   <img src="" class="img-responsive">
                 </div>
-        	<!--	<div class="col col-sm-4">
-                  <img src="//placehold.it/400x180/FF3333/FFF" class="img-responsive">
-                  <h4>Aside</h4>
+        		<div class="col col-sm-4">
+
+                  <img src="src={{Auth::user()->foto}}/190" class="img-responsive">
+                <!--  <h4>Aside</h4>
                   <hr>
                   <img src="//placehold.it/400x180/FF3333/FFF" class="img-responsive">
-                  <h4>Aside 2</h4>
-              	</div>-->
+                  <h4>Aside 2</h4>-->
+              	</div>
               </div>
 
-              	<h2>Content</h2>
+              	<h2>Dados Pessoais</h2>
                 <label class="nome">Nome:</label>
-                <div class="">
+
                     <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}" readonly="readonly">
                     <label class="nome">Email:</label>
-                    <div class="">
+
                         <input type="text" class="form-control" name="email" value="{{ Auth::user()->email }}" readonly="readonly">
                         <label class="nome">Telefone:</label>
-                        <div class="">
+
                             <input type="text" class="form-control" name="telefone" value="{{ Auth::user()->telefone }}" readonly="readonly">
                             <label class="nome">Endereco:</label>
-                            <div class="">
-                                <input type="text" class="form-control" name="endereco" value="{{ Auth::user()->endereco }}" readonly="readonly">
-             	</div>
+
+													 <input type="text" class="form-control" name="endereco" value="{{ Auth::user()->endereco }}" readonly="readonly">
+                          <label class="nome">Email Paypal:</label>
+
+	 														<input type="text" class="form-control" name="email_paypal" value="{{ Auth::user()->email_paypal }}" readonly="readonly">
+						 	</div>
       	</div>
   	</div>
 </div>

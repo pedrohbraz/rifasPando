@@ -88,7 +88,7 @@ class UserController extends Controller
       $user->name = $request->name;
       $user->telefone = $request->telefone;
       $user->password = bcrypt($request->newpassword);
-
+      $user->email_paypal = $request->email_paypal;
       //Armazenamento da imagem
       $arquivo    = $request->file('foto');
     //  dd($arquivo);
@@ -98,11 +98,9 @@ class UserController extends Controller
 
       Storage::put('users/'.$image_name.'.'.$extension,file_get_contents($path));
       $user->foto = '/image/users/'.$image_name;
-
-
       //dd($user);
       $user->save();
-
+       return redirect('perfil');
     }
 
     /**

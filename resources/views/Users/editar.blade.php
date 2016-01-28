@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 @extends('layouts.mackartHeader')
-=======
-@extends('layouts.mackart')
-
->>>>>>> master
 @section('content')
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Editar Perfil {{getcwd()}}</div>
+                <div class="panel-heading">Editar Perfil</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="/perfil/{{Auth::user()->id}}/atualizar" enctype="multipart/form-data">
                         {!! csrf_field() !!}
@@ -56,6 +51,21 @@
                                 @endif
                             </div>
                         </div>
+
+                        <!------Campo email Paypal-------------->
+                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                 <label class="col-md-4 control-label">E-Mail Paypal</label>
+
+                                 <div class="col-md-6">
+                                     <input type="email" class="form-control" name="email_paypal" value="{{Auth::user()->email_paypal }}">
+
+                                     @if ($errors->has('email_paypal'))
+                                         <span class="help-block">
+                                             <strong>{{ $errors->first('email_paypal') }}</strong>
+                                         </span>
+                                     @endif
+                                 </div>
+                             </div>
                         <!--Foto do usuario-->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Inserir Foto</label>
