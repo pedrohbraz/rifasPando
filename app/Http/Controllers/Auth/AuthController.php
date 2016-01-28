@@ -71,10 +71,10 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
             'telefone'=>$data['telefone'],
             'endereco'=>$data['endereco'],
-
+            'email_paypal'=>$data['email_paypal'],
         ]);
-        
-        /*        
+
+        /*
         dd($user);
 
         $user = new User;
@@ -89,6 +89,6 @@ class AuthController extends Controller
         $user->attachRole($role);
 
         return $user;
-        
+
     }
 }

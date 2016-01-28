@@ -198,6 +198,7 @@ public function acaosOrgClosed($id)
     {
         //
     }
+
     public function carrinhoDeCompras()
     {
         return view('shopping_cart');

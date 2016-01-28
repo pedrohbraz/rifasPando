@@ -280,17 +280,8 @@
 								<li><a href="index-rslider.html">Home #2</a></li>
 							</ul>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="myaccount.html">My Account</a></li>
-								<li><a href="view-cart.html">View Cart</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
-								<li><a href="wish-list.html">Wish List</a></li>
-								<li><a href="order-history.html">Order History</a></li>
-								<li><a href="edit-profile.html">Edit Profile</a></li>
-								<li><a href="confirmation.html">Confirmation</a></li>
-							</ul>
+						  <li>
+							<a href="/perfil">Perfil</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>

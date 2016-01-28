@@ -236,8 +236,18 @@
 								</a> -<span class="bold">$25</span>
 							</span>
 							<!-- Login and Register link -->
-							<span class="lr"><a href="#login" role="button" data-toggle="modal">Login</a>
-							or <a href="#register" role="button" data-toggle="modal">Register</a></span>
+							<span class="lr">
+							@if(Auth::user()==null)
+								<a href="/login" role="button" data-toggle="modal">Login</a>
+								or <a href="/register" role="button" data-toggle="modal">Register</a> </span>
+							@else
+								<a href="/logout" role="button" data-toggle="modal">logout</a> </span>
+								@if(Auth::user()->hasRole('admin'))
+									<br /><br />
+									<span class="lr"><a href="/admin" role="button" data-toggle="modal">Painel do Admin</a></span>
+								@endif
+							@endif
+
 						</div>
 
 					</div>
@@ -266,17 +276,9 @@
 								<li><a href="index-rslider.html">Home #2</a></li>
 							</ul>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="myaccount.html">My Account</a></li>
-								<li><a href="view-cart.html">View Cart</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
-								<li><a href="wish-list.html">Wish List</a></li>
-								<li><a href="order-history.html">Order History</a></li>
-								<li><a href="edit-profile.html">Edit Profile</a></li>
-								<li><a href="confirmation.html">Confirmation</a></li>
-							</ul>
+						<li>
+							<a href="/perfil">Perfil</a>
+
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
