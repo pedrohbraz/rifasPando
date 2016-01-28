@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="22586fe2-7a51-4da9-997c-7db08fafd635" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/images/facebook.png" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/images/facebook.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/animated-overlay.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/images/animated-overlay.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/buttons.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/images/buttons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/toolbar.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/images/toolbar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_flat_75_ffffff_40x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_75_dadada_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_222222_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_228ef1_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_2e83ff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_454545_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_888888_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ef8c08_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ffd27a_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/public/css/macadmin/images/ui-icons_ffffff_256x240.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/back.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/black.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/black.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/cleditor/buttons.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/cleditor/buttons.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/cleditor/toolbar.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/cleditor/toolbar.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/cream.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/cream.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_disabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_enabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_enabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_enabled_hover.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/back_enabled_hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_disabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_enabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_enabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_enabled_hover.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/forward_enabled_hover.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_asc.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_asc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_asc_disabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_asc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_both.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_both.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_desc.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_desc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_desc_disabled.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/data-tables/sort_desc_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/delete.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/delete.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/favicon/favicon.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/favicon/favicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/android.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/android.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/chrome.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/chrome.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/firefox.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/firefox.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/ie.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/ie.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/ios.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/ios.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/linux.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/linux.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/mac.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/mac.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/metro.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/metro.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/opera.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/opera.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/safari.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/safari.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/icons/windows.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/icons/windows.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/ie-spacer.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/ie-spacer.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/main-back.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/main-back.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s1.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s10.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s10.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s2.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s3.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s4.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s5.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s6.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s7.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s8.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/s9.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/s9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t1.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t10.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t10.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t2.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t3.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t4.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t5.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t6.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t7.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t8.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/photos/t9.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/photos/t9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/btnNext.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/btnNext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/btnPrevious.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/contentPattern.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/contentPattern.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/default_thumbnail.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/default_thumbnail.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_rounded/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/btnNext.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/btnNext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/btnPrevious.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/btnPrevious.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/contentPattern.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/contentPattern.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/default_thumbnail.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/default_thumbnail.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/dark_square/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/default_thumb.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/default_thumb.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_next.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_next.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_prev.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_prev.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_x.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_y.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/default/sprite_y.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/btnNext.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/btnNext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/btnPrevious.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/btnPrevious.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternBottom.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternBottom.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternLeft.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternLeft.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternRight.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternRight.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternTop.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/contentPatternTop.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/default_thumbnail.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/default_thumbnail.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/facebook/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/btnNext.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/btnNext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/btnPrevious.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/btnPrevious.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/default_thumbnail.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/default_thumbnail.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_rounded/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/btnNext.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/btnNext.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/btnPrevious.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/btnPrevious.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/default_thumbnail.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/default_thumbnail.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/loader.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/sprite.png" afterPath="$PROJECT_DIR$/public/css/macadmin/img/prettyPhoto/light_square/sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/star.gif" afterPath="$PROJECT_DIR$/public/css/macadmin/img/star.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/user-big.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/user-big.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/img/user.jpg" afterPath="$PROJECT_DIR$/public/css/macadmin/img/user.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.eot" afterPath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.ttf" afterPath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.woff" afterPath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_large_left.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_large_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_large_right.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_large_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_left.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_left2.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_left2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_right.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrow_right2.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrow_right2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrowleft.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrowleft.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrowright.png" afterPath="$PROJECT_DIR$/public/images-mackart/arrowright.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/arrows.psd" afterPath="$PROJECT_DIR$/public/images-mackart/arrows.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bg_direction_nav.png" afterPath="$PROJECT_DIR$/public/images-mackart/bg_direction_nav.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/black50.png" afterPath="$PROJECT_DIR$/public/images-mackart/black50.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/boxed_bgtile.png" afterPath="$PROJECT_DIR$/public/images-mackart/boxed_bgtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bullet.png" afterPath="$PROJECT_DIR$/public/images-mackart/bullet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bullet_boxed.png" afterPath="$PROJECT_DIR$/public/images-mackart/bullet_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bullets.png" afterPath="$PROJECT_DIR$/public/images-mackart/bullets.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bullets.psd" afterPath="$PROJECT_DIR$/public/images-mackart/bullets.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/bullets2.png" afterPath="$PROJECT_DIR$/public/images-mackart/bullets2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/coloredbg.png" afterPath="$PROJECT_DIR$/public/images-mackart/coloredbg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/cream.png" afterPath="$PROJECT_DIR$/public/images-mackart/cream.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/deal.png" afterPath="$PROJECT_DIR$/public/images-mackart/deal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/favicon/favicon.png" afterPath="$PROJECT_DIR$/public/images-mackart/favicon/favicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/footer.png" afterPath="$PROJECT_DIR$/public/images-mackart/footer.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/grain.png" afterPath="$PROJECT_DIR$/public/images-mackart/grain.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/gridtile.png" afterPath="$PROJECT_DIR$/public/images-mackart/gridtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/gridtile_3x3.png" afterPath="$PROJECT_DIR$/public/images-mackart/gridtile_3x3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/gridtile_3x3_white.png" afterPath="$PROJECT_DIR$/public/images-mackart/gridtile_3x3_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/gridtile_white.png" afterPath="$PROJECT_DIR$/public/images-mackart/gridtile_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/hot.png" afterPath="$PROJECT_DIR$/public/images-mackart/hot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/icon-psd.psd" afterPath="$PROJECT_DIR$/public/images-mackart/icon-psd.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/large_left.png" afterPath="$PROJECT_DIR$/public/images-mackart/large_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/large_right.png" afterPath="$PROJECT_DIR$/public/images-mackart/large_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/loader.gif" afterPath="$PROJECT_DIR$/public/images-mackart/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/loader2.gif" afterPath="$PROJECT_DIR$/public/images-mackart/loader2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/navigdots.png" afterPath="$PROJECT_DIR$/public/images-mackart/navigdots.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/navigdots_bgtile.png" afterPath="$PROJECT_DIR$/public/images-mackart/navigdots_bgtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/new.png" afterPath="$PROJECT_DIR$/public/images-mackart/new.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/page-head.png" afterPath="$PROJECT_DIR$/public/images-mackart/page-head.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/payment/americanexpress.gif" afterPath="$PROJECT_DIR$/public/images-mackart/payment/americanexpress.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/payment/discover.gif" afterPath="$PROJECT_DIR$/public/images-mackart/payment/discover.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/payment/mastercard.gif" afterPath="$PROJECT_DIR$/public/images-mackart/payment/mastercard.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/payment/paypal.gif" afterPath="$PROJECT_DIR$/public/images-mackart/payment/paypal.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/payment/visa.gif" afterPath="$PROJECT_DIR$/public/images-mackart/payment/visa.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/1-1.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/1-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/1-2.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/1-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/1-3.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/1-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/1-4.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/1-4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/1-5.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/1-5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/10.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/11.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/12.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/13.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/2.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/3.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/4.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/5.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/6.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/7.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/8.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/9.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/promo-1.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/promo-1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/promo-2.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/promo-2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/promo-3.png" afterPath="$PROJECT_DIR$/public/images-mackart/photos/promo-3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/slider1.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/slider1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/slider2.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/slider2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/slider3.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/slider3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/slider4.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/slider4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/slider5.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/slider5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/user-big.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/user-big.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/photos/user-small.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/photos/user-small.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/sale.png" afterPath="$PROJECT_DIR$/public/images-mackart/sale.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/sep.png" afterPath="$PROJECT_DIR$/public/images-mackart/sep.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/shadow1.png" afterPath="$PROJECT_DIR$/public/images-mackart/shadow1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/shadow2.png" afterPath="$PROJECT_DIR$/public/images-mackart/shadow2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/shadow3.png" afterPath="$PROJECT_DIR$/public/images-mackart/shadow3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/1.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/2.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/3.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/girl.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/girl.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/s31.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/s31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/s32.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/s32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/s33.png" afterPath="$PROJECT_DIR$/public/images-mackart/slider/s33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/slider/slide-back.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/slider/slide-back.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/small_arrows.psd" afterPath="$PROJECT_DIR$/public/images-mackart/small_arrows.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/small_left.png" afterPath="$PROJECT_DIR$/public/images-mackart/small_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/small_left_boxed.png" afterPath="$PROJECT_DIR$/public/images-mackart/small_left_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/small_right.png" afterPath="$PROJECT_DIR$/public/images-mackart/small_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/small_right_boxed.png" afterPath="$PROJECT_DIR$/public/images-mackart/small_right_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/timer.png" afterPath="$PROJECT_DIR$/public/images-mackart/timer.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/timerdot.png" afterPath="$PROJECT_DIR$/public/images-mackart/timerdot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/transparent.jpg" afterPath="$PROJECT_DIR$/public/images-mackart/transparent.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images-mackart/white50.png" afterPath="$PROJECT_DIR$/public/images-mackart/white50.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_large_left.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_large_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_large_right.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_large_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_left.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_left2.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_left2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_right.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrow_right2.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrow_right2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrowleft.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrowleft.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrowright.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrowright.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/arrows.psd" afterPath="$PROJECT_DIR$/resources/assets/mackart/arrows.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/black50.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/black50.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/boxed_bgtile.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/boxed_bgtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/bullet.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/bullet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/bullet_boxed.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/bullet_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/bullets.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/bullets.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/bullets.psd" afterPath="$PROJECT_DIR$/resources/assets/mackart/bullets.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/bullets2.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/bullets2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/coloredbg.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/coloredbg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/grain.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/grain.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/gridtile.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/gridtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/gridtile_3x3.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/gridtile_3x3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/gridtile_3x3_white.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/gridtile_3x3_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/gridtile_white.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/gridtile_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/large_left.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/large_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/large_right.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/large_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/loader.gif" afterPath="$PROJECT_DIR$/resources/assets/mackart/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/loader2.gif" afterPath="$PROJECT_DIR$/resources/assets/mackart/loader2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/navigdots.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/navigdots.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/navigdots_bgtile.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/navigdots_bgtile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/shadow1.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/shadow1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/shadow2.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/shadow2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/shadow3.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/shadow3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/small_arrows.psd" afterPath="$PROJECT_DIR$/resources/assets/mackart/small_arrows.psd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/small_left.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/small_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/small_left_boxed.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/small_left_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/small_right.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/small_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/small_right_boxed.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/small_right_boxed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/timer.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/timer.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/timerdot.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/timerdot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/transparent.jpg" afterPath="$PROJECT_DIR$/resources/assets/mackart/transparent.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/assets/mackart/white50.png" afterPath="$PROJECT_DIR$/resources/assets/mackart/white50.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AcaoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AcaoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/MensagemADMController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/MensagemADMController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Permission.php" afterPath="$PROJECT_DIR$/app/Permission.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Role.php" afterPath="$PROJECT_DIR$/app/Role.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/paypal.php" afterPath="$PROJECT_DIR$/config/paypal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_01_21_141452_entrust_setup_tables.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_21_141452_entrust_setup_tables.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_01_27_133537_create_mensagemAdms_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_01_27_133537_create_mensagemAdms_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/PermissionRoleTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/PermissionRoleTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/RoleUserTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/RoleUserTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/bootstrap/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/buttons.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/buttons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/calendar.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/calendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/forms.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/forms.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/stats.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/stats.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/styles.css" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/calendar.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/custom.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/editors.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/editors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/forms.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/forms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/stats.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/stats.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/tables.js" afterPath="$PROJECT_DIR$/public/assets/bootstrap-admin-theme3/js/tables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/public/css/macadmin/bootstrap-datetimepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/macadmin/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/macadmin/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/css/macadmin/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/css/macadmin/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/fullcalendar.css" afterPath="$PROJECT_DIR$/public/css/macadmin/fullcalendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/jquery-ui.css" afterPath="$PROJECT_DIR$/public/css/macadmin/jquery-ui.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/jquery-ui.min.css" afterPath="$PROJECT_DIR$/public/css/macadmin/jquery-ui.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/jquery.cleditor.css" afterPath="$PROJECT_DIR$/public/css/macadmin/jquery.cleditor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/jquery.dataTables.css" afterPath="$PROJECT_DIR$/public/css/macadmin/jquery.dataTables.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/jquery.onoff.css" afterPath="$PROJECT_DIR$/public/css/macadmin/jquery.onoff.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/prettyPhoto.css" afterPath="$PROJECT_DIR$/public/css/macadmin/prettyPhoto.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/rateit.css" afterPath="$PROJECT_DIR$/public/css/macadmin/rateit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/style.css" afterPath="$PROJECT_DIR$/public/css/macadmin/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/macadmin/widgets.css" afterPath="$PROJECT_DIR$/public/css/macadmin/widgets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/blue.css" afterPath="$PROJECT_DIR$/public/css/mackart/blue.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/bootstrap.css" afterPath="$PROJECT_DIR$/public/css/mackart/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/mackart/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/brown.css" afterPath="$PROJECT_DIR$/public/css/mackart/brown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/flexslider.css" afterPath="$PROJECT_DIR$/public/css/mackart/flexslider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/font-awesome.min.css" afterPath="$PROJECT_DIR$/public/css/mackart/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.svg" afterPath="$PROJECT_DIR$/public/css/mackart/fonts/flexslider-icon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/green.css" afterPath="$PROJECT_DIR$/public/css/mackart/green.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/orange.css" afterPath="$PROJECT_DIR$/public/css/mackart/orange.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/owl.carousel.css" afterPath="$PROJECT_DIR$/public/css/mackart/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/red.css" afterPath="$PROJECT_DIR$/public/css/mackart/red.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/settings.css" afterPath="$PROJECT_DIR$/public/css/mackart/settings.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/sidebar-nav.css" afterPath="$PROJECT_DIR$/public/css/mackart/sidebar-nav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/style.css" afterPath="$PROJECT_DIR$/public/css/mackart/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/mackart/yellow.css" afterPath="$PROJECT_DIR$/public/css/mackart/yellow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css2/bootstrap.css" afterPath="$PROJECT_DIR$/public/css2/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css2/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css2/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css2/simple-sidebar.css" afterPath="$PROJECT_DIR$/public/css2/simple-sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/bootstrap-datetimepicker.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/bootstrap-datetimepicker.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/macadmin/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/charts.js" afterPath="$PROJECT_DIR$/public/js/macadmin/charts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/custom.js" afterPath="$PROJECT_DIR$/public/js/macadmin/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/excanvas.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/excanvas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/filter.js" afterPath="$PROJECT_DIR$/public/js/macadmin/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/fullcalendar.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/fullcalendar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/html5shiv.js" afterPath="$PROJECT_DIR$/public/js/macadmin/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery-ui.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery-ui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.cleditor.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.cleditor.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.dataTables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.pie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.resize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.stack.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.flot.stack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.noty.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.noty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.onoff.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.onoff.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.prettyPhoto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.rateit.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.rateit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/jquery.slimscroll.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/jquery.slimscroll.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/bottom.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/bottom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomCenter.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomCenter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomLeft.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomRight.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/bottomRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/center.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/center.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/centerLeft.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/centerLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/centerRight.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/centerRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/inline.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/inline.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/top.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/top.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/topCenter.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/topCenter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/topLeft.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/topLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/layouts/topRight.js" afterPath="$PROJECT_DIR$/public/js/macadmin/layouts/topRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/moment.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/moment.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/respond.min.js" afterPath="$PROJECT_DIR$/public/js/macadmin/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/sparklines.js" afterPath="$PROJECT_DIR$/public/js/macadmin/sparklines.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/themes/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/macadmin/themes/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/themes/default.js" afterPath="$PROJECT_DIR$/public/js/macadmin/themes/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/macadmin/themes/relax.js" afterPath="$PROJECT_DIR$/public/js/macadmin/themes/relax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/mackart/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/mackart/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/custom.js" afterPath="$PROJECT_DIR$/public/js/mackart/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/filter.js" afterPath="$PROJECT_DIR$/public/js/mackart/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/html5shiv.js" afterPath="$PROJECT_DIR$/public/js/mackart/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/jquery.flexslider-min.js" afterPath="$PROJECT_DIR$/public/js/mackart/jquery.flexslider-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/jquery.js" afterPath="$PROJECT_DIR$/public/js/mackart/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/jquery.themepunch.revolution.min.js" afterPath="$PROJECT_DIR$/public/js/mackart/jquery.themepunch.revolution.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/jquery.themepunch.tools.min.js" afterPath="$PROJECT_DIR$/public/js/mackart/jquery.themepunch.tools.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/nav.js" afterPath="$PROJECT_DIR$/public/js/mackart/nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/owl.carousel.min.js" afterPath="$PROJECT_DIR$/public/js/mackart/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/mackart/respond.min.js" afterPath="$PROJECT_DIR$/public/js/mackart/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/perfilUser/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/perfilUser/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/perfilUser/css/styles.css" afterPath="$PROJECT_DIR$/public/perfilUser/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/perfilUser/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/perfilUser/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/perfilUser/js/scripts.js" afterPath="$PROJECT_DIR$/public/perfilUser/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/TelaUser2.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/TelaUser2.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/TelaUserTeste.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/TelaUserTeste.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/acoesCompAndamento.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/acoesCompAndamento.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/acoesCompClosed.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/acoesCompClosed.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/acoesOrgAndamento.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/acoesOrgAndamento.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/acoesOrgClosed.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/acoesOrgClosed.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/editar.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/editar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Users/tela_admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/Users/tela_admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/acaos.blade.php" afterPath="$PROJECT_DIR$/resources/views/acaos.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/mensagemADM_inserir.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/mensagemADM_inserir.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/tela_admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/tela_admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/editar.blade.php" afterPath="$PROJECT_DIR$/resources/views/editar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/footer.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/footer.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/master.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/bootstrap_admin3/menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/mackart.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/mackart.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/mackartFooter.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/mackartFooter.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/mackartHeader.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/mackartHeader.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/perfilUser.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/perfilUser.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/mensagemADM.blade.php" afterPath="$PROJECT_DIR$/resources/views/mensagemADM.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" afterPath="$PROJECT_DIR$/resources/views/shopping_cart.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+    </list>
+    <ignored path="rifasPando.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="rifasPando" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.518518">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcaoController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AcaoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30677965">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acaos.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/acaos.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.185185">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="14.62963">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mensagem.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Mensagem.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MensagemAdm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/MensagemAdm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="33.555557">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vendor/zizaco/entrust/src/Entrust/EntrustServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/MensagemADMController.php" />
+        <option value="$PROJECT_DIR$/resources/views/acaos.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AcaoController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rifasPando" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22586fe2-7a51-4da9-997c-7db08fafd635" name="Default" comment="" />
+      <created>1453982329756</created>
+      <option name="number" value="Default" />
+      <updated>1453982329756</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25418326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vendor/zizaco/entrust/src/Entrust/EntrustServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.888889">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/RolesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1111112">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/RoleUserTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/PermissionRoleTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8116711">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/PermissionsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="33.555557">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/mackartFooter.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="45.703705">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/mackart.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/mackartHeader.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/acao.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.172413">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.518518">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09152542">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MensagemADMController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6118644">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pando-kanban/resources/views/companies/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pando-kanban/resources/views/companies/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4694915">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pando-kanban/resources/views/employees/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3983051">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pando-kanban/resources/views/employees/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3101695">
+          <caret line="39" column="89" selection-start-line="39" selection-start-column="89" selection-end-line="39" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/MensagemAdm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4847943">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../pando-kanban/app/Http/Controllers/EmployeesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.62963">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Mensagem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/acaos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.185185">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AcaoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30677965">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
