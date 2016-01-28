@@ -64,7 +64,7 @@ class MensagemADMController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MensagemAdm;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,6 +13,7 @@ use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
 use Storage;
+use App\User;
 //PayPal
 use PayPal\Api\Amount;
 use PayPal\Api\CreditCard;
@@ -35,7 +37,9 @@ class AcaoController extends Controller
     {
         //Obtem todas as acoes para serem listadas
         $acaos = Acao::all();
-        return view('acaos',compact('acaos'));
+        $mensagem = MensagemAdm::all()->last();
+
+        return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
     }
 
     /**
