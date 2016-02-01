@@ -14,6 +14,7 @@
                       </div>
                       <div class="col-xs-6 col-md-4">
                             <h3>{{$acao->nome_acao}}</h3>
+                            <p>{{$acao->user->name }}</p>
                             <p>R${{$acao->valor_rifa}},00</p>
                             <p>{{$acao->descricao}}</p>
                       </div>   
@@ -23,14 +24,28 @@
 
                   <div class="panel-body">
                     <div class="row" style="height: 300px; overflow-y: scroll;">
-                    @foreach($acao->rifa as $rifa)
-                      
-                      <div class="col-xs-6 col-md-4">
-                          <div class="thumbnail">
-                            <button type="button" class="btn btn-primary btn-lg">{{$rifa->nome_rifa}}</button>
-                          </div>
-                      </div>
-                    @endforeach
+                        <form action="{{route('carrinho',$acao->id)}}" method="post">
+                            <B>Escolha os numeros de sua preferência:</B><br>
+                            <div class="table-responsive">
+                                <table class="table" >
+                                        <tbody>
+                                        <tr>
+                                            @foreach($acao->rifa as $key=>$rifa)
+                                                @if($key%10==0 && $key != 0)
+                                                    </tr>
+                                                    <tr>
+                                                @endif
+                                                <td><input type=checkbox value = "{{$rifa->nome_rifa}}" name = "checkbox[]">{{$rifa->nome_rifa}}</td>
+                                            @endforeach
+                                        </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Comprar!">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            </div>
+                        </form>
                     </div>
 
                     <!--Formulario de insercao de mensagens -->
@@ -41,7 +56,7 @@
                         <div class="form-group">
                           <textarea class="form-control" rows="3" name="mensagem">Digite seu comentario aqui!</textarea>
                           <input type="hidden" name="acao_id" value="{{$acao->id}}">
-                          <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                          <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         </div>
                         <div class="form-group">
                           <input type="submit" value="Comentar!">
