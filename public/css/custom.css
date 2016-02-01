@@ -1,0 +1,10 @@
+.tabela{
+    float: left;
+    width: 100px;
+}
+.table{
+    border-collapse: collapse; !important;
+}
+.td{
+    padding: 0; !important;
+}

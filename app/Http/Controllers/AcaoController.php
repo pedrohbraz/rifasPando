@@ -25,6 +25,7 @@ use PayPal\Api\Payer;
 use PayPal\Api\Payment;
 use PayPal\Api\Transaction;
 use PayPal\Api\RedirectUrls;
+use PayPal\Exception\PayPalConnectionException;
 
 class AcaoController extends Controller
 {
@@ -215,10 +216,18 @@ public function acaosOrgClosed($id)
         return view('shopping_cart');
     }
 
-    public function checkout(Request $request)
+    public function checkout($id)
     {
-        $rifa = $request;
-        return view('checkout',compact('rifa'));
+        $acao = Acao::find($id);
+        $checkboxCount = isset($_POST['checkbox']) ? count($_POST['checkbox']):0;
+        $rifas = "";
+        if(isset($_POST['checkbox']) && !empty($_POST['checkbox'])){
+            foreach($_POST['checkbox'] as $key=>$checkbox){
+                if($checkboxCount-1!=$key)$rifas.=$checkbox.", ";
+                else $rifas.=$checkbox;
+            }
+        }
+        return view('checkout',compact('acao','checkboxCount','rifas'));
     }
 
     public function paypal(Request $request)
@@ -238,10 +247,10 @@ public function acaosOrgClosed($id)
         // ### Itemized information
 
         $item1 = new Item();
-        $item1->setName($request->name)
+        $item1->setName($request->nome)
             ->setCurrency('BRL')
             ->setQuantity($request->quantidade)
-            ->setSku("123123") // Similar to `item_number` in Classic API
+            ->setSku($request->rifas) // Similar to `item_number` in Classic API
             ->setPrice($request->valor);
         $item2 = new Item();
 
@@ -274,7 +283,7 @@ public function acaosOrgClosed($id)
 
         // ### Redirect urls
 
-        $baseUrl = "http://rifas.pando";
+        $baseUrl = "http://localhost:8000";
         $redirectUrls = new RedirectUrls();
         $redirectUrls->setReturnUrl("$baseUrl")
             ->setCancelUrl("$baseUrl/ExecutePayment.php?success=false");
@@ -295,10 +304,15 @@ public function acaosOrgClosed($id)
 
         try {
             $payment->create($apiContext);
-        } catch (Exception $ex) {
+        } catch (\PayPal\Exception\PayPalConnectionException $ex) {
             // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-            echo("Erro. Nao foi possivel criar o pagamento nesta sessao.");
-            exit(1);
+//            echo("Erro. Nao foi possivel criar o pagamento nesta sessao.");
+//            exit(1);
+            echo $ex->getCode(); // Prints the Error Code
+            echo $ex->getData(); // Prints the detailed error message
+            die($ex);
+        }catch (Exception $ex) {
+            die($ex);
         }
 
         // ### Get redirect url
