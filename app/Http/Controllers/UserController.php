@@ -98,7 +98,7 @@ class UserController extends Controller
 
       Storage::put('users/'.$image_name.'.'.$extension,file_get_contents($path));
       $user->foto = '/image/users/'.$image_name;
-      //dd($user);
+    //  dd($user->foto);
       $user->save();
        return redirect('perfil');
     }

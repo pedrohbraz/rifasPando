@@ -92,7 +92,7 @@ class AcaoController extends Controller
         //Dispara o evento de geracao de rifas
         \Event::fire(new GeracaoDeRifas($acao));
 
-        return redirect('/home');
+        return redirect('/perfil');
     }
 
     /**
@@ -173,7 +173,9 @@ public function acaosOrgClosed($id)
      */
     public function edit($id)
     {
-        //
+      $acao   = Acao::find($id);
+      //dd($acao->mensagem);
+      return view('Acaos.acaoEdit', compact('acao'));
     }
 
     /**
@@ -185,7 +187,12 @@ public function acaosOrgClosed($id)
      */
     public function update(Request $request, $id)
     {
-        //
+
+      $acao = Acao::find($id);
+      $acao->descricao = $request->descricao;
+      $acao->save();
+
+
     }
 
     /**
@@ -196,7 +203,11 @@ public function acaosOrgClosed($id)
      */
     public function destroy($id)
     {
-        //
+          $acao = Acao::find($id);
+          //dd($acao);
+          $acao -> delete();
+
+          return redirect('/perfil');
     }
 
     public function carrinhoDeCompras()

@@ -12,10 +12,10 @@
 
                     <div class="row">
                     @foreach($acao as $acao)
-
+                    <!-- @if($acao->deleted_at ==null)-->
                      <div class="col-xs-6 col-md-3">
                         <div class="thumbnail">
-                         <a href="acao/{{$acao->id}}">
+                         <a href="/acao/{{$acao->id}}/editar">
                             <img src="{{$acao->imagem}}/190">
                           </a>
                           <div class="caption">
@@ -24,6 +24,7 @@
                           </div>
                         </div>
                       </div>
+                    <!--  @endif-->
                     @endforeach
                     </div>
 

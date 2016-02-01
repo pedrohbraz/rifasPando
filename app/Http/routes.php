@@ -43,13 +43,13 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/perfil',function(){
       return view ('Users/TelaUserTeste');
     });
-	
+
 	Route::get('/', 'AcaoController@index');
     Route::get('/home', 'HomeController@index');
     Route::get("/acao",'AcaoController@index');
-    
+
     //Rotas das acoes em relação ao usuario
-    
+
     Route::get('acao/inserir', 'AcaoController@create');
     Route::post('acao/inserir', 'AcaoController@store');
     Route::get("/acao/{usuario}/organizadas/andamento/exibir",'AcaoController@acaosOrgAndamento');
@@ -74,7 +74,10 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('acao/inserir', 'AcaoController@store');
   	Route::get('acao/{id}', 'AcaoController@show');
 
-	Route::post('acao/{id}', 'MensagemController@store');
+	  Route::post('acao/{id}', 'MensagemController@store');
+    Route::get('acao/{id}/editar','AcaoController@edit');
+    Route::post('acao/{id}/atualizar','AcaoController@update');
+    Route::get('acao/{id}/excluir','AcaoController@destroy');
 
 	Route::group(['middleware' => 'role:admin'],function(){
 		Route::get('admin','MensagemADMController@index');
@@ -88,7 +91,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('carrinho','AcaoController@checkout');
 
 	Route::get('paypal', 'AcaoController@paypal');
-	
+
 
 	//Route::get('role/generate','UserController@create');
 
