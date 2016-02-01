@@ -22,6 +22,7 @@
 
 		<!-- Custom CSS -->
 		<link href="../../css/mackart/style.css" rel="stylesheet">
+		<link href="../../css/custom.css" rel="stylesheet">
 		<!-- Stylesheet for Color -->
 
 		<link href="../../css/mackart/red.css" rel="stylesheet">

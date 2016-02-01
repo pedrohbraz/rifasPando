@@ -11,8 +11,6 @@
             <!--Campo nome da acao -->
                         <h3>Rifa - TV 40 polegadas</h3>
                         <div class="form-group">
-                            <input type="hidden" name="name" value="Rifa - TV 40 polegadas">
-                            <input type="hidden" name="valor" value="7.5">
                             <label class="col-md-4 control-label">Quantidade</label>
                             <p>Preco por unidade: R$7,50</p>
                             <div class="col-md-6">
