@@ -269,16 +269,11 @@
 				</div>
 				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="index.html">Home #1</a></li>
-								<li><a href="index-rslider.html">Home #2</a></li>
-							</ul>
+						<li>
+							<a href="/">Home </a>
 						</li>
 						<li>
 							<a href="/perfil">Perfil</a>
-
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
