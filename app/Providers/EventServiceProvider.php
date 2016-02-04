@@ -16,6 +16,12 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\GeracaoDeRifas' => [
             'App\Listeners\GeracaoDeRifasListener',
         ],
+        'App\Events\SoftDeleteRifas' => [
+            'App\Listeners\SoftDeleteRifasListener'
+        ],
+        'App\Events\ArmazenaRifas' => [
+            'App\Listeners\ArmazenaRifasListener'
+        ],
     ];
 
     /**

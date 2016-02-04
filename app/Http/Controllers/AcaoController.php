@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PagamentoExecutado;
 use App\MensagemAdm;
 use Illuminate\Http\Request;
 
@@ -26,6 +27,7 @@ use PayPal\Api\Payment;
 use PayPal\Api\Transaction;
 use PayPal\Api\RedirectUrls;
 use PayPal\Exception\PayPalConnectionException;
+use App\Events\SoftDeleteRifas;
 
 class AcaoController extends Controller
 {
@@ -34,6 +36,9 @@ class AcaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public $rifasarray=array();
+
+
     public function index()
     {
         //Obtem todas as acoes para serem listadas
@@ -106,7 +111,6 @@ class AcaoController extends Controller
     {
         //
         $acao   = Acao::find($id);
-        //dd($acao->mensagem);
         return view('acao', compact('acao'));
 
     }
@@ -138,8 +142,8 @@ class AcaoController extends Controller
     }
 
 
-public function acaosOrgClosed($id)
-  {
+    public function acaosOrgClosed($id)
+    {
 
     $hoje = getdate();
     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
@@ -148,9 +152,9 @@ public function acaosOrgClosed($id)
                ->where('user_id','=',$id)
                ->get();
     return view('Users.acoesOrgClosed',compact('acao'));
-  }
+    }
 
-  public function acaosCompClosed($id)
+    public function acaosCompClosed($id)
     {
 
       $hoje = getdate();
@@ -200,23 +204,27 @@ public function acaosOrgClosed($id)
         //
     }
 
-    public function carrinhoDeCompras()
-    {
-        return view('shopping_cart');
-    }
+//    public function carrinhoDeCompras()
+//    {
+//        return view('shopping_cart');
+//    }
 
     public function checkout($id)
     {
         $acao = Acao::find($id);
         $checkboxCount = isset($_POST['checkbox']) ? count($_POST['checkbox']):0;
         $rifas = "";
+        $i=0;
         if(isset($_POST['checkbox']) && !empty($_POST['checkbox'])){
             foreach($_POST['checkbox'] as $key=>$checkbox){
-                if($checkboxCount-1!=$key)$rifas.=$checkbox.", ";
+                $rifasarray[$i]=$checkbox;
+                $i++;
+                if($checkboxCount-1!=$key)$rifas.=$checkbox.",";
                 else $rifas.=$checkbox;
             }
         }
-        return view('checkout',compact('acao','checkboxCount','rifas'));
+
+        return view('checkout',compact('acao','checkboxCount','rifas', 'rifasarray'));
     }
 
     public function paypal(Request $request)
@@ -239,10 +247,8 @@ public function acaosOrgClosed($id)
         $item1->setName($request->nome)
             ->setCurrency('BRL')
             ->setQuantity($request->quantidade)
-            ->setSku($request->rifas) // Similar to `item_number` in Classic API
+            ->setSku($request->acao) // Similar to `item_number` in Classic API
             ->setPrice($request->valor);
-        $item2 = new Item();
-
 
         $itemList = new ItemList();
         $itemList->addItem($item1);
@@ -254,7 +260,7 @@ public function acaosOrgClosed($id)
         $details = new Details();
         $details->setShipping($shipping)
             ->setTax($tax)
-            ->setSubtotal($request->total);
+            ->setSubtotal($request->valor*$request->quantidade);
 
         // ### Amount
         $amount = new Amount();
@@ -267,15 +273,17 @@ public function acaosOrgClosed($id)
         $transaction = new Transaction();
         $transaction->setAmount($amount)
             ->setItemList($itemList)
-            ->setDescription("Payment description")
+            ->setDescription("$request->rifas")
             ->setInvoiceNumber(uniqid());
 
         // ### Redirect urls
 
-        $baseUrl = "http://localhost:8000";
+        $baseUrl = "http://localhost:8000/confirmacao";
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl("$baseUrl")
-            ->setCancelUrl("$baseUrl/ExecutePayment.php?success=false");
+        $redirectUrls->setReturnUrl("$baseUrl/?success=true&")
+            ->setCancelUrl("$baseUrl/?success=false");
+
+
 
         // ### Payment
 
@@ -286,17 +294,14 @@ public function acaosOrgClosed($id)
             ->setTransactions(array($transaction));
 
 
-        // For Sample Purposes Only.
-        $request = clone $payment;
+//        // For Sample Purposes Only.
+//        $request = clone $payment;
 
         // ### Create Payment
 
         try {
             $payment->create($apiContext);
         } catch (\PayPal\Exception\PayPalConnectionException $ex) {
-            // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
-//            echo("Erro. Nao foi possivel criar o pagamento nesta sessao.");
-//            exit(1);
             echo $ex->getCode(); // Prints the Error Code
             echo $ex->getData(); // Prints the detailed error message
             die($ex);
@@ -304,13 +309,8 @@ public function acaosOrgClosed($id)
             die($ex);
         }
 
-        // ### Get redirect url
-        // The API response provides the url that you must redirect
-        // the buyer to. Retrieve the url from the $payment->getApprovalLink()
-        // method
-        $approvalUrl = $payment->getApprovalLink();
 
-        // NOTE: PLEASE DO NOT USE RESULTPRINTER CLASS IN YOUR ORIGINAL CODE. FOR SAMPLE ONLY
+        $approvalUrl = $payment->getApprovalLink();
         echo("Created Payment Using PayPal. Please visit the URL to Approve.");
         return redirect($approvalUrl);
 
