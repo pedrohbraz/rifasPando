@@ -33,6 +33,7 @@
                             <button type="submit" class="btn btn-primary" onclick="location.href = '/perfil'">
                                 <i class="fa fa-btn fa-user"></i>Voltar
                             </button>
+
                         </div>
                     </div>
                 </div>

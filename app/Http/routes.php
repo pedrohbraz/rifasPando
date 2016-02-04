@@ -82,8 +82,10 @@ Route::group(['middleware' => 'web'], function () {
 	  Route::post('acao/{id}', 'MensagemController@store');
     Route::get('acao/{id}/editar','AcaoController@edit');
     Route::post('acao/{id}/atualizar','AcaoController@update');
+    Route::get('acao/{id}/deletedReason',['as'=>'razao', 'uses'=>'AcaoController@deletedReason']);
+    Route::post('acao/{id}/deletedReasonG','AcaoController@deletedReasonGravar');
     Route::get('acao/{id}/excluir','AcaoController@destroy');
-
+    Route::get('acao/{id}/rifar','AcaoController@sorteio');
 
 	Route::group(['middleware' => 'role:admin'],function(){
 		Route::get('admin','MensagemADMController@index');

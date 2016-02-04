@@ -14,10 +14,12 @@
                       </div>
                       <div class="col-xs-6 col-md-4">
                             <h3>{{$acao->nome_acao}}</h3>
-                            <p>{{$acao->user->name }}</p>
-                            <p>R${{$acao->valor_rifa}},00</p>
-                            <p>{{$acao->descricao}}</p>
-                      </div>   
+                            <h6>Criador:{{$acao->user->name }}</h6>
+                            <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                            <h6>Descrição:  <textarea rows="4" cols="50">{{$acao->descricao}}</textarea></6>
+                          <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
+
+                      </div>
                   </div>
 
                   <!-- Lista de Rifas -->

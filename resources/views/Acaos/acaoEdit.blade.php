@@ -1,4 +1,4 @@
-@extends('layouts.mackart')
+@extends('layouts.mackartHeader')
 
 @section('content')
 
@@ -15,35 +15,34 @@
                         </div>
                       </div>
                       <div class="col-xs-6 col-md-4">
-                            <h3>{{$acao->nome_acao}}</h3>
-                            <p>R${{$acao->valor_rifa}},00</p>
-                            <p>{{$acao->descricao}}</p>
+                        <h3>{{$acao->nome_acao}}</h3>
+                        <h6>Criador:{{$acao->user->name }}</h6>
+                        <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                        <h6>Descrição:  <textarea rows="4" cols="50">{{$acao->descricao}}</textarea></6>
+                      <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
                       </div>
                   </div>
 
-                  <!-- Lista de Rifas Vendidas-->
+
 
                   <div class="panel-body">
-                    <div class="row" style="height: 300px; overflow-y: scroll;">
-                    @foreach($acao->rifa as $rifa)
 
-                      <div class="col-xs-6 col-md-4">
-                          <div class="thumbnail">
-                            <button type="button" class="btn btn-primary btn-lg">{{$rifa->nome_rifa}}</button>
-                          </div>
-                      </div>
-                    @endforeach
-                    </div>
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
                           <button type="button" class="btn btn-primary" onclick="location.href = '/perfil'">
                               <i class="fa fa-btn fa-user"></i>Voltar
                           </button>
-                            <button type="button" class="btn btn-primary" onClick="location.href = '../{{$acao->id}}/excluir'">
+                            @if($acao->numrifado==null)
+                            <button type="button" class="btn btn-primary" onClick="location.href = '../{{$acao->id}}/deletedReason'">
                                 <i class="fa fa-btn fa-user"></i>Excluir Ação
                             </button>
 
+                            <button type="submit" class="btn btn-primary" onclick="location.href = '../{{$acao->id}}/rifar'">
+                                <i class="fa fa-btn fa-user"></i>Rifar
+                            </button>
+
+                            @endif
                         </div>
                     </div>
 
