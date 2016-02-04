@@ -15,7 +15,10 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\GeracaoDeRifas' => [
             'App\Listeners\GeracaoDeRifasListener',
-        ],
+            ],
+            'App\Events\HoraSorteio'=>[
+               'App\Listeners\EscolherNumeroListener',
+            ],
     ];
 
     /**

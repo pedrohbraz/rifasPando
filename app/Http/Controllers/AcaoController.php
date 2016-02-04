@@ -37,7 +37,14 @@ class AcaoController extends Controller
     public function index()
     {
         //Obtem todas as acoes para serem listadas
-        $acaos = Acao::all();
+      // $acaos = Acao::all();
+        $hoje = getdate();
+        $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+        $acaos = DB::table('acaos')->select('*')
+                   ->where('data_sorteio','>=',$hoje2)
+                   ->where('deleted_at',null)
+                   ->get();
+
         $mensagem = MensagemAdm::all()->last();
 
         return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
@@ -157,6 +164,7 @@ public function acaosOrgClosed($id)
       $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
 
      $rifas = DB::table('rifas')
+
                ->join('acaos','rifas.acao_id','=','acaos.id')
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','<',$hoje2)
@@ -196,6 +204,21 @@ public function acaosOrgClosed($id)
 
     }
 
+    public function deletedReason($id){
+      $acao = Acao::find($id);
+      return view('Acaos.deletedReason', compact('acao'));
+    }
+    public function deletedReasonGravar(Request $request,$id){
+      $acao = Acao::find($id);
+
+      $acao->deleted_reason = $request->deleted_reason;
+
+      $acao ->save();
+    //  dd($acao);
+      return redirect()->route('razao',['id'=>$id]);
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *
@@ -209,6 +232,31 @@ public function acaosOrgClosed($id)
           $acao -> delete();
 
           return redirect('/perfil');
+    }
+
+    public function sorteio($id) {
+
+      $hoje = getdate();
+      $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday']; //data do dia atual
+      //consulta para econtrar as rifas que foram compradas em uma ação
+      $rifas = DB::table('rifas')
+               ->join('acaos','rifas.acao_id','=','acaos.id')
+               ->where('acao_id',$id)
+               ->whereNotNull('id_comprador') //indica que existe um comprador
+               ->where('acaos.data_sorteio','=',$hoje2)
+               ->get();
+
+    //realiza o sorteio da rifa
+    $sorteado =  array_rand ($rifas,1);//variavel com uma posição randomica do array
+    $numero = $rifas[$sorteado];//rifa especifica do array com a posição sorteada
+    $acao = Acao::find($id);
+    $acao->numrifado = $numero->nome_rifa; //atualiza campo de numero rifado da tabele acaos
+    $acao->save();
+    $user_id = $numero->id_comprador;
+    $user = User::find($user_id); //encontrar ganhador da rifa
+    return view('Acaos.rifado', compact('numero','acao','user'));
+
+
     }
 
     public function carrinhoDeCompras()
