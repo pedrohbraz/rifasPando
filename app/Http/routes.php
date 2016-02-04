@@ -95,7 +95,7 @@ Route::group(['middleware' => 'web'], function () {
 
 	});
 
-	Route::get('carrinho','AcaoController@carrinhoDeCompras');
+//	Route::get('carrinho','AcaoController@carrinhoDeCompras');
 	Route::post('carrinho/{id}',['as'=>'carrinho', 'uses'=>'AcaoController@checkout']);
 
 
@@ -105,6 +105,6 @@ Route::group(['middleware' => 'web'], function () {
 
 
 
-	//Route::get('role/generate','UserController@create');
+	Route::get('confirmacao', 'ConfirmacaoController@index');
 
 });

@@ -16,7 +16,8 @@
                         <input type="hidden" name="quantidade" value="{{$checkboxCount}}">
                         <input type="hidden" name="valor" value="{{$acao->valor_rifa}}">
                         <input type="hidden" name="total" value="{{$acao->valor_rifa * $checkboxCount}}">
-                        <input type="hidden" name="rifas" value="{{$acao->id}}">
+                        <input type="hidden" name="acao" value="{{$acao->id}}">
+                        <input type="hidden" name="rifas" value="{{$rifas}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" /></h3>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
