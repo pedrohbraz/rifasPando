@@ -62,7 +62,7 @@ class ConfirmacaoController extends Controller
             try {
                 foreach($rifas as $rifa) {
                     $aux = Rifa::find($rifa);
-                    if($aux != NULL)
+                    if($aux->id_comprador == NULL)
                     {
                         $aux->id_comprador = Auth::user()->id;
                         $aux->save();
@@ -84,8 +84,6 @@ class ConfirmacaoController extends Controller
 
             if($result->state=="approved"){
                 $status='Compra feita com sucesso!';
-                //dispara soft delete rifas
-                \Event::fire(new SoftDeleteRifas($rifas));
             }
             return view('confirmacao')->with('status',$status);
 

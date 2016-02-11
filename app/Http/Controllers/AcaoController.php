@@ -54,15 +54,6 @@ class AcaoController extends Controller
                    ->where('deleted_at',null)
                    ->get();
         $mensagem = MensagemAdm::all()->last();
-        if($mensagem==NULL)
-        {
-            DB::table('mensagem_adms')->insert([
-                'user_id' => 1,
-                'titulo' => 'Aviso',
-                'descricao'=>'Sem novas mensagens',
-            ]);
-        }
-
         return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
 
     }
@@ -113,6 +104,7 @@ class AcaoController extends Controller
         Storage::put('acaos/'.$image_name.'.'.$extension,file_get_contents($path));
         $acao->imagem = '/image/acaos/'.$image_name;
         $acao->save();
+        if($acao->save())
 
         //Dispara o evento de geracao de rifas
         \Event::fire(new GeracaoDeRifas($acao));
@@ -290,16 +282,25 @@ class AcaoController extends Controller
     {
         $acao = Acao::find($id);
         $checkboxCount = isset($_POST['checkbox']) ? count($_POST['checkbox']):0;
-        $rifas = "";
+        $aux = Rifa::find($_POST['checkbox']);
+        $rifasstr = '';
+        $rifas= '';
+        foreach($aux as $key=>$rifa)
+        {
+            if($checkboxCount-1!=$key)
+            {
+                $rifasstr.=$rifa->nome_rifa.",";
+                $rifas.=$rifa->id.",";
 
-        //if para imprimir as rifas disponiveis e linkar as rifas escolhidas ao usuario antes de fazer o checkout
-        if(isset($_POST['checkbox']) && !empty($_POST['checkbox'])){
-            foreach($_POST['checkbox'] as $key=>$checkbox){
-                if($checkboxCount-1!=$key)$rifas.=$checkbox.",";
-                else $rifas.=$checkbox;
+            }
+            else
+            {
+                $rifasstr.=$rifa->nome_rifa;
+                $rifas.=$rifa->id;
             }
         }
-        return view('checkout',compact('acao','checkboxCount','rifas', 'rifasarray'));
+
+        return view('checkout',compact('acao','checkboxCount','rifasstr', 'rifas'));
     }
 
     public function paypal(Request $request)

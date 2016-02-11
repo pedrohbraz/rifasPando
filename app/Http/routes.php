@@ -45,7 +45,7 @@ Route::group(['middleware' => 'web'], function () {
             return view ('Users/TelaUserTeste');
         }
         else
-            return view('auth.register');
+            return view('auth.login ');
     });
 	
     Route::get('/',['as'=>'home', 'uses'=> 'HomeController@index']);
@@ -79,14 +79,11 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['middleware' => 'auth', 'role:admin|user'],function(){
         Route::get('acao/inserir', 'AcaoController@create');
         Route::post('acao/inserir', 'AcaoController@store');
-        Route::get('acao/{id}',['as'=>'acao', 'uses'=>'AcaoController@show']);
         Route::post('acao/{id}', 'MensagemController@store');
     });
 
     Route::get("/acao",'AcaoController@index');
-//    Route::get('acao/inserir', 'AcaoController@create');
-//    Route::post('acao/inserir', 'AcaoController@store');
-//  	Route::get('acao/{id}', 'AcaoController@show');
+    Route::get('acao/{id}',['as'=>'acao', 'uses'=>'AcaoController@show']);
 
 
     Route::post('acao/{id}', 'MensagemController@store');

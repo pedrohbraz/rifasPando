@@ -20,9 +20,6 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\HoraSorteio'=>[
                'App\Listeners\EscolherNumeroListener',
             ],
-        'App\Events\SoftDeleteRifas' => [
-            'App\Listeners\SoftDeleteRifasListener'
-        ],
         'App\Events\DissociaUser' => [
             'App\Listeners\DissociaUserListener'
         ],
