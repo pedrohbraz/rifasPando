@@ -19,8 +19,8 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\SoftDeleteRifas' => [
             'App\Listeners\SoftDeleteRifasListener'
         ],
-        'App\Events\ArmazenaRifas' => [
-            'App\Listeners\ArmazenaRifasListener'
+        'App\Events\DissociaUser' => [
+            'App\Listeners\DissociaUserListener'
         ],
     ];
 

@@ -10,10 +10,10 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 
 Route::get('/teste','UserController@index');
@@ -47,6 +47,8 @@ Route::group(['middleware' => 'web'], function () {
         else
             return view('auth.register');
     });
+	
+    Route::get('/',['as'=>'home', 'uses'=> 'HomeController@index']);
 
 	Route::get('/', 'AcaoController@index');
     Route::get('/home', 'HomeController@index');
@@ -72,6 +74,14 @@ Route::group(['middleware' => 'web'], function () {
 
 	    return $img->response('jpg');
 	});
+    Route::get('acao',['as'=>'acao', 'uses'=>'AcaoController@index'] );
+
+    Route::group(['middleware' => 'role:admin|user'],function(){
+        Route::get('acao/inserir', 'AcaoController@create');
+        Route::post('acao/inserir', 'AcaoController@store');
+        Route::get('acao/{id}',['as'=>'acao', 'uses'=>'AcaoController@show']);
+        Route::post('acao/{id}', 'MensagemController@store');
+    });
 
     Route::get("/acao",'AcaoController@index');
     Route::get('acao/inserir', 'AcaoController@create');
@@ -79,7 +89,7 @@ Route::group(['middleware' => 'web'], function () {
   	Route::get('acao/{id}', 'AcaoController@show');
 
 
-	  Route::post('acao/{id}', 'MensagemController@store');
+    Route::post('acao/{id}', 'MensagemController@store');
     Route::get('acao/{id}/editar','AcaoController@edit');
     Route::post('acao/{id}/atualizar','AcaoController@update');
     Route::get('acao/{id}/excluir','AcaoController@destroy');
@@ -93,7 +103,6 @@ Route::group(['middleware' => 'web'], function () {
 
 	});
 
-//	Route::get('carrinho','AcaoController@carrinhoDeCompras');
 	Route::post('carrinho/{id}',['as'=>'carrinho', 'uses'=>'AcaoController@checkout']);
 
 
@@ -103,6 +112,6 @@ Route::group(['middleware' => 'web'], function () {
 
 
 
-	Route::get('confirmacao', 'ConfirmacaoController@index');
+	Route::get('confirmacao',['as'=>'confirmacao', 'uses'=>'ConfirmacaoController@index'] );
 
 });

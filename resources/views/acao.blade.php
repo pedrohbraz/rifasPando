@@ -25,7 +25,7 @@
                   <div class="panel-body">
                     <div class="row" style="height: 300px; overflow-y: scroll;">
                         <form action="{{route('carrinho',$acao->id)}}" method="post">
-                            <B>Escolha os numeros de sua preferência:</B><br>
+                            <B>Rifas Disponiveis:</B><br>
                             <div class="table-responsive">
                                 <table class="table" >
                                         <tbody>
@@ -42,7 +42,9 @@
                                 </table>
                             </div>
                             <div class="form-group">
+
                                 <input type="submit" value="Comprar!">
+
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                             </div>
                         </form>
