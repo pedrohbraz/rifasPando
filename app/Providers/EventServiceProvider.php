@@ -15,6 +15,11 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\GeracaoDeRifas' => [
             'App\Listeners\GeracaoDeRifasListener',
+
+            ],
+            'App\Events\HoraSorteio'=>[
+               'App\Listeners\EscolherNumeroListener',
+            ],
         ],
         'App\Events\SoftDeleteRifas' => [
             'App\Listeners\SoftDeleteRifasListener'
@@ -22,6 +27,7 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\DissociaUser' => [
             'App\Listeners\DissociaUserListener'
         ],
+
     ];
 
     /**
