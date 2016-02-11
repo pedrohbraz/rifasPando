@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+
+		<script>
+		function alert() {
+		  alert("O motivo da exclusão foi gravado com sucesso, você pode alterar o motivo e clicar novamente em gravar, caso apague o conteudo do campo,voce gravará a ultima mensagem submetida");
+		}
+		</script>
+
 		<meta charset="utf-8">
 		<!-- Title here -->
 		<title>MacKart</title>
