@@ -17,10 +17,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\GeracaoDeRifasListener',
 
             ],
-            'App\Events\HoraSorteio'=>[
+        'App\Events\HoraSorteio'=>[
                'App\Listeners\EscolherNumeroListener',
             ],
-        ],
         'App\Events\SoftDeleteRifas' => [
             'App\Listeners\SoftDeleteRifasListener'
         ],
