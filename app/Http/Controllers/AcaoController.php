@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\AssociaUser;
 use App\Events\PagamentoExecutado;
 use App\MensagemAdm;
 use Illuminate\Http\Request;
@@ -109,7 +110,6 @@ class AcaoController extends Controller
      */
     public function show($id)
     {
-        //
         $acao   = Acao::find($id);
         return view('acao', compact('acao'));
 
@@ -204,31 +204,26 @@ class AcaoController extends Controller
         //
     }
 
-//    public function carrinhoDeCompras()
-//    {
-//        return view('shopping_cart');
-//    }
 
     public function checkout($id)
     {
         $acao = Acao::find($id);
         $checkboxCount = isset($_POST['checkbox']) ? count($_POST['checkbox']):0;
         $rifas = "";
-        $i=0;
+
+        //if para imprimir as rifas disponiveis e linkar as rifas escolhidas ao usuario antes de fazer o checkout
         if(isset($_POST['checkbox']) && !empty($_POST['checkbox'])){
             foreach($_POST['checkbox'] as $key=>$checkbox){
-                $rifasarray[$i]=$checkbox;
-                $i++;
                 if($checkboxCount-1!=$key)$rifas.=$checkbox.",";
                 else $rifas.=$checkbox;
             }
         }
-
         return view('checkout',compact('acao','checkboxCount','rifas', 'rifasarray'));
     }
 
     public function paypal(Request $request)
     {
+
         $apiContext = new \PayPal\Rest\ApiContext(
             new \PayPal\Auth\OAuthTokenCredential(
                 'ATGFkB2ea6f0pM92jwBqkZ17kxsiftDvUhLHyXson-10AUs7n5TocpEc0sis7Cl_fMIxS8uQO04kPP8Q',     // ClientID
@@ -298,7 +293,6 @@ class AcaoController extends Controller
 //        $request = clone $payment;
 
         // ### Create Payment
-
         try {
             $payment->create($apiContext);
         } catch (\PayPal\Exception\PayPalConnectionException $ex) {

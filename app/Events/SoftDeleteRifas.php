@@ -19,7 +19,7 @@ class SoftDeleteRifas extends Event
      */
     public function __construct($rifas)
     {
-        $this->rifas=explode(',',$rifas);
+        $this->rifas=$rifas;
     }
 
     /**

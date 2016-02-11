@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DissociaUser;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -17,6 +18,8 @@ use PayPal\Api\Transaction;
 use Exception;
 use PayPal\Exception\PayPalConnectionException;
 use App\Events\SoftDeleteRifas;
+use App\Rifa;
+use Auth;
 
 class ConfirmacaoController extends Controller
 {
@@ -52,12 +55,24 @@ class ConfirmacaoController extends Controller
             $execution = new PaymentExecution();
             $execution->setPayerId($_GET['PayerID']);
             $execution->addTransaction($transaction);
+            $rifas = $payment->transactions[0]->description;
+            $rifas=explode(',',$rifas);
 
 
             try {
+                foreach($rifas as $rifa) {
+                    $aux = Rifa::find($rifa);
+                    if($aux != NULL)
+                    {
+                        $aux->id_comprador = Auth::user()->id;
+                        $aux->save();
+                    } else
+                    {
+                        $status='Numeros de rifas ja foram escolhidos por outra pessoa, por favor escolha novamente.';
+                        return view('confirmacao')->with('status', $status);
+                    }
+                }
                 $result = $payment->execute($execution, $apiContext);
-                $status='Compra criada e esperando confirmacao de pagamento';
-
                 try {
                     $payment = Payment::get($paymentId, $apiContext);
                 } catch (Exception $ex) {
@@ -69,13 +84,10 @@ class ConfirmacaoController extends Controller
 
             if($result->state=="approved"){
                 $status='Compra feita com sucesso!';
-                $rifas = $payment->transactions[0]->description;
                 //dispara soft delete rifas
                 \Event::fire(new SoftDeleteRifas($rifas));
-
             }
-
-            return view('confirmacao')->with('payment',$payment)->with('status',$status);
+            return view('confirmacao')->with('status',$status);
 
         }else {
             $status='Compra cancelada pelo usuario';

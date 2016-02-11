@@ -3,12 +3,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Confirmacao de Pagamento</div>
-                    <div class="panel-body">
-                        <h3>Status do pagamento:{{$status}}</h3>
-                    </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Status do Pagamento
+                </div>
+                <div class="panel-body">
+                    <h3>{{$status}}</h3>
+                    <a style="float: right" href="/acao"><button type="button" class="btn btn-default" >Voltar</button></a>
                 </div>
             </div>
         </div>
