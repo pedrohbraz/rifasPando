@@ -50,8 +50,12 @@ Route::group(['middleware' => 'web'], function () {
 	
     Route::get('/',['as'=>'home', 'uses'=> 'HomeController@index']);
 
+	Route::get('/', 'AcaoController@index');
+    Route::get('/home', 'HomeController@index');
+    Route::get("/acao",'AcaoController@index');
+
     //Rotas das acoes em relação ao usuario
-    
+
     Route::get('acao/inserir', 'AcaoController@create');
     Route::post('acao/inserir', 'AcaoController@store');
     Route::get("/acao/{usuario}/organizadas/andamento/exibir",'AcaoController@acaosOrgAndamento');
@@ -79,6 +83,17 @@ Route::group(['middleware' => 'web'], function () {
         Route::post('acao/{id}', 'MensagemController@store');
     });
 
+    Route::get("/acao",'AcaoController@index');
+    Route::get('acao/inserir', 'AcaoController@create');
+    Route::post('acao/inserir', 'AcaoController@store');
+  	Route::get('acao/{id}', 'AcaoController@show');
+
+
+    Route::post('acao/{id}', 'MensagemController@store');
+    Route::get('acao/{id}/editar','AcaoController@edit');
+    Route::post('acao/{id}/atualizar','AcaoController@update');
+    Route::get('acao/{id}/excluir','AcaoController@destroy');
+
 
 	Route::group(['middleware' => 'role:admin'],function(){
 		Route::get('admin','MensagemADMController@index');
@@ -90,8 +105,12 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('carrinho/{id}',['as'=>'carrinho', 'uses'=>'AcaoController@checkout']);
 
+
+	Route::get('paypal', 'AcaoController@paypal');
+
 	Route::post('paypal', 'AcaoController@paypal');
-	
+
+
 
 	Route::get('confirmacao',['as'=>'confirmacao', 'uses'=>'ConfirmacaoController@index'] );
 

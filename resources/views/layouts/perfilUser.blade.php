@@ -45,17 +45,22 @@
               <h1>Bem Vindo {{Auth::user()->name}}</h1>
 
               <div class="row">
-              	<div class="col col-sm-8">
+
+              	<div class="col col-sm-4">
                   <img src="" class="img-responsive">
                 </div>
-        		<div class="col col-sm-4">
+								@if(Auth::user()->foto!=null)
+        		     <div class="col col-sm-4">
+                  <img src="{{Auth::user()->foto}}/190" class="img-responsive">
 
-                  <img src="src={{Auth::user()->foto}}/190" class="img-responsive">
-                <!--  <h4>Aside</h4>
-                  <hr>
-                  <img src="//placehold.it/400x180/FF3333/FFF" class="img-responsive">
-                  <h4>Aside 2</h4>-->
               	</div>
+                @else
+								<div class="col col-sm-4">
+								 <img src="/image/users/userPadrao/190" class="img-responsive">
+							 </div>
+							 @endif
+
+
               </div>
 
               	<h2>Dados Pessoais</h2>

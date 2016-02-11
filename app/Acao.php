@@ -3,12 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Acao extends Model
 {
   //Usar o softDeletes na tabela Acaos
     //Acoes nao serao deletadas, mas sim marcadas como deletadas
-  //  use SoftDeletes;
+   use SoftDeletes;
 
     protected $dates = ['deleted_at'];
 
