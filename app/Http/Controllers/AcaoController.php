@@ -50,9 +50,10 @@ class AcaoController extends Controller
                    ->where('data_sorteio','>=',$hoje2)
                    ->where('deleted_at',null)
                    ->get();
-
+    //    dd($acaos);
         $mensagem = MensagemAdm::all()->last();
-
+        if($mensagem==NULL)$mensagem='no msg';
+      //  dd($mensagem);
         return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
     }
 
@@ -144,7 +145,7 @@ class AcaoController extends Controller
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','>',$hoje2)
                ->get();
-
+      //  dd($rifas);
       return view('Users.acoesCompAndamento',compact('rifas'));
     }
 
