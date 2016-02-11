@@ -12,19 +12,20 @@
                     <div class="row">
                     @foreach($rifas as $rifas)
 
-                     <div class="col-xs-6 col-md-3">
-                        <div class="thumbnail">
-                      <!--   <a href="acao/{{$acao->id}}">
-                            <img src="{{$acao->imagem}}/190">
-                          </a>-->
-                          <div class="caption">
-                            <h3>{{$rifas->acao_id}}</h3>
-                            <p>{{$rifas->nome_rifa}}</p>
-                          </div>
-                        </div>
-                      </div>
-                    @endforeach
-                    </div>
+                    <div class="col-xs-6 col-md-4">
+                       <div class="thumbnail">
+
+                         <img src="{{$rifas->imagem}}/190">
+
+                           <div class="caption">
+                             <h3>{{$rifas->nome_acao}}</h3>
+                             <p>R${{$rifas->valor_rifa}},00</p>
+                             <p><b>Rifa comprada:{{$rifas->nome_rifa}}</b></p>
+                         </div>
+                     </div>
+                   @endforeach
+                   </div>
+                  
 
                     <div class="form-group">
                         <div class="col-md-6 col-md-offset-4">
