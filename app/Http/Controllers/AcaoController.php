@@ -14,6 +14,7 @@ use App\Rifa;
 use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
+use Psy\Exception\ErrorException;
 use Storage;
 use App\User;
 //PayPal
@@ -40,10 +41,12 @@ class AcaoController extends Controller
     public $rifasarray=array();
 
 
+
+
     public function index()
     {
         //Obtem todas as acoes para serem listadas
-      // $acaos = Acao::all();
+
         $hoje = getdate();
         $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
         $acaos = DB::table('acaos')->select('*')
@@ -52,8 +55,17 @@ class AcaoController extends Controller
                    ->get();
 
         $mensagem = MensagemAdm::all()->last();
+        if($mensagem==NULL)
+        {
+            DB::table('mensagem_adms')->insert([
+                'user_id' => 1,
+                'titulo' => 'Aviso',
+                'descricao'=>'Sem novas mensagens',
+            ]);
+        }
 
         return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
+
     }
 
     /**
