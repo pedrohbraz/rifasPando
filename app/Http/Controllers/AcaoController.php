@@ -263,7 +263,6 @@ class AcaoController extends Controller
 
 
     }
-
     public function carrinhoDeCompras()
     {
         return view('shopping_cart');
@@ -273,6 +272,7 @@ class AcaoController extends Controller
 //    {
 //        return view('shopping_cart');
 //    }
+
 
 
     public function checkout($id)
