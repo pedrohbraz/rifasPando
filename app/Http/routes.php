@@ -76,7 +76,7 @@ Route::group(['middleware' => 'web'], function () {
 	});
     Route::get('acao',['as'=>'acao', 'uses'=>'AcaoController@index'] );
 
-    Route::group(['middleware' => 'role:admin|user'],function(){
+    Route::group(['middleware' => 'auth', 'role:admin|user'],function(){
         Route::get('acao/inserir', 'AcaoController@create');
         Route::post('acao/inserir', 'AcaoController@store');
         Route::get('acao/{id}',['as'=>'acao', 'uses'=>'AcaoController@show']);
@@ -84,9 +84,9 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::get("/acao",'AcaoController@index');
-    Route::get('acao/inserir', 'AcaoController@create');
-    Route::post('acao/inserir', 'AcaoController@store');
-  	Route::get('acao/{id}', 'AcaoController@show');
+//    Route::get('acao/inserir', 'AcaoController@create');
+//    Route::post('acao/inserir', 'AcaoController@store');
+//  	Route::get('acao/{id}', 'AcaoController@show');
 
 
     Route::post('acao/{id}', 'MensagemController@store');
@@ -105,7 +105,9 @@ Route::group(['middleware' => 'web'], function () {
 
 	});
 
-	Route::post('carrinho/{id}',['as'=>'carrinho', 'uses'=>'AcaoController@checkout']);
+    Route::group(['middleware' => 'auth'], function(){
+        Route::post('carrinho/{id}',['as'=>'carrinho', 'uses'=>'AcaoController@checkout']);
+    });
 
 
 	Route::get('paypal', 'AcaoController@paypal');
