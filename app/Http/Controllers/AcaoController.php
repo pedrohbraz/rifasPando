@@ -263,6 +263,15 @@ class AcaoController extends Controller
 
 
     }
+    public function carrinhoDeCompras()
+    {
+        return view('shopping_cart');
+    }
+
+//    public function carrinhoDeCompras()
+//    {
+//        return view('shopping_cart');
+//    }
 
 
 
