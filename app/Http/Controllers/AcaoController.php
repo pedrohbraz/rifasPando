@@ -29,7 +29,6 @@ use PayPal\Api\Payment;
 use PayPal\Api\Transaction;
 use PayPal\Api\RedirectUrls;
 use PayPal\Exception\PayPalConnectionException;
-use App\Events\SoftDeleteRifas;
 
 class AcaoController extends Controller
 {
@@ -281,17 +280,19 @@ class AcaoController extends Controller
     public function checkout($id)
     {
         $acao = Acao::find($id);
-        $checkboxCount = isset($_POST['checkbox']) ? count($_POST['checkbox']):0;
-        $aux = Rifa::find($_POST['checkbox']);
+        $aux = Rifa::find($_POST['checkbox'])->where('id_comprador',NULL);
+        $checkboxCount = count($aux);
         $rifasstr = '';
         $rifas= '';
-        foreach($aux as $key=>$rifa)
+        $key=$checkboxCount;
+        foreach($aux as $rifa)
         {
-            if($checkboxCount-1!=$key)
+
+            if($key>1)
             {
                 $rifasstr.=$rifa->nome_rifa.",";
                 $rifas.=$rifa->id.",";
-
+                $key--;
             }
             else
             {
@@ -299,7 +300,6 @@ class AcaoController extends Controller
                 $rifas.=$rifa->id;
             }
         }
-
         return view('checkout',compact('acao','checkboxCount','rifasstr', 'rifas'));
     }
 

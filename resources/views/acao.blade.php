@@ -32,12 +32,23 @@
                                 <table class="table" >
                                         <tbody>
                                         <tr>
-                                            @foreach($acao->rifa as $key=>$rifa)
+                                            {{--<input type="checkbox" name="wpuf_post_tags[]" class="vis-hidden new-post-tags" value="Aliens" />--}}
+                                            {{--<label for="chk_aliens">Aliens</label>--}}
+
+                                            {{--<input id="chk_ghosts" type="checkbox" name="wpuf_post_tags[]" class="vis-hidden new-post-tags" value="Ghosts" />--}}
+                                            {{--<label for="chk_ghosts">Ghosts</label>--}}
+
+                                            {{--<input id="chk_monsters" type="checkbox" name="wpuf_post_tags[]" class="vis-hidden new-post-tags" value="Monsters" />--}}
+                                            {{--<label for="chk_monsters">Monsters</label>--}}
+
+                                        @foreach($acao->rifa as $key=>$rifa)
                                                 @if($key%10==0 && $key != 0)
                                                     </tr>
                                                     <tr>
                                                 @endif
-                                                <td><input type=checkbox value = "{{$rifa->id}}" name = "checkbox[]">{{$rifa->nome_rifa}}</td>
+                                                <td><input id="{{$rifa->id}}" type="checkbox" value = "{{$rifa->id}}" class="vis-hidden new-post-tags" name = "checkbox[]" @if($rifa->id_comprador) checked style="border-color: green;"@endif >
+                                                    <label for="{{$rifa->id}}">{{$rifa->nome_rifa}}</label>
+                                                </td>
                                             @endforeach
                                         </tr>
                                         </tbody>
