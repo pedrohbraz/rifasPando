@@ -20,7 +20,9 @@
                             <div class="caption">
                               <h3>{{$rifas->nome_acao}}</h3>
                               <p>R${{$rifas->valor_rifa}},00</p>
+                              <p>Data sorteio:{{$rifas->data_sorteio}}</p>
                               <p><b>Rifa comprada:{{$rifas->nome_rifa}}</b></p>
+
                           </div>
                       </div>
                     @endforeach

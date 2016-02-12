@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Registrar-se</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
                         {!! csrf_field() !!}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -23,6 +23,14 @@
                                 @endif
                             </div>
                         </div>
+                        <!--Foto do usuario-->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Inserir Foto</label>
+
+                                        <div class="col-md-6">
+                                            <input type="file" class="form-control" name="foto" value="{{ old('foto') }}">
+                                        </div>
+                                    </div>
              <!----campo de telefone-->
                         <div class="form-group{{ $errors->has('telefone') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Telefone</label>

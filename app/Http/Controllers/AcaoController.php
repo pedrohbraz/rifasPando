@@ -155,7 +155,7 @@ class AcaoController extends Controller
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','>',$hoje2)
                ->get();
-      //  dd($rifas);
+        dd($rifas);
       return view('Users.acoesCompAndamento',compact('rifas'));
     }
 
@@ -212,9 +212,20 @@ class AcaoController extends Controller
     public function update(Request $request, $id)
     {
 
-      $acao = Acao::find($id);
-      $acao->descricao = $request->descricao;
+       $acao = Acao::find($id);
+       $acao->descricao = $request->descricao;
+      //Armazenamento da imagem
+      if($request->hasFile('imagem')){
+      $arquivo    = $request->file('imagem');
+      $extension  = $arquivo->getClientOriginalExtension();
+      $image_name = 'acao'.$acao->id;
+      $path       = $arquivo->getRealPath();
+
+      Storage::put('acaos/'.$image_name.'.'.$extension,file_get_contents($path));
+      $acao->imagem = '/image/acaos/'.$image_name;
+    }
       $acao->save();
+     return view('Acaos.acaoEdit', compact('acao'));
 
 
     }
