@@ -26,6 +26,9 @@
 		<!-- Stylesheet for Color -->
 
 		<link href="../../css/mackart/red.css" rel="stylesheet">
+		<script src="../../assets/sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="../../assets/sweetalert-master/dist/sweetalert.css">
+		@include('sweet::alert')
 
 
 		<!-- Favicon -->
