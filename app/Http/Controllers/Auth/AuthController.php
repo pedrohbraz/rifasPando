@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Role;
-
+use Storage;
 
 class AuthController extends Controller
 {
@@ -72,6 +72,7 @@ class AuthController extends Controller
             'telefone'=>$data['telefone'],
             'endereco'=>$data['endereco'],
             'email_paypal'=>$data['email_paypal'],
+
         ]);
 
         /*
@@ -89,6 +90,6 @@ class AuthController extends Controller
         $user->attachRole($role);
 
         return $user;
-
+        dd($user->id);
     }
 }
