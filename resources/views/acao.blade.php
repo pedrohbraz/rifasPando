@@ -16,7 +16,7 @@
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->user->name }}</h6>
                             <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
-                            <h6>Descrição:  <textarea rows="4" cols="50" readonly="readonly">{{$acao->descricao}}</textarea></6>
+                            <h6>Descrição:  <textarea rows="4" cols="50" readonly="readonly">{{$acao->descricao}}</textarea></h6>
                           <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
 
                       </div>
@@ -37,15 +37,21 @@
                                                     </tr>
                                                     <tr>
                                                 @endif
-                                                <td><input type=checkbox value = "{{$rifa->nome_rifa}}" name = "checkbox[]">{{$rifa->nome_rifa}}</td>
+                                                <td><input type=checkbox value = "{{$rifa->id}}" name = "checkbox[]">{{$rifa->nome_rifa}}</td>
                                             @endforeach
                                         </tr>
                                         </tbody>
                                 </table>
                             </div>
                             <div class="form-group">
-
-                                <input type="submit" value="Comprar!">
+                                @if(Auth::user()!=NULL)
+                                    <button type="submit" class="btn btn-default" >Comprar!</button>
+                                @else
+                                    </div>
+                                    </form>
+                                    <h6>Voce precisa estar logado para poder comprar.</h6>
+                                    <a href="/login"><button type="submit" class="btn btn-default" >Login</button></a>
+                                @endif
 
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                             </div>

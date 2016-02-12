@@ -8,7 +8,7 @@
                 <div class="panel-heading">Carrinho de rifas</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/paypal') }}" enctype="multipart/form-data">
-                        <h3>Rifas:{{$rifas}}</h3>
+                        <h3>Rifas:{{$rifasstr}}</h3>
                         <h3><p>Quantidade:{{$checkboxCount}}</p>
                         <p>Preco por unidade: R${{$acao->valor_rifa}},00</p>
                         <p>Valor Total: R${{$acao->valor_rifa * $checkboxCount}}</p>

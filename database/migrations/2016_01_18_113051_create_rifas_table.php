@@ -27,7 +27,6 @@ class CreateRifasTable extends Migration
 
       $table->date('soldAt')->nullable();//apenas para teste esta null
       $table->timestamps();
-      $table->softDeletes();
   });
   }
 
