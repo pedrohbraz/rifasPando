@@ -76,9 +76,9 @@
                             <label class="nome">Endereco:</label>
 
 													 <input type="text" class="form-control" name="endereco" value="{{ Auth::user()->endereco }}" readonly="readonly">
-                          <label class="nome">Email Paypal:</label>
 
-	 														<input type="text" class="form-control" name="email_paypal" value="{{ Auth::user()->email_paypal }}" readonly="readonly">
+
+	 														
 						 	</div>
       	</div>
   	</div>

@@ -87,7 +87,7 @@ class AcaoController extends Controller
         $acao->valor_rifa       = $request->valor_rifa;
         $acao->data_sorteio     = $request->data_sorteio;
         $acao->forma_entrega    = $request->forma_entrega;
-
+        $acao->qtd_max          = $request->qtd_max;
         //Cria e salva as rifas
         $quantidade_rifas = $acao->quantidade_rifas;
 

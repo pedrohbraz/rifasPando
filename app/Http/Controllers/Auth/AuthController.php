@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Role;
+use App\Http\Requests;
+
 use Storage;
 
 class AuthController extends Controller
@@ -65,31 +67,28 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+
+    $arquivo    = $data['foto'];
+    $extension  = $arquivo->getClientOriginalExtension();
+    $image_name = 'user';
+    $path       = $arquivo->getRealPath();
+
+    Storage::put('users/'.$image_name.$data['email'].'.'.$extension,file_get_contents($path));
+  //  $user->foto = '/image/users/'.$image_name;
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'telefone'=>$data['telefone'],
             'endereco'=>$data['endereco'],
-            'email_paypal'=>$data['email_paypal'],
-
+            'foto' =>'image/users/'.$image_name,
         ]);
 
-        /*
-        dd($user);
-
-        $user = new User;
-        $user->name     = $data['name'];
-        $user->email    = $data['email'];
-        $user->password = bcrypt($data['password']);
-        $user->telefone = $data['telefone'];
-        $user->endereco = $data['endereco'];
-        */
 
         $role = Role::where('name','=','user')->first();
         $user->attachRole($role);
 
         return $user;
-        dd($user->id);
+
     }
 }
