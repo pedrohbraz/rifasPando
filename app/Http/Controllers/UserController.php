@@ -88,7 +88,7 @@ class UserController extends Controller
       $user->name = $request->name;
       $user->telefone = $request->telefone;
       $user->password = bcrypt($request->newpassword);
-      $user->email_paypal = $request->email_paypal;
+    
       //Armazenamento da imagem
       $arquivo    = $request->file('foto');
     //  dd($arquivo);
