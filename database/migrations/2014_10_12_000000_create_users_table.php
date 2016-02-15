@@ -16,7 +16,6 @@ class CreateUsersTable extends Migration
           $table->increments('id');
           $table->string('name');
           $table->string('email')->unique();
-          $table->string('email_paypal')->unique()->nullable();
           $table->string('telefone');
           $table->string('foto')->nullable();//esta null apenas para teste de seed, retirar depois
           $table->string('endereco')->nullable();//esta null apenas para teste de seed, retirar depois

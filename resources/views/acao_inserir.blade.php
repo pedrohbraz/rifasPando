@@ -50,6 +50,16 @@
                             </div>
                         </div>
 
+              <!--qtd max de Rifas por comprador-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Quantidade máxima de rifas por comprador</label>
+
+                              <div class="col-md-6">
+                                  <input type="number" class="form-control" name="qtd_max">
+                                  </div>
+                          </div>
+
+
             <!--Data do sorteio-->
                         <div class="form-group">
                             <label class="col-md-4 control-label">Data do Sorteio</label>
