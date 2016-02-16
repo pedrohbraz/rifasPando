@@ -15,6 +15,10 @@ class CreateAcaosTable extends Migration
       Schema::create('acaos', function (Blueprint $table) {
         $table->increments('id');
         $table->integer('user_id');
+        $table->integer('winner_id')->nullable()->unsigned();
+        $table->foreign('winner_id')
+              ->references('id')->on('users');
+
         $table->string('nome_acao',100);
         $table->longText('descricao');
         $table->string('numrifado')->nullable();

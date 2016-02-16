@@ -19,6 +19,9 @@
                           <div class="caption">
                             <h3>{{$acao->nome_acao}}</h3>
                             <p>R${{$acao->valor_rifa}},00</p>
+                            <p>Sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></p>
+                            <p>Número sorteado:{{$acao->numrifado}}</p>
+                            <p>ID ganhador:{{$acao->winner_id}}</p>
                           </div>
                         </div>
                       </div>
