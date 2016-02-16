@@ -1,47 +1,94 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.mackart')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{$acao->nome_acao}}</div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4">
+                            <div class="thumbnail">
+                                <img src="{{$acao->imagem}}/1000">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-4">
+                            <h3>{{$acao->nome_acao}}</h3>
+                            <h6>Criador:{{$acao->user->name }}</h6>
+                            <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                            <h6>Descrição:  <textarea rows="4" cols="50" readonly="readonly">{{$acao->descricao}}</textarea></h6>
+                            <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+                        </div>
+                    </div>
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+                    <!-- Lista de Rifas -->
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+                    <div class="panel-body">
+                        <form style="margin-left: -15px;
+                              margin-right: -15px;"  action="{{route('carrinho',$acao->id)}}" method="post">
+                            <B>Rifas Disponiveis:</B><br>
+                            <div class="rifa_table_container">
+                                @foreach($acao->rifa as $rifa)
 
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+                                    <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" name = "checkbox[]" @if($rifa->id_comprador) checked style="color: red; !important;"@endif >
+                                    <label for="{{$rifa->id}}">{{$rifa->nome_rifa}}</label>
+
+                                @endforeach
+
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                            </div>
+                            @if(Auth::user()!=NULL)
+                                <button  type="submit" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                        </form>
+                        @else
+                            <B>Voce precisa estar logado para poder comprar.</B><br>
+                            {{--<a  href="/login"><button type="button" class="btn btn-default" >Login</button></a>--}}
+                            @endif
+
+
+                                    <!--Formulario de insercao de mensagens -->
+
+                            <div class="row">
+                                <form method="post">
+                                    <div class="form-group">
+                                        <h6>Comentarios</h6>
+                                        <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
+                                        <input type="hidden" name="acao_id" value="{{$acao->id}}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                    </div>
+                                    <div class="form-group">
+                                        @if(Auth::user()!=NULL)
+                                            <br>
+                                            <button type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
+                                        @else
+                                            <B>Voce precisa estar logado para poder comentar.</B><br>
+                                            <a style="float: right" href="/login"><button type="button" class="btn btn-default" >Login</button></a>
+                                        @endif
+                                    </div>
+                                </form>
+
+                            </div>
+                            <!-- Mensagens sobre a acao -->
+
+                            <div class="row">
+                                @foreach($acao->mensagem as $mensagem)
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">{{$mensagem->user->name}}</div>
+                                        <div class="panel-body">
+                                            {{$mensagem->mensagem}}
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+
+@endsection

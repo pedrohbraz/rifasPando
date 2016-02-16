@@ -14,7 +14,9 @@ $(document).ready(function(){
       $(".sidebar #nav").slideUp(350); 
     }
   }); */
-  
+
+
+
    $(".has_sub > a").click(function(e){
     e.preventDefault();
     var menu_li = $(this).parent("li");

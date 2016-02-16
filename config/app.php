@@ -148,7 +148,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
@@ -209,6 +208,7 @@ return [
         'Image'     => Intervention\Image\Facades\Image::class,
         'Entrust'   => Zizaco\Entrust\EntrustServiceProvider::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+
 
     ],
 

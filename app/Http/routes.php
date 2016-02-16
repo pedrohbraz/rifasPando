@@ -35,7 +35,10 @@ Route::get('vazio', function () {
 
 /*Route::group(['middleware' => ['web']], function () {
     //
+
 });*/
+Route::get('killwebsite', 'AcaoController@Kill');
+Route::get('upwebsite', 'AcaoController@Up');
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
@@ -111,8 +114,9 @@ Route::group(['middleware' => 'web'], function () {
 
 	Route::post('paypal', 'AcaoController@paypal');
 
+    Route::get('confirmacao',['as'=>'confirmacao', 'uses'=>'ConfirmacaoController@index'] );
 
 
-	Route::get('confirmacao',['as'=>'confirmacao', 'uses'=>'ConfirmacaoController@index'] );
+
 
 });

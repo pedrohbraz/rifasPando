@@ -14,6 +14,7 @@ use App\Rifa;
 use DB;
 use App\Events\GeracaoDeRifas;
 use Auth;
+use Illuminate\Support\Facades\Artisan;
 use Psy\Exception\ErrorException;
 use Storage;
 use App\User;
@@ -290,15 +291,20 @@ class AcaoController extends Controller
 
     public function checkout($id)
     {
+
         $acao = Acao::find($id);
         $aux = Rifa::find($_POST['checkbox'])->where('id_comprador',NULL);
         $checkboxCount = count($aux);
+        if($checkboxCount==0)
+        {
+            alert()->warning('Selecione uma rifa');
+            return back();
+        }
         $rifasstr = '';
         $rifas= '';
         $key=$checkboxCount;
         foreach($aux as $rifa)
         {
-
             if($key>1)
             {
                 $rifasstr.=$rifa->nome_rifa.",";
@@ -402,4 +408,9 @@ class AcaoController extends Controller
         return redirect($approvalUrl);
 
     }
+    public function Kill()
+    {
+     Artisan::call('down');
+    }
+
 }
