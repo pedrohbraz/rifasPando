@@ -52,20 +52,7 @@
                             </div>
                         </div>
 
-                        <!------Campo email Paypal-------------->
-                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                 <label class="col-md-4 control-label">E-Mail Paypal</label>
-
-                                 <div class="col-md-6">
-                                     <input type="email" class="form-control" name="email_paypal" value="{{Auth::user()->email_paypal }}">
-
-                                     @if ($errors->has('email_paypal'))
-                                         <span class="help-block">
-                                             <strong>{{ $errors->first('email_paypal') }}</strong>
-                                         </span>
-                                     @endif
-                                 </div>
-                             </div>
+                        
                         <!--Foto do usuario-->
                                     <div class="form-group">
                                         <label class="col-md-4 control-label">Inserir Foto</label>

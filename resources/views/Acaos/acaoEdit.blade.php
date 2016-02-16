@@ -19,22 +19,22 @@
                       <div class="col-xs-6 col-md-4">
                         <h3>{{$acao->nome_acao}}</h3>
                         <h6>Criador:{{$acao->user->name }}</h6>
+                        <img src="{{$acao->user->foto}}/100">
                         <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                        <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
+                        <h6>Email de contato: {{$acao->email}}</h6>
+                        <h6>Telefone de contato: {{$acao->telefone_contato}}</h6>
                         <h6>Descrição:
                         <textarea class="form-control" rows="3" name="descricao" value="{{$acao->descricao}}">{{$acao->descricao}}</textarea>
                         </h6>
                          <h6>Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
 
-
-                    <div class="form-group">
                         <label>Alterar Imagem</label>
-                        <div>
-                            <input type="file" class="form-control" name="imagem" value="{{ old('imagem') }}">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
+                        <input type="file" class="form-control" name="imagem" value="{{ old('imagem') }}"/>
+                      </br>
+                       <button type="submit" class="btn btn-primary">
                         <i class="fa fa-btn fa-user"></i>ok
-                    </button>
+                     </button>
                 </form>
 
                       </div>
@@ -70,5 +70,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection

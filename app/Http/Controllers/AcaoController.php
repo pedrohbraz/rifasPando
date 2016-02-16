@@ -89,9 +89,13 @@ class AcaoController extends Controller
         $acao->data_sorteio     = $request->data_sorteio;
         $acao->forma_entrega    = $request->forma_entrega;
         $acao->qtd_max          = $request->qtd_max;
+        $acao->nome_contato     = Auth::user()->name;
+        $acao->telefone_contato = Auth::user()->telefone;
+        $acao->email            = Auth::user()->email;
+        $acao->foto_contato     = Auth::user()->foto;
         //Cria e salva as rifas
         $quantidade_rifas = $acao->quantidade_rifas;
-
+       
         //Salva a acao
         $acao->save();
 
