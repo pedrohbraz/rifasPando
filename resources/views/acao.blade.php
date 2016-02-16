@@ -20,7 +20,7 @@
                             <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
                             <h6>Email de contato: {{$acao->email}}</h6>
                             <h6>Telefone de contato: {{$acao->telefone_contato}}</h6>
-                            <h6>Descrição:  <textarea rows="4" cols="50" readonly="readonly">{{$acao->descricao}}</textarea></h6>
+                            <h6>Descrição:  <textinput readonly="readonly">{{$acao->descricao}}</textinput></h6>
                           <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
 
                       </div>
