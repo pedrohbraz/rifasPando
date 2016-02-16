@@ -38,6 +38,9 @@
 
     <!-- Custom CSS -->
     <link href="css2/simple-sidebar.css" rel="stylesheet">
+    <script src="../../assets/sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../../assets/sweetalert-master/dist/sweetalert.css">
+
 
     <style>
         body {

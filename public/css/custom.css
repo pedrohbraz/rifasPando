@@ -1,18 +1,9 @@
-.tabela{
-    float: left;
-    width: 100px;
-}
-.table{
-    border-collapse: collapse; !important;
-}
-.td{
-    padding: 0; !important;
-}
+
 .vis-hidden {
     border: 0;
     clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
+    height: 10px;
+    margin: 10px;
     overflow: hidden;
     padding: 0;
     position: absolute;
@@ -28,4 +19,16 @@ label {
 input:checked + label {
     border-color: blue;
 }
+
+.rifa_table_container {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 15px inset #eee;
+}
+
 

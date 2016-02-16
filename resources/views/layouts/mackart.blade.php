@@ -13,26 +13,26 @@
 
 		<!-- Styles -->
 		<!-- Bootstrap CSS -->
-		<link href="../../css/mackart/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/mackart/bootstrap.min.css" rel="stylesheet">
 		<!-- Flex slider -->
 
-		<link href="../../css/mackart/flexslider.css" rel="stylesheet">
-		<link href="../../css/mackart/owl.carousel.css" rel="stylesheet">
-		<link href="../../css/mackart/font-awesome.min.css" rel="stylesheet">
+		<link href="/css/mackart/flexslider.css" rel="stylesheet">
+		<link href="/css/mackart/owl.carousel.css" rel="stylesheet">
+		<link href="/css/mackart/font-awesome.min.css" rel="stylesheet">
 
 		<!-- Custom CSS -->
-		<link href="../../css/mackart/style.css" rel="stylesheet">
-		<link href="../../css/custom.css" rel="stylesheet">
+		<link href="/css/mackart/style.css" rel="stylesheet">
+		<link href="/css/custom.css" rel="stylesheet">
 		<!-- Stylesheet for Color -->
 
-		<link href="../../css/mackart/red.css" rel="stylesheet">
-		<script src="../../assets/sweetalert-master/dist/sweetalert.min.js"></script>
-		<link rel="stylesheet" href="../../assets/sweetalert-master/dist/sweetalert.css">
-		@include('sweet::alert')
+		<link href="/css/mackart/red.css" rel="stylesheet">
+		<script src="/assets/sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="/assets/sweetalert-master/dist/sweetalert.css">
+
 
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="images-mackart/favicon/favicon.png">
+		<link rel="shortcut icon" href="/images-mackart/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -408,18 +408,19 @@
 
 		<!-- Javascript files -->
 		<!-- jQuery -->
-		<script src="js/jquery.js"></script>
-		<!-- Bootstrap JS -->
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/filter.js"></script>
+		<script src="/js/macadmin/jquery.js"></script>
+
+	<!-- Bootstrap JS -->
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/owl.carousel.min.js"></script>
+		<script src="/js/filter.js"></script>
 		<!-- Flex slider -->
-		<script src="js/jquery.flexslider-min.js"></script>
+		<script src="/js/jquery.flexslider-min.js"></script>
 		<!-- Respond JS for IE8 -->
-		<script src="js/respond.min.js"></script>
+		<script src="/js/respond.min.js"></script>
 		<!-- HTML5 Support for IE -->
-		<script src="js/html5shiv.js"></script>
+		<script src="/js/html5shiv.js"></script>
 		<!-- Custom JS -->
-		<script src="js/custom.js"></script>
+		<script src="/js/custom.js"></script>
 	</body>
 </html>

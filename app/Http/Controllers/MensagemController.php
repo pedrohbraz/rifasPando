@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
 use App\Mensagem;
+use UxWeb\SweetAlert\SweetAlert;
 
 class MensagemController extends Controller
 {
@@ -44,9 +45,9 @@ class MensagemController extends Controller
 
         $mensagem->user_id  = Auth::user()->id;
         $mensagem->acao_id  = $request->acao_id;
-        $mensagem->mensagem = $request->mensagem; 
-
+        $mensagem->mensagem = $request->mensagem;
         $mensagem->save();
+
 
         return redirect('/acao/'.$mensagem->acao_id);
     }
