@@ -5,8 +5,10 @@
         <div class="col-md-10 col-md-offset-1">
             @if($mensagem)
             <div class="panel panel-primary">
-                    <div class="panel-heading">Mensagens</div>
-                    <div class="panel-body">{{$mensagem->user->name}}:  {{$mensagem->descricao}}</div>
+                <div class="panel-heading">Avisos</div>
+                <div class="panel-body">
+                    <h6>{{$mensagem->user->name}} ({{$mensagem->created_at}}): {{$mensagem->descricao}}</h6>
+                </div>
             </div>
             @endif
             <div class="panel panel-info">

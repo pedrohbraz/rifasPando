@@ -21,5 +21,4 @@ class Rifa extends Model
 	{
 		return $this->belongsTo('App\Acao');
 	}
-
 }
