@@ -207,7 +207,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Image'     => Intervention\Image\Facades\Image::class,
         'Entrust'   => Zizaco\Entrust\EntrustServiceProvider::class,
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'SweetAlert' => UxWeb\SweetAlert\SweetAlert::class,
 
 
     ],

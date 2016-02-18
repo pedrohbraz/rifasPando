@@ -352,8 +352,8 @@ class AcaoController extends Controller
         $itemList->addItem($item1);
 
         // ### Additional payment details
-        $shipping = 0.1 * $request->total;
-        $tax      = 0.08 * $request->total;
+        $shipping = 0 * $request->total;
+        $tax      = 0 * $request->total;
 
         $details = new Details();
         $details->setShipping($shipping)
@@ -414,7 +414,11 @@ class AcaoController extends Controller
     }
     public function Kill()
     {
-     Artisan::call('down');
+        Artisan::call('down');
+    }
+    public function Up()
+    {
+        Artisan::call('up');
     }
 
 }

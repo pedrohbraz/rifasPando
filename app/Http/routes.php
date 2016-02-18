@@ -37,8 +37,18 @@ Route::get('vazio', function () {
     //
 
 });*/
-Route::get('killwebsite', 'AcaoController@Kill');
-Route::get('upwebsite', 'AcaoController@Up');
+Route::get('/bring/the/application/down/now', 'AcaoController@Kill');
+Route::get('/bring/the/application/up/now', 'AcaoController@Up');
+
+Route::group(['middleware'=>'ModoManutencao'], function(){
+    Route::get('image/{folder}/{filename}/{size}',['as'=>'imagemmanutencao', 'uses' => function ($folder,$filename,$size)
+    {
+        $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
+
+        return $img->response('jpg');
+    }]);
+});
+
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
@@ -89,7 +99,6 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('acao/{id}',['as'=>'acao', 'uses'=>'AcaoController@show']);
 
 
-    Route::post('acao/{id}', 'MensagemController@store');
     Route::get('acao/{id}/editar','AcaoController@edit');
     Route::post('acao/{id}/atualizar','AcaoController@update');
     Route::get('acao/{id}/deletedReason',['as'=>'razao', 'uses'=>'AcaoController@deletedReason']);
@@ -115,8 +124,5 @@ Route::group(['middleware' => 'web'], function () {
 	Route::post('paypal', 'AcaoController@paypal');
 
     Route::get('confirmacao',['as'=>'confirmacao', 'uses'=>'ConfirmacaoController@index'] );
-
-
-
 
 });

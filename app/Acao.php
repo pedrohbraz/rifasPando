@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Carbon\Carbon;
 
 class Acao extends Model
 {
@@ -32,4 +33,5 @@ class Acao extends Model
     {
     	return $this->hasMany('App\Mensagem');
     }
+
   }
