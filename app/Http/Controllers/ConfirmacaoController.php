@@ -19,6 +19,7 @@ use Exception;
 use PayPal\Exception\PayPalConnectionException;
 use App\Events\SoftDeleteRifas;
 use App\Rifa;
+use UxWeb\SweetAlert\SweetAlert;
 use Auth;
 
 class ConfirmacaoController extends Controller
@@ -86,9 +87,10 @@ class ConfirmacaoController extends Controller
                 $status='Compra feita com sucesso!';
             }
 
-            alert()->success($status);
+            SweetAlert::success($status);
 
             return view('confirmacao');
+
 
         }else {
             $status='Compra cancelada pelo usuario';

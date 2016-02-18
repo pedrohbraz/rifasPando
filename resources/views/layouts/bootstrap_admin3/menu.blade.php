@@ -6,6 +6,8 @@
                     <li class="current"><a href="/admin"><i class="glyphicon glyphicon-home"></i> Mensagens Administrativas</a></li>
                     <li><a href="/mensagem_adm/inserir"><i class="glyphicon glyphicon-list"></i> Nova Mensagem Administrativa</a></li>
                     <li><a href="/"><i class="glyphicon glyphicon-list"></i> Voltar para o Site</a></li>
+                    <li><a href="/bring/the/application/down/now"><i class="glyphicon glyphicon-remove-sign"></i> Ativar modo manutenção</a></li>
+
                     <!--
                     <li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
                     <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>

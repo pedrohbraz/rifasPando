@@ -8,10 +8,4 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <a style="float:left" href="/killwebsite"><button type="button" class="btn btn-default" >Kill</button></a>
-    </div>
-</div>
-
 @endsection

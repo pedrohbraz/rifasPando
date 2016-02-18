@@ -83,11 +83,9 @@ class AuthController extends Controller
             'endereco'=>$data['endereco'],
             'foto' =>'image/users/'.$image_name,
         ]);
-
-
         $role = Role::where('name','=','user')->first();
-        $user->attachRole($role);
 
+        $user->attachRole($role);
         return $user;
 
     }
