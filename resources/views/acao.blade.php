@@ -13,6 +13,7 @@
                             <img src="{{$acao->imagem}}/1000">
                         </div>
                     </div>
+
                       <div class="col-xs-6 col-md-4">
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->name }}</h6>
