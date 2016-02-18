@@ -95,7 +95,7 @@ class AcaoController extends Controller
         $acao->foto_contato     = Auth::user()->foto;
         //Cria e salva as rifas
         $quantidade_rifas = $acao->quantidade_rifas;
-       
+
         //Salva a acao
         $acao->save();
 
@@ -135,6 +135,7 @@ class AcaoController extends Controller
     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
     $acao = DB::table('acaos')->select('*')
                ->where('data_sorteio','>=',$hoje2)
+               ->where('winner_id',null)
                ->where('user_id','=',$id)
                ->get();
 
@@ -151,7 +152,7 @@ class AcaoController extends Controller
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','>',$hoje2)
                ->get();
-        dd($rifas);
+      
       return view('Users.acoesCompAndamento',compact('rifas'));
     }
 
@@ -162,7 +163,8 @@ class AcaoController extends Controller
     $hoje = getdate();
     $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
     $acao = DB::table('acaos')->select('*')
-               ->where('data_sorteio','<',$hoje2)
+               ->whereNotNull('winner_id')
+               ->orWhere('data_sorteio','<',$hoje2)
                ->where('user_id','=',$id)
                ->get();
     return view('Users.acoesOrgClosed',compact('acao'));
@@ -180,7 +182,6 @@ class AcaoController extends Controller
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','<',$hoje2)
                ->get();
-     //dd($rifas);
 
       return view('Users.acoesCompClosed',compact('rifas'));
      }
@@ -236,7 +237,6 @@ class AcaoController extends Controller
       $acao->deleted_reason = $request->deleted_reason;
 
       $acao ->save();
-    //  dd($acao);
       return redirect()->route('razao',['id'=>$id]);
     }
 
@@ -250,7 +250,6 @@ class AcaoController extends Controller
     public function destroy($id)
     {
           $acao = Acao::find($id);
-          //dd($acao);
           $acao -> delete();
 
           return redirect('/perfil');
@@ -274,9 +273,12 @@ class AcaoController extends Controller
     $numero = $rifas[$sorteado];//rifa especifica do array com a posição sorteada
     $acao = Acao::find($id);
     $acao->numrifado = $numero->nome_rifa; //atualiza campo de numero rifado da tabele acaos
+    $acao->winner_id = $numero->id_comprador;//atualiza o campo id do vencedor em acaos
     $acao->save();
-    $user_id = $numero->id_comprador;
+    //exibir resultado
+    $user_id = $acao->winner_id;
     $user = User::find($user_id); //encontrar ganhador da rifa
+
     return view('Acaos.rifado', compact('numero','acao','user'));
 
 

@@ -13,13 +13,7 @@
                             <img src="{{$acao->imagem}}/1000">
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-4">
-                        <h3>{{$acao->nome_acao}}</h3>
-                        <h6>Criador:{{$acao->user->name }}</h6>
-                        <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
-                        <h6>Descrição:  <textarea rows="4" cols="50" readonly="readonly">{{$acao->descricao}}</textarea></h6>
-                        <h6>  Numero sorteado: {{ $acao->numrifado or 'ainda não ocorreu sorteio' }}</h6>
-                      </div>
+                    
                       <div class="col-xs-6 col-md-4">
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->user->name }}</h6>
