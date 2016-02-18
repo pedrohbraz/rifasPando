@@ -10,8 +10,7 @@
         "intervention/image": "^2.3",
         "ext-curl": "*",
         "angelleye/paypal-php-library": "2.0.*",
-        "paypal/rest-api-sdk-php": "*",
-        "bagwaa/killswitch": "^1.0"
+        "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
