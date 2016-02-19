@@ -1,7 +1,6 @@
 @extends('layouts.mackart')
 
 @section('content')
-@include('vendor.sweet.alert')
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -19,7 +18,7 @@
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->name }}</h6>
                             <img src="{{$acao->user->foto}}/100">
-                            <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                            <h6>Valor das rifas: R${{$acao->valor_rifa}}</h6>
                             <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
                             <h6>Email de contato: {{$acao->email}}</h6>
                             <h6>Telefone de contato: {{$acao->telefone_contato}}</h6>
@@ -42,7 +41,8 @@
                                       data-hint="comprada"
                                       class="hint--top hint--info" @endif>{{$rifa->nome_rifa}} </label>
 
-                             @endforeach
+
+                            @endforeach
 
                         </div>
                         <br>
@@ -50,7 +50,9 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         </div>
                         @if(Auth::user()!=NULL)
-                            <button  type="submit" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                        <div class="form-group">
+                            <button type="submit" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                        </div>
                     </form>
                     @else
                         <B>Voce precisa estar logado para poder comprar.</B><br>
@@ -58,28 +60,39 @@
                         @endif
 
 
-                                <!--Formulario de insercao de mensagens -->
-
-                        <div class="row">
-                            <form method="post">
-                                <div class="form-group">
-                                    <h6>Comentarios</h6>
-                                    <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
-                                    <input type="hidden" name="acao_id" value="{{$acao->id}}">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                                </div>
-                                <div class="form-group">
-                                    @if(Auth::user()!=NULL)
-                                        <br>
-                                        <button type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
-                                    @else
+                        <!--Formulario de insercao de mensagens -->
+                        @if(Auth::user()!=NULL)
+                            <div class="row">
+                                <form  method="post">
+                                    <div   class="form-group">
+                                        <h6>Comentarios</h6>
+                                        <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
+                                        <input type="hidden" name="acao_id" value="{{$acao->id}}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                    </div>
+                                    <div class="form-group">
+                                            <button  type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
+                                    </div>
+                                </form>
+                            </div>
+                        @else
+                            <div class="row">
+                                <form   method="post">
+                                    <div style="margin-left: 15px;
+                              margin-right: 15px;" class="form-group">
+                                        <h6>Comentarios</h6>
+                                        <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
+                                        <input type="hidden" name="acao_id" value="{{$acao->id}}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                    </div>
+                                    <div style="margin-left: 15px;
+                              margin-right: 15px;" class="form-group">
                                         <B>Voce precisa estar logado para poder comentar.</B><br>
-                                        <a style="float: right" href="/login"><button type="button" class="btn btn-default" >Login</button></a>
-                                    @endif
-                                </div>
-                            </form>
-
-                        </div>
+                                        <a style="float: left" href="/login"><button type="button" class="btn btn-default" >Login</button></a>
+                                    </div>
+                                </form>
+                            </div>
+                        @endif
                         <!-- Mensagens sobre a acao -->
 
                         <div class="row">

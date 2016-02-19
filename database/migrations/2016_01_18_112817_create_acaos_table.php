@@ -25,7 +25,7 @@ class CreateAcaosTable extends Migration
         $table->longText('imagem')->nullable();//esta null apenas para teste de seed, retirar depois
         $table->integer('quantidade_rifas');
         $table->integer('qtd_max');
-        $table->double('valor_rifa');
+        $table->decimal('valor_rifa',4,2);
         $table->date('data_sorteio')->nullable();//esta null apenas para teste de seed, retirar depois
         $table->string('forma_entrega')->nullable();//esta null apenas para teste de seed, retirar depois
         $table->string('nome_contato')->nullable();//esta null apenas para teste de seed, retirar depois

@@ -1,3 +1,9 @@
+
+@if(isset($aux)==1)
+	<script>
+		swal({   title: "Usuario criado com sucesso!",   text: "", type: "success",   timer: 3000,   showConfirmButton: false });
+	</script>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 	<head>

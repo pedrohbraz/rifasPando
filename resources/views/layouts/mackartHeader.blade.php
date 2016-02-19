@@ -33,6 +33,8 @@
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="images-mackart/favicon/favicon.png">
+		<script src="/assets/sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="/assets/sweetalert-master/dist/sweetalert.css">
 	</head>
 
 	<body>

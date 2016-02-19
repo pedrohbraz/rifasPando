@@ -11,12 +11,12 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/paypal') }}" enctype="multipart/form-data">
                         <h3>Rifas:{{$rifasstr}}</h3>
                         <h3><p>Quantidade:{{$checkboxCount}}</p>
-                        <p>Preco por unidade: R${{$acao->valor_rifa}},00</p>
+                        <p>Preco por unidade: R${{$acao->valor_rifa}}</p>
                         <p>Valor Total: R${{$acao->valor_rifa * $checkboxCount}}</p>
                         <input type="hidden" name="nome" value="{{$acao->nome_acao}}">
                         <input type="hidden" name="quantidade" value="{{$checkboxCount}}">
                         <input type="hidden" name="valor" value="{{$acao->valor_rifa}}">
-                        <input type="hidden" name="total" value="{{$acao->valor_rifa * $checkboxCount}}">
+                        <input type="hidden" name="total" value="{{$total}}">
                         <input type="hidden" name="acao" value="{{$acao->id}}">
                         <input type="hidden" name="rifas" value="{{$rifas}}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" /></h3>
