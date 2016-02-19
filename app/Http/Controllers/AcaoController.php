@@ -307,6 +307,7 @@ class AcaoController extends Controller
         $rifasstr = '';
         $rifas= '';
         $key=$checkboxCount;
+        $total=number_format($acao->valor_rifa*$checkboxCount,2);
         foreach($aux as $rifa)
         {
             if($key>1)
@@ -321,7 +322,7 @@ class AcaoController extends Controller
                 $rifas.=$rifa->id;
             }
         }
-        return view('checkout',compact('acao','checkboxCount','rifasstr', 'rifas'));
+        return view('checkout',compact('acao','checkboxCount','rifasstr', 'rifas', 'total'));
     }
 
     public function paypal(Request $request)
