@@ -18,8 +18,7 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*",
-        "zizaco/entrust": "dev-laravel-5",
-        "uxweb/sweet-alert": "~1.1"
+        "zizaco/entrust": "dev-laravel-5"
     },
     "autoload": {
         "classmap": [
