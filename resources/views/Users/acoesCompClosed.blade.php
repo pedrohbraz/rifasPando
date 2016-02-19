@@ -10,20 +10,23 @@
                 <div class="panel-body">
 
                     <div class="row">
-                    @foreach($rifas as $rifas)
+                    @foreach($acaos as $acaos)
 
                     <div class="col-xs-6 col-md-4">
                        <div class="thumbnail">
 
-                         <img src="{{$rifas->imagem}}/190">
+                         <img src="{{$acaos->imagem}}/190">
 
                            <div class="caption">
-                             <h3>{{$rifas->nome_acao}}</h3>
-                             <p>R${{$rifas->valor_rifa}},00</p>
-                             <p>Data sorteio:{{$rifas->data_sorteio}}</p>
-                             <p><b>Rifa comprada:{{$rifas->nome_rifa}}</b></p>
+                             <h3>{{$acaos->nome_acao}}</h3>
+                             <p>R${{$acaos->valor_rifa}},00</p>
+                             <p>Data do sorteio:<?php echo date("d/m/Y", strtotime($acaos->data_sorteio)); ?><p>
+
+                           <p><b>Rifa comprada:{{$acaos->nome_rifa}}</b></p>
+
                          </div>
                      </div>
+                   </div>
                    @endforeach
                    </div>
 
