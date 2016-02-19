@@ -58,6 +58,7 @@ class ConfirmacaoController extends Controller
             $execution->addTransaction($transaction);
             $rifas = $payment->transactions[0]->description;
             $rifas=explode(',',$rifas);
+            $aux=0;
 
 
             try {
@@ -85,11 +86,10 @@ class ConfirmacaoController extends Controller
 
             if($result->state=="approved"){
                 $status='Compra feita com sucesso!';
+                $aux=1;
             }
 
-            SweetAlert::success($status);
-
-            return view('confirmacao');
+            return view('confirmacao')->with('status', $status)->with('aux', $aux);
 
 
         }else {

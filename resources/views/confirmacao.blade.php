@@ -1,6 +1,12 @@
 @extends('layouts.mackart')
 @section('content')
-@include('vendor.sweet.alert')
+<script>
+    @if($aux==1)
+    swal({   title: "{{$status}}",   text: "", type: "success",   timer: 3000,   showConfirmButton: false });
+    @else    swal({   title: "{{$status}}",   text: "",   timer: 3000,   showConfirmButton: false });
+    @endif
+</script>
+
 
 <div class="container">
     <div class="row">

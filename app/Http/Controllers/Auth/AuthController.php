@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\Role;
 use App\Http\Requests;
-
+use Illuminate\Support\Facades\Session;
 use Storage;
 
 class AuthController extends Controller
@@ -32,7 +32,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/perfil';
 
     /**
      * Create a new authentication controller instance.
@@ -86,6 +86,7 @@ class AuthController extends Controller
         $role = Role::where('name','=','user')->first();
 
         $user->attachRole($role);
+
         return $user;
 
     }
