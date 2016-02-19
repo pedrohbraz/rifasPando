@@ -40,14 +40,15 @@
                                 <label for="{{$rifa->id}}">{{$rifa->nome_rifa}}</label>
 
                             @endforeach
-
                         </div>
                         <br>
                         <div class="form-group">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         </div>
                         @if(Auth::user()!=NULL)
-                            <button  type="submit" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                        <div class="form-group">
+                            <button type="submit" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                        </div>
                     </form>
                     @else
                         <B>Voce precisa estar logado para poder comprar.</B><br>
@@ -55,30 +56,39 @@
                         @endif
 
 
-                                <!--Formulario de insercao de mensagens -->
-
-                        <div class="row">
-                            <form  method="post">
-                                <div  style="margin-left: 15px;
+                        <!--Formulario de insercao de mensagens -->
+                        @if(Auth::user()!=NULL)
+                            <div class="row">
+                                <form  method="post">
+                                    <div   class="form-group">
+                                        <h6>Comentarios</h6>
+                                        <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
+                                        <input type="hidden" name="acao_id" value="{{$acao->id}}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                    </div>
+                                    <div class="form-group">
+                                            <button  type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
+                                    </div>
+                                </form>
+                            </div>
+                        @else
+                            <div class="row">
+                                <form   method="post">
+                                    <div style="margin-left: 15px;
                               margin-right: 15px;" class="form-group">
-                                    <h6>Comentarios</h6>
-                                    <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
-                                    <input type="hidden" name="acao_id" value="{{$acao->id}}">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-                                </div>
-                                <div style="margin-left: 15px;
+                                        <h6>Comentarios</h6>
+                                        <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
+                                        <input type="hidden" name="acao_id" value="{{$acao->id}}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
+                                    </div>
+                                    <div style="margin-left: 15px;
                               margin-right: 15px;" class="form-group">
-                                    @if(Auth::user()!=NULL)
-                                        <br>
-                                        <button type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
-                                    @else
                                         <B>Voce precisa estar logado para poder comentar.</B><br>
-                                        <a style="float: right" href="/login"><button type="button" class="btn btn-default" >Login</button></a>
-                                    @endif
-                                </div>
-                            </form>
-
-                        </div>
+                                        <a style="float: left" href="/login"><button type="button" class="btn btn-default" >Login</button></a>
+                                    </div>
+                                </form>
+                            </div>
+                        @endif
                         <!-- Mensagens sobre a acao -->
 
                         <div class="row">
