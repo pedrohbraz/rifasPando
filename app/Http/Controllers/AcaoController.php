@@ -98,6 +98,7 @@ class AcaoController extends Controller
 
         //Salva a acao
         $acao->save();
+        $id=$acao->id;
 
         //Armazenamento da imagem
         $arquivo    = $request->file('imagem');
@@ -113,7 +114,7 @@ class AcaoController extends Controller
         //Dispara o evento de geracao de rifas
         \Event::fire(new GeracaoDeRifas($acao));
 
-        return redirect('/perfil');
+        return redirect()->route('acao', ['id'=>$id]);
     }
 
     /**
@@ -303,11 +304,10 @@ class AcaoController extends Controller
         $checkboxCount = count($aux);
         if($checkboxCount==0)
         {
-            alert()->warning('Selecione uma rifa');
             return back();
         }
         $rifasstr = '';
-        $rifas= '';
+     $rifas= '';
         $key=$checkboxCount;
         $total=number_format($acao->valor_rifa*$checkboxCount,2);
         foreach($aux as $rifa)
