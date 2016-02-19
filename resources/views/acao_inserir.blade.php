@@ -46,7 +46,7 @@
                             <label class="col-md-4 control-label">Valor das rifas</label>
 
                             <div class="col-md-6">
-                                <input type="text" class="form-control" name="valor_rifa">
+                                <input type="number" step="any" class="form-control" name="valor_rifa">
                             </div>
                         </div>
 

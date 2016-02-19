@@ -24,7 +24,7 @@
                                     </a>
                                     <div class="caption">
                                         <h3 style="word-wrap:break-word">{{$acao->nome_acao}}</h3>
-                                        <p>R${{$acao->valor_rifa }},00</p>
+                                        <p>R${{$acao->valor_rifa}}</p>
                                     </div>
                                 </div>
                             </div>

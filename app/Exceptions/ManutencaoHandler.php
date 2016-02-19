@@ -20,7 +20,6 @@ use Symfony\Component\Debug\ExceptionHandler as SymfonyExceptionHandler;
 use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandlerContract;
 use App\MensagemAdm;
 use DB;
-use App\Acao;
 class ManutencaoHandler implements ExceptionHandlerContract
 {
     /**
