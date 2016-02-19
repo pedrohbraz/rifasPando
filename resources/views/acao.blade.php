@@ -17,7 +17,7 @@
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->name }}</h6>
                             <img src="{{$acao->user->foto}}/100">
-                            <h6>Valor das rifas: R${{$acao->valor_rifa}},00</h6>
+                            <h6>Valor das rifas: R${{$acao->valor_rifa}}</h6>
                             <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
                             <h6>Email de contato: {{$acao->email}}</h6>
                             <h6>Telefone de contato: {{$acao->telefone_contato}}</h6>
@@ -57,14 +57,16 @@
                                 <!--Formulario de insercao de mensagens -->
 
                         <div class="row">
-                            <form method="post">
-                                <div class="form-group">
+                            <form  method="post">
+                                <div  style="margin-left: 15px;
+                              margin-right: 15px;" class="form-group">
                                     <h6>Comentarios</h6>
                                     <textarea class="form-control" rows="3" name="mensagem" id="texto_mensagem" placeholder="Digite seu comentario aqui!"></textarea>
                                     <input type="hidden" name="acao_id" value="{{$acao->id}}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 </div>
-                                <div class="form-group">
+                                <div style="margin-left: 15px;
+                              margin-right: 15px;" class="form-group">
                                     @if(Auth::user()!=NULL)
                                         <br>
                                         <button type="submit" id="botao_mensagem" class="btn btn-default">Comentar!</button>
