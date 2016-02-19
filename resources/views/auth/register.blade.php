@@ -24,11 +24,11 @@
                             </div>
                         </div>
                         <!--Foto do usuario-->
-                                    <div class="form-group">
+                                    <div  class="form-group">
                                         <label class="col-md-4 control-label">Inserir Foto</label>
 
                                         <div class="col-md-6">
-                                            <input type="file" class="form-control" name="foto" value="{{ old('foto') }}">
+                                            <input type="file" class="form-control" name="foto" value="{{ old('foto') }}" required>
                                         </div>
                                     </div>
              <!----campo de telefone-->
