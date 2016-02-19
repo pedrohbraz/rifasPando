@@ -12,6 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Styles -->
+		<link rel="stylesheet" href="../../../../hint/hint.css">
 		<!-- Bootstrap CSS -->
 		<link href="/css/mackart/bootstrap.min.css" rel="stylesheet">
 		<!-- Flex slider -->
@@ -283,16 +284,8 @@
 						  <li>
 							<a href="/perfil">Perfil</a>
 						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="general.html">General</a></li>
-								<li><a href="login.html">Login</a></li>
-								<li><a href="register.html">Register</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="blog-single.html">Blog Single</a></li>
-								<li><a href="404.html">404</a></li>
-							</ul>
+						<li>
+							<a href="/finalizadas" >Ações finalizadas</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Smartphones <b class="caret"></b></a>
