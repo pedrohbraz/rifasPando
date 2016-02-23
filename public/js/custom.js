@@ -11,3 +11,17 @@ $(document).ready(function() {
         }
     });
 });
+
+//libera botao de compra apos nova entrada de checkbox
+$(document).ready(function () {
+    $('#botao_comprar').prop('disabled', true);
+    validate();
+    function validate() {
+        $('input[type=checkbox]').change(function () {
+            $('#botao_comprar').prop('disabled', false);
+        });
+    }
+});
+
+
+
