@@ -21,7 +21,10 @@
                             <p>R${{$acao->valor_rifa}},00</p>
                             <p>Sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></p>
                             <p>Número sorteado:{{$acao->numrifado}}</p>
-                            <p>ID ganhador:{{$acao->winner_id}}</p>
+                            @foreach($ganhadores as $ganhador)
+                            @if($ganhador->id ==$acao->winner_id)
+                            <p>Ganhador:{{$ganhador->name}}</p>@endif
+                            @endforeach
                           </div>
                         </div>
                       </div>
