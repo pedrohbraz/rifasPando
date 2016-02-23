@@ -15,7 +15,7 @@ class ModoManutencao
      * @var \Illuminate\Contracts\Foundation\Application
      */
     protected $app;
-    protected $excludedRoutes = ['/bring/the/application/down/now','/bring/the/application/up/now', 'imagemmanutencao'];
+    protected $excludedRoutes = ['imagemmanutencao', '/bring/the/application/down/now','/bring/the/application/up/now'];
 
     /**
      * Create a new middleware instance.
@@ -27,7 +27,6 @@ class ModoManutencao
     {
         $this->app = $app;
     }
-
     /**
      * Handle an incoming request.
      *
@@ -51,7 +50,11 @@ class ModoManutencao
             throw new HttpException(503);
         }
 
-
         return $next($request);
+    }
+
+    public function terminate($request, $response)
+    {
+
     }
 }
