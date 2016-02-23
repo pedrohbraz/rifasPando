@@ -58,10 +58,11 @@ Route::group(['middleware' => 'web'], function () {
         else
             return view('auth.login ');
     });
-	
+
     Route::get('/',['as'=>'home', 'uses'=> 'HomeController@index']);
 
-	Route::get('/', 'AcaoController@index');
+	  Route::get('/', 'AcaoController@index');
+    Route::get('/finalizadas','AcaoController@finalizadas');
     Route::get('/home', 'HomeController@index');
     Route::get("/acao",'AcaoController@index');
 

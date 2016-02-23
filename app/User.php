@@ -56,6 +56,7 @@ class User extends Authenticatable
     //Um usuario pode ter varias rifas (compradas)
     public function rifa()
     {
-        return $this->hasMany('App\Rifa');
+        return $this->hasMany('App\Rifa','id_comprador','id');
+
     }
 }

@@ -15,6 +15,9 @@ class Rifa extends Model
 	public function user()
 	{
 		return $this->belongsTo('App\User');
+
+
+
 	}
 	//Uma rifa pertence a uma acao
 	public function acao()

@@ -6,6 +6,7 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">{{$acao->nome_acao}}</div>
+
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
                         <div class="thumbnail">
@@ -34,11 +35,10 @@
                         <B>Rifas Disponiveis:</B><br>
                         <div class="rifa_table_container">
                             @foreach($acao->rifa as $rifa)
-
                                 <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" onchange="validate()" name = "checkbox[]"  @if($rifa->id_comprador) checked style="color: red; !important;"@endif >
                                 <label for="{{$rifa->id}}">{{$rifa->nome_rifa}}</label>
-
                             @endforeach
+
                         </div>
                         <div id="contador" data-value="0"></div>
                         <br>

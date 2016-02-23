@@ -51,10 +51,26 @@ class AcaoController extends Controller
         $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
         $acaos = DB::table('acaos')->select('*')
                    ->where('data_sorteio','>=',$hoje2)
+                   ->where('numrifado',null)
                    ->where('deleted_at',null)
                    ->get();
         $mensagem = MensagemAdm::all()->last();
         return view('acaos')->with('acaos', $acaos)->with('mensagem', $mensagem);
+
+    }
+    public function finalizadas()
+    {
+        //Obtem todas as acoes finalizadas para serem listadas
+
+        $hoje = getdate();
+        $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
+        $acaos = DB::table('acaos')->select('*')
+                   ->where('data_sorteio','<',$hoje2)
+                    ->where('deleted_at',null)
+                   ->orWhereNotNull('numrifado',null)
+                   ->get();
+
+        return view('acaosFinalizadas',compact('acaos'));
 
     }
 
@@ -126,7 +142,17 @@ class AcaoController extends Controller
     public function show($id)
     {
         $acao   = Acao::find($id);
-        return view('acao', compact('acao'));
+      /*  $rifas = Rifa::where('acao_id',$id)->with('user')->get();
+      //  dd($rifas);
+        $user = User::where('id',$rifa->id_comprador)->get();
+      //  dd($user);*/
+       /*$users = DB::table('users')
+       ->join('rifas','users.id','=','rifas.id_comprador')
+       ->where('rifas.acao_id','=',$id)
+               ->get();*/
+               
+        //  dd($users);
+        return view('acao', compact('acao','users'));
 
     }
 
@@ -153,7 +179,7 @@ class AcaoController extends Controller
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','>',$hoje2)
                ->get();
-      
+
       return view('Users.acoesCompAndamento',compact('rifas'));
     }
 
@@ -177,14 +203,19 @@ class AcaoController extends Controller
       $hoje = getdate();
       $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
 
-     $rifas = DB::table('rifas')
+    /* $rifas = DB::table('rifas')
 
                ->join('acaos','rifas.acao_id','=','acaos.id')
                ->where('rifas.id_comprador','=',$id)
                ->where('acaos.data_sorteio','<',$hoje2)
-               ->get();
+               ->get();*/
+            $acaos = DB::table('acaos')
+                  ->join('rifas','acaos.id','=','rifas.acao_id')
 
-      return view('Users.acoesCompClosed',compact('rifas'));
+                  ->where('rifas.id_comprador','=',$id)
+                  ->where('acaos.data_sorteio','<',$hoje2)->get();
+                //  dd($acaos);
+      return view('Users.acoesCompClosed',compact('acaos'));
      }
 
     /**
