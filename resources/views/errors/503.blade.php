@@ -1,7 +1,6 @@
 @extends('layouts.mackart')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -18,7 +17,9 @@
 
                     <div class="panel-body">
                         <div class="row">
-                            @foreach($acaos as $key=>$acao)
+
+                        @foreach($acaos as $key=>$acao)
+                            {{--{{dd($acao->imagem)}}--}}
                                 <div class="panel panel-default">
                                     <div class="panel heading">
                                         <h3 style="word-wrap:break-word">{{$acao->nome_acao}}</h3>
@@ -26,7 +27,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 col-md-3">
                                             <div class="thumbnail">
-                                                <img src="{{$acao->imagem }}/190">
+                                                <img src="{{$acao->imagem}}/190">
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-md-4">

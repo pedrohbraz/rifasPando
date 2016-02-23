@@ -20,6 +20,7 @@ use Symfony\Component\Debug\ExceptionHandler as SymfonyExceptionHandler;
 use Illuminate\Contracts\Debug\ExceptionHandler as ExceptionHandlerContract;
 use App\MensagemAdm;
 use DB;
+use Intervention\Image\Facades\Image;
 class ManutencaoHandler implements ExceptionHandlerContract
 {
     /**
@@ -170,6 +171,7 @@ class ManutencaoHandler implements ExceptionHandlerContract
             ->groupby('name','acao_id')
             ->get();
 
+
         if (view()->exists("errors.{$status}")) {
 
             return response()->view("errors.{$status}", ['exception' => $e, 'mensagem' => $mensagem, 'acaos' => $acaos, 'criador' => $criador, 'rifas' => $rifas], $status, $e->getHeaders());
@@ -177,6 +179,8 @@ class ManutencaoHandler implements ExceptionHandlerContract
             return $this->convertExceptionToResponse($e);
         }
     }
+
+
 
     /**
      * Create a Symfony response for the given exception.
