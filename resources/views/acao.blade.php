@@ -34,9 +34,13 @@
                               margin-right: -15px;"  action="{{route('carrinho',$acao->id)}}" method="post">
                         <B>Rifas Disponiveis:</B><br>
                         <div class="rifa_table_container">
-                            @foreach($acao->rifa as $rifa)
-                                <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" onchange="validate()" name = "checkbox[]"  @if($rifa->id_comprador) checked style="color: red; !important;"@endif >
-                                <label for="{{$rifa->id}}">{{$rifa->nome_rifa}}</label>
+
+                            @foreach($rifas as $rifa)
+
+                                <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" onchange="validate()" name = "checkbox[]" @if($rifa->user_id) checked style="color: red; !important;"@endif >
+                                <label for="{{$rifa->id}}"@if($rifa->user_id)
+                                      data-hint="comprador: {{$rifa->user->name}} "
+                                      class="hint--top hint--info" @endif>{{$rifa->nome_rifa}} </label>
                             @endforeach
 
                         </div>

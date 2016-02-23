@@ -64,9 +64,9 @@ class ConfirmacaoController extends Controller
             try {
                 foreach($rifas as $rifa) {
                     $aux = Rifa::find($rifa);
-                    if($aux->id_comprador == NULL)
+                    if($aux->user_id == NULL)
                     {
-                        $aux->id_comprador = Auth::user()->id;
+                        $aux->user_id = Auth::user()->id;
                         $aux->save();
                     } else
                     {

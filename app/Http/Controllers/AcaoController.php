@@ -69,8 +69,9 @@ class AcaoController extends Controller
                     ->where('deleted_at',null)
                    ->orWhereNotNull('numrifado',null)
                    ->get();
-
-        return view('acaosFinalizadas',compact('acaos'));
+        $ganhadores = DB::table('users')
+                    ->join('acaos','users.id','=','acaos.winner_id')->get();
+        return view('acaosFinalizadas',compact('acaos','ganhadores'));
 
     }
 
@@ -97,7 +98,7 @@ class AcaoController extends Controller
         //Cria o objeto Acao a ser inserido
         $acao = new Acao;
 
-        $acao->user_id          = Auth::user()->id;
+        $acao->user_id         = Auth::user()->id;
         $acao->nome_acao        = $request->nome_acao;
         $acao->descricao        = $request->descricao;
         $acao->quantidade_rifas = $request->quantidade_rifas;
@@ -142,17 +143,8 @@ class AcaoController extends Controller
     public function show($id)
     {
         $acao   = Acao::find($id);
-      /*  $rifas = Rifa::where('acao_id',$id)->with('user')->get();
-      //  dd($rifas);
-        $user = User::where('id',$rifa->id_comprador)->get();
-      //  dd($user);*/
-       /*$users = DB::table('users')
-       ->join('rifas','users.id','=','rifas.id_comprador')
-       ->where('rifas.acao_id','=',$id)
-               ->get();*/
-               
-        //  dd($users);
-        return view('acao', compact('acao','users'));
+        $rifas = Rifa::where('acao_id',$id)->get();
+        return view('acao', compact('acao','rifas'));
 
     }
 
@@ -176,8 +168,8 @@ class AcaoController extends Controller
 
      $rifas = DB::table('rifas')
                ->join('acaos','rifas.acao_id','=','acaos.id')
-               ->where('rifas.id_comprador','=',$id)
-               ->where('acaos.data_sorteio','>',$hoje2)
+               ->where('rifas.user_id','=',$id)
+               ->where('acaos.data_sorteio','>=',$hoje2)
                ->get();
 
       return view('Users.acoesCompAndamento',compact('rifas'));
@@ -194,7 +186,10 @@ class AcaoController extends Controller
                ->orWhere('data_sorteio','<',$hoje2)
                ->where('user_id','=',$id)
                ->get();
-    return view('Users.acoesOrgClosed',compact('acao'));
+    $ganhadores = DB::table('users')
+                  ->join('acaos','users.id','=','acaos.winner_id')->get();
+                  //dd($ganhadores);
+    return view('Users.acoesOrgClosed',compact('acao','ganhadores'));
     }
 
     public function acaosCompClosed($id)
@@ -203,18 +198,18 @@ class AcaoController extends Controller
       $hoje = getdate();
       $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
 
-    /* $rifas = DB::table('rifas')
+     $rifas = DB::table('rifas')
 
                ->join('acaos','rifas.acao_id','=','acaos.id')
-               ->where('rifas.id_comprador','=',$id)
+               ->where('rifas.user_id','=',$id)
                ->where('acaos.data_sorteio','<',$hoje2)
-               ->get();*/
-            $acaos = DB::table('acaos')
+               ->get();
+            /*$acaos = DB::table('acaos')
                   ->join('rifas','acaos.id','=','rifas.acao_id')
 
-                  ->where('rifas.id_comprador','=',$id)
+                  ->where('rifas.user_id','=',$id)
                   ->where('acaos.data_sorteio','<',$hoje2)->get();
-                //  dd($acaos);
+                //dd($acaos);*/dd($rifas);
       return view('Users.acoesCompClosed',compact('acaos'));
      }
 
@@ -289,23 +284,33 @@ class AcaoController extends Controller
 
 
     public function sorteio($id) {
+    /*  $hoje = getdate();
+      $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday']; //data do dia atual
+       $acaos = Acao::where('data_sorteio','=',$hoje2)
+         ->where('numrifado',null)->whereNotNull('rifas.user_id')
+         ->get();
+       dd($acaos[0]->rifa);*/
 
       $hoje = getdate();
       $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday']; //data do dia atual
       //consulta para econtrar as rifas que foram compradas em uma ação
-      $rifas = DB::table('rifas')
-               ->join('acaos','rifas.acao_id','=','acaos.id')
-               ->where('acao_id',$id)
-               ->whereNotNull('id_comprador') //indica que existe um comprador
-               ->where('acaos.data_sorteio','=',$hoje2)
-               ->get();
-
+      $rifas = DB::table('acaos')
+                 ->join('rifas','acaos.id','=','rifas.acao_id')
+                 ->where('rifas.acao_id',$id)
+                 ->whereNotNull('rifas.user_id') //indica que existe um comprador
+                 ->where('acaos.data_sorteio','=',$hoje2)
+                 ->get();
+dd($rifas);
     //realiza o sorteio da rifa
     $sorteado =  array_rand ($rifas,1);//variavel com uma posição randomica do array
     $numero = $rifas[$sorteado];//rifa especifica do array com a posição sorteada
+
+    $rifa = DB::table('rifas')->where('nome_rifa',$numero->nome_rifa)->get();
+      dd($rifa);
     $acao = Acao::find($id);
     $acao->numrifado = $numero->nome_rifa; //atualiza campo de numero rifado da tabele acaos
-    $acao->winner_id = $numero->id_comprador;//atualiza o campo id do vencedor em acaos
+    $acao->winner_id = $numero->user_id;//atualiza o campo id do vencedor em acaos
+    dd($numero->user_id);
     $acao->save();
     //exibir resultado
     $user_id = $acao->winner_id;
@@ -331,7 +336,7 @@ class AcaoController extends Controller
     {
 
         $acao = Acao::find($id);
-        $aux = Rifa::find($_POST['checkbox'])->where('id_comprador',NULL);
+        $aux = Rifa::find($_POST['checkbox'])->where('user_id',NULL);
         $checkboxCount = count($aux);
         if($checkboxCount==0)
         {

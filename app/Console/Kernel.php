@@ -36,20 +36,27 @@ class Kernel extends ConsoleKernel
                   ->where('data_sorteio','=',$hoje2)
                   ->where('numrifado',null)
                   ->get();
+                    Log::info("antes");
                  foreach($acoes as $acoes){
-                   $rifas = DB::table('rifas')
+                  /* $rifas = DB::table('rifas')
                               ->join('acaos','rifas.acao_id','=','acaos.id')
                               ->where('acao_id',$acoes->id)
-                              ->whereNotNull('id_comprador') //indica que existe um comprador
+                              ->whereNotNull('rifas.user_id') //indica que existe um comprador
                               ->where('acaos.data_sorteio','=',$hoje2)
-                              ->get();
+                              ->get();*/
+                              $rifas = DB::table('acaos')
+                                         ->join('rifas','acaos.id','=','rifas.acao_id')
+                                         ->where('rifas.acao_id',$acoes->id)
+                                         ->whereNotNull('rifas.user_id') //indica que existe um comprador
+                                         ->where('acaos.data_sorteio','=',$hoje2)
+                                         ->get();
                               $sorteado =  array_rand ($rifas,1);//variavel com uma posição randomica do array
-                              Log::info("teste");
+                              Log::info("depois");
                               $numero = $rifas[$sorteado];//rifa especifica do array com a posição sorteada
                               $acao = Acao::find($acoes->id);
                               $acao->numrifado = $numero->nome_rifa; //atualiza campo de numero rifado da tabele acaos
-
-                              $acao->winner_id = $numero->id_comprador;//atualiza o campo id do vencedor em acaos
+                              Log::info($numero->user_id);
+                              $acao->winner_id = $numero->user_id;//atualiza o campo id do vencedor em acaos
                               // Log::info($acao);
                               $acao->save();
 
@@ -58,6 +65,6 @@ class Kernel extends ConsoleKernel
             }
 
 
-        })->everyTenMinutes();
+        })->everyMinute();
     }
 }

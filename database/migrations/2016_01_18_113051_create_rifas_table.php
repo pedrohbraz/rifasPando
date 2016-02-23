@@ -20,8 +20,8 @@ class CreateRifasTable extends Migration
              ->onDelete('cascade');
 
       $table->string('nome_rifa');
-      $table->integer('id_comprador')->nullable()->unsigned()->index();
-      $table->foreign('id_comprador')
+      $table->integer('user_id')->nullable()->unsigned()->index();//comprador
+      $table->foreign('user_id')
              ->references('id')->on('users')
              ->onDelete('cascade');
 
