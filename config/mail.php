@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'log'),
+    'driver' => env('MAIL_DRIVER', 'stmp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'rodolfozahn@gmail.com', 'name' => 'rodolfo'],
+    'from' => ['address' => 'texugo.laranja@gmail.com', 'name' => null],
 
     /*
     |--------------------------------------------------------------------------
