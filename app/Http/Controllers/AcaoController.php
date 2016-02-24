@@ -204,7 +204,7 @@ class AcaoController extends Controller
       $hoje = getdate();
       $hoje2 = $hoje['year'].'-'.$hoje['mon'].'-'.$hoje['mday'];
 
-     $rifas = DB::table('rifas')
+     $acaos = DB::table('rifas')
 
                ->join('acaos','rifas.acao_id','=','acaos.id')
                ->where('rifas.user_id','=',$id)
@@ -215,7 +215,7 @@ class AcaoController extends Controller
 
                   ->where('rifas.user_id','=',$id)
                   ->where('acaos.data_sorteio','<',$hoje2)->get();
-                //dd($acaos);*/dd($rifas);
+                //dd($acaos);*/
       return view('Users.acoesCompClosed',compact('acaos'));
      }
 

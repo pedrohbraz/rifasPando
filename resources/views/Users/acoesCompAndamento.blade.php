@@ -14,13 +14,13 @@
 
                      <div class="col-xs-6 col-md-4">
                         <div class="thumbnail">
-
+                      <a href="/acao/{{$rifas->acao_id}}">
                           <img src="{{$rifas->imagem}}/190">
-
+                      </a>
                             <div class="caption">
                               <h3>{{$rifas->nome_acao}}</h3>
-                              <p>R${{$rifas->valor_rifa}},00</p>
-                              <p>Data sorteio:{{$rifas->data_sorteio}}</p>
+                              <p>R${{$rifas->valor_rifa}}</p>
+                              <p>Data do sorteio:<?php echo date("d/m/Y", strtotime($rifas->data_sorteio)); ?><p>
                               <p><b>Rifa comprada:{{$rifas->nome_rifa}}</b></p>
 
                           </div>
