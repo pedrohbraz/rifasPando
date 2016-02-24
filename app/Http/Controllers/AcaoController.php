@@ -6,7 +6,7 @@ use App\Events\AssociaUser;
 use App\Events\PagamentoExecutado;
 use App\MensagemAdm;
 use Illuminate\Http\Request;
-
+use Intervention\Image\Facades\Image;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
@@ -94,10 +94,12 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
+
        $hoje = date("Y-m-d");
        if($request->data_sorteio < $hoje){
           return redirect()->back()->with('msg_error', 'A ação não foi cadastrada, favor inserir uma data válida.');
        }
+
         //Cria o objeto Acao a ser inserido
         $acao = new Acao;
 
@@ -147,6 +149,7 @@ class AcaoController extends Controller
     {
         $acao   = Acao::find($id);
         $rifas = Rifa::where('acao_id',$id)->get();
+
         return view('acao', compact('acao','rifas'));
 
     }

@@ -43,9 +43,10 @@ Route::get('/bring/the/application/up/now', 'AcaoController@Up');
 Route::get('image/{folder}/{filename}/{size}', ['as' => 'imagemmanutencao', 'uses' => function ($folder,$filename,$size)
 {
     $img = Image::make(storage_path().'/app/'.$folder.'/'.$filename.'.jpg')->fit($size);
-
     return $img->response('jpg');
+
 }]);
+
 
 
 Route::group(['middleware' => 'web'], function () {
