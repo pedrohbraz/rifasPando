@@ -221,7 +221,7 @@
 					<div class="col-md-4">
 						<!-- Logo. Use class "color" to add color to the text. -->
 						<div class="logo">
-							<h1><a href="#">Mac<span class="color bold">Kart</span></a></h1>
+							<h1><a href="#">Rifas<span class="color bold">Online</span></a></h1>
 							<p class="meta">online shopping is fun!!!</p>
 						</div>
 					</div>
