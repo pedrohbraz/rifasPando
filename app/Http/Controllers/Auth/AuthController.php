@@ -67,22 +67,38 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+//    $arquivo    = $data['foto'];
+//    $extension  = $arquivo->getClientOriginalExtension();
+//    $image_name = 'user';
+//    $path       = $arquivo->getRealPath();
+//
+//    Storage::put('users/'.$image_name.$data['email'].'.'.$extension,file_get_contents($path));
+//  //  $user->foto = '/image/users/'.$image_name;
+//        $user = User::create([
+//            'name' => $data['name'],
+//            'email' => $data['email'],
+//            'password' => bcrypt($data['password']),
+//            'telefone'=>$data['telefone'],
+//            'endereco'=>$data['endereco'],
+//            'foto' =>'image/users/'.$image_name,
+//        ]);
 
-    $arquivo    = $data['foto'];
-    $extension  = $arquivo->getClientOriginalExtension();
-    $image_name = 'user';
-    $path       = $arquivo->getRealPath();
+        $user = new User();
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->password = bcrypt($data['password']);
+        $user->telefone = $data['telefone'];
+        $user->endereco = $data['endereco'];
 
-    Storage::put('users/'.$image_name.$data['email'].'.'.$extension,file_get_contents($path));
-  //  $user->foto = '/image/users/'.$image_name;
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'telefone'=>$data['telefone'],
-            'endereco'=>$data['endereco'],
-            'foto' =>'image/users/'.$image_name,
-        ]);
+        $arquivo    = $data['foto'];
+        $extension  = $arquivo->getClientOriginalExtension();
+        $image_name = 'user'.$user->id;
+        $path       = $arquivo->getRealPath();
+
+        Storage::put('users/'.$image_name.'.'.$extension,file_get_contents($path));
+        $user->foto = '/image/users/'.$image_name;
+        $user->save();
+
         $role = Role::where('name','=','user')->first();
 
         $user->attachRole($role);

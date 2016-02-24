@@ -6,7 +6,7 @@ use App\Events\AssociaUser;
 use App\Events\PagamentoExecutado;
 use App\MensagemAdm;
 use Illuminate\Http\Request;
-
+use Intervention\Image\Facades\Image;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Acao;
@@ -94,7 +94,6 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
-
         //Cria o objeto Acao a ser inserido
         $acao = new Acao;
 
@@ -144,6 +143,7 @@ class AcaoController extends Controller
     {
         $acao   = Acao::find($id);
         $rifas = Rifa::where('acao_id',$id)->get();
+
         return view('acao', compact('acao','rifas'));
 
     }

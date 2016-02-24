@@ -1,6 +1,9 @@
 @extends('layouts.mackart')
 
 @section('content')
+    {{--<title>{{ Lang::get(Config::get('maintenancemode.language-path', 'maintenancemode::defaults.') . '.title') }}</title>--}}
+    {{--<h1>{{ ${Config::get('maintenancemode.inject.prefix').'Message'} }}</h1>--}}
+    {{--<p>{{ Lang::get(Config::get('maintenancemode.language-path', 'maintenancemode::defaults.') . '.last-updated', ['timestamp' => ${Config::get('maintenancemode.inject.prefix').'Timestamp'}->diffForHumans()]) }}</p>--}}
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -18,7 +21,8 @@
                     <div class="panel-body">
                         <div class="row">
 
-                        @foreach($acaos as $key=>$acao)
+                            @foreach($acaos as $key=>$acao)
+                                {{--{{dd($acao->imagem)}}--}}
                                 <div class="panel panel-default">
                                     <div class="panel heading">
                                         <h3 style="word-wrap:break-word">{{$acao->nome_acao}}</h3>
@@ -26,7 +30,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 col-md-3">
                                             <div class="thumbnail">
-                                                <img src="{{$acao->imagem.'.jpg'}}/190">
+                                                <img src="{{$acao->imagem}}/190">
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-md-4">
@@ -41,11 +45,11 @@
                                         </div>
                                         <div class="panel-body">
                                             <b>Compradores:</b>
-                                        @foreach($rifas as $rifa)
-                                            @if($rifa->acao_id==$acao->id)
+                                            @foreach($rifas as $rifa)
+                                                @if($rifa->acao_id==$acao->id)
                                                     <h6>{{$rifa->name}}</h6>
-                                            @endif
-                                        @endforeach
+                                                @endif
+                                            @endforeach
                                         </div>
                                     </div>
 
@@ -59,3 +63,4 @@
         </div>
     </div>
 @endsection
+
