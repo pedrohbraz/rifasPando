@@ -17,7 +17,9 @@
                       <div class="col-xs-6 col-md-4">
                             <h3>{{$acao->nome_acao}}</h3>
                             <h6>Criador:{{$acao->name }}</h6>
-                            <img src="{{$acao->user->foto}}/100">
+                            <span data-hint=" {{$acao->user->name}} "
+                            class="hint--top hint--info">
+                            <img src="{{$acao->user->foto}}/100"></span>
                             <h6>Valor das rifas: R${{$acao->valor_rifa}}</h6>
                             <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
                             <h6>Email de contato: {{$acao->email}}</h6>
