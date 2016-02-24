@@ -38,12 +38,6 @@ class Kernel extends ConsoleKernel
                   ->get();
                     Log::info("antes");
                  foreach($acoes as $acoes){
-                  /* $rifas = DB::table('rifas')
-                              ->join('acaos','rifas.acao_id','=','acaos.id')
-                              ->where('acao_id',$acoes->id)
-                              ->whereNotNull('rifas.user_id') //indica que existe um comprador
-                              ->where('acaos.data_sorteio','=',$hoje2)
-                              ->get();*/
                               $rifas = DB::table('acaos')
                                          ->join('rifas','acaos.id','=','rifas.acao_id')
                                          ->where('rifas.acao_id',$acoes->id)
@@ -60,10 +54,7 @@ class Kernel extends ConsoleKernel
                               // Log::info($acao);
                               $acao->save();
 
-              /*  Acao::all()->with('rifas')
-                ->get();*/
-            }
-
+                          }
 
         })->everyMinute();
     }
