@@ -1,6 +1,18 @@
 
 @extends('layouts.mackartHeader')
 @section('content')
+
+@if(Session::has('msg_error'))
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">
+            <i class="icon-remove"></i>
+        </button>
+        <strong>Erro!</strong>
+        {{Session::get('msg_error')}}
+        <br>
+    </div>
+    @endif
+    
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">

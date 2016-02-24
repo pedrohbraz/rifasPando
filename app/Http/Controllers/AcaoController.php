@@ -94,6 +94,12 @@ class AcaoController extends Controller
      */
     public function store(Request $request)
     {
+
+       $hoje = date("Y-m-d");
+       if($request->data_sorteio < $hoje){
+          return redirect()->back()->with('msg_error', 'A ação não foi cadastrada, favor inserir uma data válida.');
+       }
+
         //Cria o objeto Acao a ser inserido
         $acao = new Acao;
 
