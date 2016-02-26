@@ -12,13 +12,40 @@ $(document).ready(function() {
     });
 });
 
-//libera botao de compra apos nova entrada de checkbox
+
+
+// bloqueia ou libera botao de acordo com o limite de rifas
 $(document).ready(function () {
     $('#botao_comprar').prop('disabled', true);
-    validate();
-    function validate() {
-        $('input[type=checkbox]').change(function () {
-            $('#botao_comprar').prop('disabled', false);
+    var checkedBefore = new Array();
+    var checkedBefore = $('input[type=checkbox]:checked').map(function() {
+        return this.value;
+    }).get();
+    var checkedAfter, i;
+    validatecheckboxcount();
+    function validatecheckboxcount() {
+            $('input[type=checkbox]').click(function () {
+                checkedAfter =  $('input[type=checkbox]:checked').map(function() {
+                    if(checkedBefore.length==0){
+                        return this.value;
+                    }else{
+                        for(i=0;i<checkedBefore;i++){
+                            if(this.value!=checkedBefore[i]){
+                                return this.value;
+                            }
+                        }
+                    }
+                }).get();
+            $('input[type=checkbox]').change(function(){
+                if(checkedAfter.length<($('#qtd_max').data('qtdmax')+1) && checkedAfter.length>0){
+                    $('#botao_comprar').prop('disabled', false)
+                    $('[data-toggle="tooltip"]').removeAttr('title');
+
+                }else{
+                    $('#botao_comprar').prop('disabled', true);
+                    $('[data-toggle="tooltip"]').attr('title', 'Limite de 3 rifas');
+                }
+            });
         });
     }
 });

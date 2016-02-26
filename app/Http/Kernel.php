@@ -14,7 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \App\Http\Middleware\ModoManutencao::class,
+        'manutencao' => \App\Http\Middleware\ModoManutencao::class,
     ];
 
     /**

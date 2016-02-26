@@ -349,7 +349,7 @@ dd($rifas);
             return back();
         }
         $rifasstr = '';
-     $rifas= '';
+        $rifas= '';
         $key=$checkboxCount;
         $total=number_format($acao->valor_rifa*$checkboxCount,2);
         foreach($aux as $rifa)

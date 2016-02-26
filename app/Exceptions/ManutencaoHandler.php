@@ -166,11 +166,10 @@ class ManutencaoHandler implements ExceptionHandlerContract
             ->join('acaos', 'users.id', '=', 'acaos.user_id')
             ->get();
         $rifas = DB::table('rifas')->select('*')
-            ->join('users', 'rifas.id_comprador', '=', 'users.id')
-            ->whereNotNull('id_comprador')
+            ->join('users', 'rifas.user_id', '=', 'users.id')
+            ->whereNotNull('user_id')
             ->groupby('name','acao_id')
             ->get();
-
 
         if (view()->exists("errors.{$status}")) {
 
