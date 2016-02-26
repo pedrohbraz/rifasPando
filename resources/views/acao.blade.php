@@ -55,7 +55,7 @@
                         </div>
                     @if(Auth::user()!=NULL)
                         <div class="form-group">
-                            <button type="submit" data-toggle="tooltip" title="Limite de 3 rifas" id="botao_comprar" class="btn btn-default" >Comprar!</button>
+                            <button type="submit" data-toggle="tooltip" title="Selecione uma rifa" id="botao_comprar" class="btn btn-default" >Comprar!</button>
                         </div>
                     </form>
                     @else

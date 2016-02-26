@@ -23,6 +23,7 @@ $(document).ready(function () {
     }).get();
     var checkedAfter, i;
     validatecheckboxcount();
+    var aux=$('#qtd_max').data('qtdmax');
     function validatecheckboxcount() {
             $('input[type=checkbox]').click(function () {
                 checkedAfter =  $('input[type=checkbox]:checked').map(function() {
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
                 }else{
                     $('#botao_comprar').prop('disabled', true);
-                    $('[data-toggle="tooltip"]').attr('title', 'Limite de 3 rifas');
+                    $('[data-toggle="tooltip"]').attr('title', 'Selecione uma rifa');
                 }
             });
         });
