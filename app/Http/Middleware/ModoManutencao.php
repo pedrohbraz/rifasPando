@@ -15,7 +15,7 @@ class ModoManutencao
      * @var \Illuminate\Contracts\Foundation\Application
      */
     protected $app;
-    protected $excludedRoutes = ['imagemmanutencao', '/bring/the/application/down/now','/bring/the/application/up/now'];
+    protected $excludedRoutes = ['/bring/the/application/down/now','/bring/the/application/up/now'];
 
     /**
      * Create a new middleware instance.

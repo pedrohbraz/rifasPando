@@ -26,7 +26,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 col-md-3">
                                             <div class="thumbnail">
-                                                <img src="{{$acao->imagem.'.jpg'}}/190">
+                                                <img id="foto" src="{{$acao->imagem.'.jpg'}}/190">
                                             </div>
                                         </div>
                                         <div class="col-xs-6 col-md-4">

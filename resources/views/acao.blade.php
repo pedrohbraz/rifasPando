@@ -21,6 +21,7 @@
                             class="hint--top hint--info">
                             <img src="{{$acao->user->foto}}/100"></span>
                             <h6>Valor das rifas: R${{$acao->valor_rifa}}</h6>
+                            <h6 id="qtd_max" data-qtdmax="{{$acao->qtd_max}}">Quantidade maxima: {{$acao->qtd_max}}</h6>
                             <h6>Data do sorteio:<?php echo date("d/m/Y", strtotime($acao->data_sorteio)); ?></h6>
                             <h6>Email de contato: {{$acao->email}}</h6>
                             <h6>Telefone de contato: {{$acao->telefone_contato}}</h6>
@@ -40,7 +41,7 @@
 
                             @foreach($rifas as $rifa)
 
-                                <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" onchange="validate()" name = "checkbox[]" @if($rifa->user_id) checked style="color: red; !important;"@endif >
+                                <input id="{{$rifa->id}}" type="checkbox" id="checkbox" value = "{{$rifa->id}}" class="vis-hidden" name = "checkbox[]" @if($rifa->user_id) checked style="color: red; !important;"@endif >
                                 <label for="{{$rifa->id}}"@if($rifa->user_id)
                                       data-hint="comprador: {{$rifa->user->name}} "
                                       class="hint--top hint--info" @endif>{{$rifa->nome_rifa}} </label>

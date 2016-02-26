@@ -17,7 +17,7 @@ label {
 }
 
 input:checked + label {
-    border-color: blue;
+    border-color: green;
 }
 
 .rifa_table_container {
